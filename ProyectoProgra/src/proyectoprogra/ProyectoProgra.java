@@ -16,9 +16,6 @@ public class ProyectoProgra {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int x = 9;
-        int x1 = 10;
-        float y2 = 0;
     }
     
 }
