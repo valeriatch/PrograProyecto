@@ -21,6 +21,8 @@ public class ProyectoProgra {
         float y2 = 0;
         
         String saludo = "Hola muchachos";
+        
+        int p = 20;
     }
     
 }
