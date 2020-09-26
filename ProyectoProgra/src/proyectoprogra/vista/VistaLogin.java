@@ -65,6 +65,7 @@ public class VistaLogin extends javax.swing.JFrame {
         contrasennaEntrada.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Login");
 
         iniciaSesion.setBackground(new java.awt.Color(153, 255, 255));
