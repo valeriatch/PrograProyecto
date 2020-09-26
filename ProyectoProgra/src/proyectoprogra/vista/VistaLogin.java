@@ -65,7 +65,7 @@ public class VistaLogin extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Iniciar Sesión");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\vtrejosc\\OneDrive - Intel Corporation\\Documents\\GitHub\\PrograProyecto\\logoAeropuerto.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoAeropuerto.jpg"))); // NOI18N
 
         javax.swing.GroupLayout LOGINLayout = new javax.swing.GroupLayout(LOGIN);
         LOGIN.setLayout(LOGINLayout);
