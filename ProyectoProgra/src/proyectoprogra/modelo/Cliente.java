@@ -11,7 +11,12 @@ package proyectoprogra.modelo;
  */
 public class Cliente {
     
-    
+    public Cliente(){
+        nombre = "";
+        apellido = "";
+        ID = 0;
+        numeroAcompannantes = 0;
+    }
     public String getNombre() {
         return nombre;
     }

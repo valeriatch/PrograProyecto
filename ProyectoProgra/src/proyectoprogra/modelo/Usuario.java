@@ -11,6 +11,11 @@ package proyectoprogra.modelo;
  */
 public class Usuario {
     
+    public Usuario(){
+        rol = "";
+        nombreUsuario = "";
+        contrasenna = "";
+    }
     public String getRol() {
         return rol;
     }

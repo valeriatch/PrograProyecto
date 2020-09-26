@@ -11,6 +11,17 @@ package proyectoprogra.modelo;
  */
 public class Vuelos {
 
+    public Vuelos(){
+        aerolinea = new Aerolinea();
+        numeroVuelo = "";
+        salida = "";
+        destino = "";
+        horarioSalida = "";
+        horarioLlegada = "";
+        fechaCreacion = "";
+        duracionVuelo = 0;
+        numeroAsientos = 0;
+    }
     public Aerolinea getAerolinea() {
         return aerolinea;
     }
