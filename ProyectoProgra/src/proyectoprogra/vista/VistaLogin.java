@@ -33,6 +33,7 @@ public class VistaLogin extends javax.swing.JFrame {
         contrasenna = new javax.swing.JLabel();
         contrasennaEntrada = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -59,6 +60,9 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel1.setText("Login");
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setText("Iniciar Sesión");
+
         javax.swing.GroupLayout LOGINLayout = new javax.swing.GroupLayout(LOGIN);
         LOGIN.setLayout(LOGINLayout);
         LOGINLayout.setHorizontalGroup(
@@ -70,6 +74,7 @@ public class VistaLogin extends javax.swing.JFrame {
                     .addComponent(Usuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(usuarioEntrada)
@@ -89,7 +94,9 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(contrasenna)
                     .addComponent(contrasennaEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addGap(97, 97, 97)
+                .addComponent(jButton1)
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -151,6 +158,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel Usuario;
     private javax.swing.JLabel contrasenna;
     private javax.swing.JPasswordField contrasennaEntrada;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField usuarioEntrada;
     // End of variables declaration//GEN-END:variables
