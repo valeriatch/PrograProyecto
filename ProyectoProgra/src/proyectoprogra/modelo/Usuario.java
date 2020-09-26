@@ -5,6 +5,10 @@
  */
 package proyectoprogra.modelo;
 
+import java.awt.List;
+import java.util.ArrayList;
+import javax.swing.JList;
+
 /**
  *
  * @author vtrejosc
@@ -15,6 +19,7 @@ public class Usuario {
         rol = "";
         nombreUsuario = "";
         contrasenna = "";
+        
     }
     public String getRol() {
         return rol;
@@ -43,4 +48,5 @@ public class Usuario {
     private String rol;
     private String nombreUsuario;
     private String contrasenna;
+    
 }
