@@ -5,6 +5,8 @@
  */
 package proyectoprogra.controlador;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import proyectoprogra.modelo.Aerolinea;
 import proyectoprogra.modelo.Modelo;
 import proyectoprogra.modelo.Usuario;
@@ -15,7 +17,7 @@ import proyectoprogra.modelo.Vuelos;
  *
  * @author XperriX
  */
-public class Controlador {
+public class Controlador implements ActionListener{
     
     private Modelo m;
     
@@ -23,6 +25,11 @@ public class Controlador {
     public Controlador(Modelo m){
         this.m = m;
         
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
