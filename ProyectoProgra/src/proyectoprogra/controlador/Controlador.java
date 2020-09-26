@@ -5,10 +5,24 @@
  */
 package proyectoprogra.controlador;
 
+import proyectoprogra.modelo.Aerolinea;
+import proyectoprogra.modelo.Modelo;
+import proyectoprogra.modelo.Usuario;
+import proyectoprogra.modelo.Cliente;
+import proyectoprogra.modelo.Vuelos;
+
 /**
  *
  * @author XperriX
  */
 public class Controlador {
+    
+    private Modelo m;
+    
+    
+    public Controlador(Modelo m){
+        this.m = m;
+        
+    }
     
 }
