@@ -50,24 +50,24 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel1" max="32767" attributes="0"/>
-                                      <Component id="jLabel2" max="32767" attributes="0"/>
+                                      <Component id="IngresarNombre" max="32767" attributes="0"/>
+                                      <Component id="IngreseContrasenna" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jPasswordField1" max="32767" attributes="0"/>
-                                      <Component id="jTextField1" max="32767" attributes="0"/>
+                                      <Component id="contrasenna" max="32767" attributes="0"/>
+                                      <Component id="nombreUsuario" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel5" max="32767" attributes="0"/>
+                                      <Component id="RolUsuario" max="32767" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                          <Component id="jLabel3" max="32767" attributes="0"/>
-                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jPasswordField2" max="32767" attributes="0"/>
+                                          <Component id="IngresarContraConfirm" max="32767" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="confirmContrasenna" min="-2" pref="274" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -78,11 +78,11 @@
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jCheckBox2" min="-2" pref="219" max="-2" attributes="0"/>
+                                  <Component id="PlataformaCheck" min="-2" pref="219" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="569" max="-2" attributes="0"/>
-                                  <Component id="jButton1" max="32767" attributes="0"/>
+                                  <Component id="AceptarBttn" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="jCheckBox1" max="32767" attributes="0"/>
+                              <Component id="administradorCheck" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -90,7 +90,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="236" max="-2" attributes="0"/>
-                  <Component id="jLabel4" max="32767" attributes="0"/>
+                  <Component id="titleUsuario" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="449" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -99,47 +99,47 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="jLabel4" pref="36" max="32767" attributes="0"/>
+                  <Component id="titleUsuario" pref="36" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Group type="102" alignment="3" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel1" max="32767" attributes="0"/>
+                          <Component id="IngresarNombre" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="3" attributes="0">
                           <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
-                          <Component id="jTextField1" pref="56" max="32767" attributes="0"/>
+                          <Component id="nombreUsuario" pref="56" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                          <Component id="jPasswordField1" pref="56" max="32767" attributes="0"/>
+                          <Component id="contrasenna" pref="56" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="120" max="-2" attributes="0"/>
+                          <Component id="IngreseContrasenna" min="-2" pref="120" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Group type="102" alignment="3" attributes="0">
                           <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" max="32767" attributes="0"/>
+                          <Component id="IngresarContraConfirm" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="3" attributes="0">
                           <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                          <Component id="jPasswordField2" pref="56" max="32767" attributes="0"/>
+                          <Component id="confirmContrasenna" pref="56" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="jLabel5" pref="27" max="32767" attributes="0"/>
+                  <Component id="RolUsuario" pref="27" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jCheckBox1" pref="30" max="32767" attributes="0"/>
+                  <Component id="administradorCheck" pref="30" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton1" max="32767" attributes="0"/>
-                      <Component id="jCheckBox2" pref="52" max="32767" attributes="0"/>
+                      <Component id="AceptarBttn" max="32767" attributes="0"/>
+                      <Component id="PlataformaCheck" pref="52" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
               </Group>
@@ -147,7 +147,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="IngresarNombre">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -155,24 +155,24 @@
             <Property name="text" type="java.lang.String" value="Ingrese el nombre de usuario: "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="nombreUsuario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nombreUsuarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField1">
+        <Component class="javax.swing.JPasswordField" name="contrasenna">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="IngreseContrasenna">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -180,7 +180,7 @@
             <Property name="text" type="java.lang.String" value="Ingrese una contrase&#xf1;a:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="IngresarContraConfirm">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -188,14 +188,14 @@
             <Property name="text" type="java.lang.String" value="Confirme la contrase&#xf1;a ingresada:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+        <Component class="javax.swing.JPasswordField" name="confirmContrasenna">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="titleUsuario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="36" style="0"/>
@@ -203,7 +203,7 @@
             <Property name="text" type="java.lang.String" value="Creaci&#xf3;n de usuario"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="RolUsuario">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -211,7 +211,7 @@
             <Property name="text" type="java.lang.String" value="Seleccione el rol que desea para este usuario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="AceptarBttn">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -219,10 +219,10 @@
             <Property name="text" type="java.lang.String" value="Aceptar"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AceptarBttnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="administradorCheck">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -230,10 +230,10 @@
             <Property name="text" type="java.lang.String" value="Administrador"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="administradorCheckActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+        <Component class="javax.swing.JCheckBox" name="PlataformaCheck">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -241,7 +241,7 @@
             <Property name="text" type="java.lang.String" value="Plataforma"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PlataformaCheckActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
