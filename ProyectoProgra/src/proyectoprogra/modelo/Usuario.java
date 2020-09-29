@@ -21,6 +21,11 @@ public class Usuario {
         contrasenna = "";
         
     }
+    public Usuario(String rol, String nombreUsuario, String contrasenna){
+        this.rol = rol;
+        this.nombreUsuario = nombreUsuario;
+        this.contrasenna = contrasenna;
+    }
     public String getRol() {
         return rol;
     }

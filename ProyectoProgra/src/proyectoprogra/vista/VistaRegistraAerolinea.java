@@ -37,6 +37,7 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
         IngresarFecha = new javax.swing.JLabel();
         fechaTxt = new javax.swing.JTextField();
         registrarBttn = new javax.swing.JButton();
+        VolverBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,6 +76,8 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
             }
         });
 
+        VolverBtn.setText("Volver");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -92,7 +95,9 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
                         .addComponent(nombreAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(208, 208, 208))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(254, 254, 254)
+                .addContainerGap()
+                .addComponent(VolverBtn)
+                .addGap(171, 171, 171)
                 .addComponent(RegistrarAerolinea, javax.swing.GroupLayout.DEFAULT_SIZE, 370, Short.MAX_VALUE)
                 .addGap(395, 395, 395))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -103,7 +108,11 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(RegistrarAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RegistrarAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(VolverBtn)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(fechaTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,7 +163,20 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
     public void setRegistrarBttn(JButton registrarBttn) {
         this.registrarBttn = registrarBttn;
     }
+    
+    public JButton getVolverBtn() {
+        return VolverBtn;
+    }
 
+    public void setVolverBtn(JButton VolverBtn) {
+        this.VolverBtn = VolverBtn;
+    }
+    
+    public void iniciar()
+    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
     private void nombreAerolineaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreAerolineaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreAerolineaActionPerformed
@@ -206,6 +228,7 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
     private javax.swing.JLabel IngresarAerolinea;
     private javax.swing.JLabel IngresarFecha;
     private javax.swing.JLabel RegistrarAerolinea;
+    private javax.swing.JButton VolverBtn;
     private javax.swing.JTextField fechaTxt;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField nombreAerolinea;

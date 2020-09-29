@@ -33,6 +33,7 @@ public class MainFrame extends javax.swing.JFrame {
         Configuracion = new javax.swing.JButton();
         Aerolíneas = new javax.swing.JButton();
         Vuelos = new javax.swing.JButton();
+        VolverBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Principal");
@@ -57,6 +58,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        VolverBtn.setText("Volver");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -67,11 +70,17 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 602, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(VolverBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
+                .addContainerGap()
+                .addComponent(VolverBtn)
+                .addGap(46, 46, 46)
                 .addComponent(Configuracion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addComponent(Aerolíneas)
@@ -122,6 +131,19 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_VuelosActionPerformed
 
+    public JButton getVolverBtn() {
+        return VolverBtn;
+    }
+
+    public void setVolverBtn(JButton VolverBtn) {
+        this.VolverBtn = VolverBtn;
+    }
+    
+    public void iniciar()
+    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */
@@ -160,6 +182,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aerolíneas;
     private javax.swing.JButton Configuracion;
+    private javax.swing.JButton VolverBtn;
     private javax.swing.JButton Vuelos;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

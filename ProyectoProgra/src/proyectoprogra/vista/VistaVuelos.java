@@ -255,7 +255,13 @@ public class VistaVuelos extends javax.swing.JFrame {
     public void setVerbtn(JButton verbtn) {
         this.verbtn = verbtn;
     }
-
+    
+    public void iniciar()
+    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+    
     private void aerolineatxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aerolineatxfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_aerolineatxfActionPerformed

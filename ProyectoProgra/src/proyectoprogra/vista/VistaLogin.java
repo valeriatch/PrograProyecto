@@ -157,7 +157,7 @@ public class VistaLogin extends javax.swing.JFrame {
     private void creaCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creaCuentaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_creaCuentaActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
@@ -237,5 +237,10 @@ public class VistaLogin extends javax.swing.JFrame {
     public void setCreaCuenta(JButton creaCuenta) {
         this.creaCuenta = creaCuenta;
     }
-
+    
+    public void iniciar()
+    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
 }
