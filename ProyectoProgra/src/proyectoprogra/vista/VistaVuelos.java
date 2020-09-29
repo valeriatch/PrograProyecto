@@ -5,6 +5,9 @@
  */
 package proyectoprogra.vista;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Jeremy
@@ -172,6 +175,86 @@ public class VistaVuelos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JButton getVolverbtn() {
+        return Volverbtn;
+    }
+
+    public void setVolverbtn(JButton Volverbtn) {
+        this.Volverbtn = Volverbtn;
+    }
+
+    public JTextField getAerolineatxf() {
+        return aerolineatxf;
+    }
+
+    public void setAerolineatxf(JTextField aerolineatxf) {
+        this.aerolineatxf = aerolineatxf;
+    }
+
+    public JTextField getCreaciontxf() {
+        return creaciontxf;
+    }
+
+    public void setCreaciontxf(JTextField creaciontxf) {
+        this.creaciontxf = creaciontxf;
+    }
+
+    public JTextField getDestinotxf() {
+        return destinotxf;
+    }
+
+    public void setDestinotxf(JTextField destinotxf) {
+        this.destinotxf = destinotxf;
+    }
+
+    public JTextField getHorallegadatxf() {
+        return horallegadatxf;
+    }
+
+    public void setHorallegadatxf(JTextField horallegadatxf) {
+        this.horallegadatxf = horallegadatxf;
+    }
+
+    public JTextField getHorasalidatxf() {
+        return horasalidatxf;
+    }
+
+    public void setHorasalidatxf(JTextField horasalidatxf) {
+        this.horasalidatxf = horasalidatxf;
+    }
+
+    public JTextField getnVuelotxf() {
+        return nVuelotxf;
+    }
+
+    public void setnVuelotxf(JTextField nVuelotxf) {
+        this.nVuelotxf = nVuelotxf;
+    }
+
+    public JTextField getPartidatxf() {
+        return partidatxf;
+    }
+
+    public void setPartidatxf(JTextField partidatxf) {
+        this.partidatxf = partidatxf;
+    }
+
+    public JButton getRegistrarbtn() {
+        return registrarbtn;
+    }
+
+    public void setRegistrarbtn(JButton registrarbtn) {
+        this.registrarbtn = registrarbtn;
+    }
+
+    public JButton getVerbtn() {
+        return verbtn;
+    }
+
+    public void setVerbtn(JButton verbtn) {
+        this.verbtn = verbtn;
+    }
 
     private void aerolineatxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aerolineatxfActionPerformed
         // TODO add your handling code here:
