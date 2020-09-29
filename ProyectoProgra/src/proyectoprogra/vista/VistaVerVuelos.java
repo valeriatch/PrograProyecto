@@ -5,6 +5,8 @@
  */
 package proyectoprogra.vista;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author Jeremy
@@ -107,6 +109,22 @@ public class VistaVerVuelos extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JButton getModificarbtn() {
+        return modificarbtn;
+    }
+
+    public void setModificarbtn(JButton modificarbtn) {
+        this.modificarbtn = modificarbtn;
+    }
+
+    public JButton getVolverbtn() {
+        return volverbtn;
+    }
+
+    public void setVolverbtn(JButton volverbtn) {
+        this.volverbtn = volverbtn;
+    }
 
     /**
      * @param args the command line arguments
