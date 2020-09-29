@@ -69,7 +69,6 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
         registrarBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         registrarBttn.setText("Registrar");
         registrarBttn.setToolTipText("");
-        registrarBttn.setActionCommand("Registrar");
         registrarBttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registrarBttnActionPerformed(evt);
@@ -90,7 +89,7 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(IngresarAerolinea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(nombreAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(nombreAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(208, 208, 208))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(254, 254, 254)

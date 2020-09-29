@@ -54,7 +54,7 @@
                       <Group type="102" attributes="0">
                           <Component id="IngresarAerolinea" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="nombreAerolinea" min="-2" pref="347" max="-2" attributes="0"/>
+                          <Component id="nombreAerolinea" min="-2" pref="357" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
@@ -145,7 +145,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
-            <Property name="actionCommand" type="java.lang.String" value="Registrar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="registrarBttnActionPerformed"/>
