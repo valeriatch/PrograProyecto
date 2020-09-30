@@ -17,6 +17,12 @@ public class Cliente {
         ID = 0;
         numeroAcompannantes = 0;
     }
+     public Cliente(String nombre, String apellido, int ID, int numeroAcompannantes){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.ID = ID;
+        this.numeroAcompannantes = numeroAcompannantes;
+    }
     public String getNombre() {
         return nombre;
     }

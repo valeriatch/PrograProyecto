@@ -34,6 +34,7 @@ public class MainFrame extends javax.swing.JFrame {
         Aerolíneas = new javax.swing.JButton();
         Vuelos = new javax.swing.JButton();
         VolverBtn = new javax.swing.JButton();
+        AgregarClienteBttn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Principal");
@@ -60,6 +61,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         VolverBtn.setText("Volver");
 
+        AgregarClienteBttn.setBackground(new java.awt.Color(51, 255, 153));
+        AgregarClienteBttn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        AgregarClienteBttn.setText("Agregar Cliente");
+        AgregarClienteBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarClienteBttnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -67,9 +77,12 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Aerolíneas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 602, Short.MAX_VALUE))
+                    .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(VolverBtn)
@@ -81,7 +94,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(VolverBtn)
                 .addGap(46, 46, 46)
-                .addComponent(Configuracion)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Configuracion)
+                    .addComponent(AgregarClienteBttn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
                 .addComponent(Aerolíneas)
                 .addGap(123, 123, 123)
@@ -127,9 +142,21 @@ public class MainFrame extends javax.swing.JFrame {
         this.Vuelos = Vuelos;
     }
 
+    public JButton getAgregarClienteBttn() {
+        return AgregarClienteBttn;
+    }
+
+    public void setAgregarClienteBttn(JButton AgregarClienteBttn) {
+        this.AgregarClienteBttn = AgregarClienteBttn;
+    }
+
     private void VuelosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VuelosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_VuelosActionPerformed
+
+    private void AgregarClienteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarClienteBttnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AgregarClienteBttnActionPerformed
 
     public JButton getVolverBtn() {
         return VolverBtn;
@@ -181,6 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aerolíneas;
+    private javax.swing.JButton AgregarClienteBttn;
     private javax.swing.JButton Configuracion;
     private javax.swing.JButton VolverBtn;
     private javax.swing.JButton Vuelos;
