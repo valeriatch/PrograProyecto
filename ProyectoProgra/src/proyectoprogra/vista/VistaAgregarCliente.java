@@ -17,6 +17,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     /**
      * Creates new form VistaAgregarCliente
      */
+    
     public VistaAgregarCliente() {
         initComponents();
     }
@@ -41,7 +42,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         AcompannantesTxt = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableUsuarios = new javax.swing.JTable();
         AgregarClienteBttn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
@@ -85,7 +86,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
 
         AcompannantesTxt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -116,8 +117,8 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
                 "Nombre", "Apellido", "ID Cliente", "Num Acompañantes"
             }
         ));
-        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jScrollPane1.setViewportView(jTable1);
+        tableUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setViewportView(tableUsuarios);
 
         AgregarClienteBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         AgregarClienteBttn.setText("Agregar Cliente");
@@ -260,7 +261,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     public void setNombreTxt(JTextField nombreTxt) {
         this.nombreTxt = nombreTxt;
     }
-
+    
     /**
      * @param args the command line arguments
      */
@@ -309,7 +310,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField nombreTxt;
+    private javax.swing.JTable tableUsuarios;
     // End of variables declaration//GEN-END:variables
 }
