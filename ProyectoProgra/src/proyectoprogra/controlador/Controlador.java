@@ -35,6 +35,7 @@ public class Controlador implements ActionListener{
     private Usuario usuario;
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
+    private Aerolinea aerolinea;
     
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes ){
         this.m = m;
@@ -60,6 +61,7 @@ public class Controlador implements ActionListener{
         this.vistaConfiguracion.getAceptarBttn().addActionListener(this);
         
         this.vistaRegAero.getVolverBtn().addActionListener(this);
+        this.vistaRegAero.getRegistrarBttn().addActionListener(this);
     }
 
     @Override
@@ -194,6 +196,25 @@ public class Controlador implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Contraseñas diferentes, intente de nuevo", "ERROR", JOptionPane.ERROR_MESSAGE);
                 vistaConfiguracion.getContrasenna().setText("");
                 vistaConfiguracion.getConfirmContrasenna().setText("");
+            }
+        }
+        if(ae.getSource().equals(vistaRegAero.getRegistrarBttn())){
+            String nombre = "";
+            String fecha = "";
+            fecha = vistaRegAero.getFechaTxt().getText();
+            nombre = vistaRegAero.getNombreAerolinea().getText();
+            if(nombre.equals("") || fecha.equals(""))
+            {
+            
+                JOptionPane.showMessageDialog(null, "Ingrese lo que se solicita", "ERROR", JOptionPane.ERROR_MESSAGE);                    
+            }
+            else{
+                aerolinea = new Aerolinea(fecha, nombre);
+                m.annadirAerolinea(aerolinea);
+                System.out.println(m.toStringAerolineas());
+                JOptionPane.showMessageDialog(null, "Registro exitoso");
+                vistaRegAero.getNombreAerolinea().setText("");
+                vistaRegAero.getFechaTxt().setText("");
             }
         }
     }

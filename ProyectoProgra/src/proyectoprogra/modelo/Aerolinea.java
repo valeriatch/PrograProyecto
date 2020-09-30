@@ -11,7 +11,7 @@ package proyectoprogra.modelo;
  */
 public class Aerolinea {
     private String nombre;
-    private int fecha;
+    private String fecha;
 
     public String getNombre() {
         return nombre;
@@ -21,16 +21,26 @@ public class Aerolinea {
         this.nombre = nombre;
     }
 
-    public int getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(int fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     
     public Aerolinea(){
         nombre = "";
-        fecha = 0;
+        fecha = "";
+    }
+
+    @Override
+    public String toString() {
+        return "Aerolinea{" + "nombre=" + nombre + ", fecha=" + fecha + '}';
+    }
+    
+    public Aerolinea(String fecha, String nombre){
+        this.fecha = fecha;
+        this.nombre = nombre;
     }
 }
