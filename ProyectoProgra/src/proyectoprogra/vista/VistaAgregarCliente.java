@@ -14,9 +14,6 @@ import javax.swing.JTextField;
  */
 public class VistaAgregarCliente extends javax.swing.JFrame {
 
-    /**
-     * Creates new form VistaAgregarCliente
-     */
     
     public VistaAgregarCliente() {
         initComponents();
@@ -261,7 +258,10 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     public void setNombreTxt(JTextField nombreTxt) {
         this.nombreTxt = nombreTxt;
     }
-    
+    public void iniciar()    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */
