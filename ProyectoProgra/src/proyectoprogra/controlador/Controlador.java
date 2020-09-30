@@ -60,9 +60,20 @@ public class Controlador implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(vistaLogin.getIniciaSesion()))
         {
-            vistaLogin.setVisible(false);
-            mainFrame.iniciar();
+            if(m.verificaUsuario(vistaLogin.getUsuarioEntrada().getText(), vistaLogin.getContrasennaEntrada().getText()))
+            {
+                vistaLogin.setVisible(false);
+                vistaLogin.getUsuarioEntrada().setText("");
+                vistaLogin.getContrasennaEntrada().setText("");
+                mainFrame.iniciar();
             
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecta", "ERROR", JOptionPane.ERROR_MESSAGE);
+                vistaLogin.getUsuarioEntrada().setText("");
+                vistaLogin.getContrasennaEntrada().setText("");
+            }
         }
         if(ae.getSource().equals(mainFrame.getVolverBtn()))
         {

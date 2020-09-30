@@ -43,7 +43,31 @@ public class Modelo {
         vuelos.add(vuelo1);
         
     }
-
+    public boolean verificaUsuario(String nombre, String contrasenna)
+    {
+        boolean nomb = false;
+        boolean contra = false;
+        for(int i = 0; i < usuarios.size(); i++)
+        {
+            Usuario u = usuarios.get(i);
+            if(u.getNombreUsuario().equals(nombre))
+            {
+                if(u.getContrasenna().equals(contrasenna))
+                {
+                    nomb = true;
+                    contra = true;
+                    break;
+                }
+            }
+            
+        }
+        if(nomb && contra)
+        {
+            return true;
+        }
+        return false;
+    }
+        
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
