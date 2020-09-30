@@ -6,6 +6,7 @@
 package proyectoprogra.vista;
 
 import javax.swing.JButton;
+import javax.swing.JTable;
 
 /**
  *
@@ -32,7 +33,7 @@ public class VistaVerVuelos extends javax.swing.JFrame {
         Volverbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        modificarbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,8 +79,8 @@ public class VistaVerVuelos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jButton1.setText("Modificar");
+        modificarbtn.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        modificarbtn.setText("Modificar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -91,7 +92,7 @@ public class VistaVerVuelos extends javax.swing.JFrame {
                     .addComponent(Volverbtn)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(404, 404, 404)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(modificarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(418, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -101,7 +102,7 @@ public class VistaVerVuelos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(modificarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 31, Short.MAX_VALUE))
         );
 
@@ -143,10 +144,34 @@ public class VistaVerVuelos extends javax.swing.JFrame {
         });
     }
 
+    public JButton getVolverbtn() {
+        return Volverbtn;
+    }
+
+    public void setVolverbtn(JButton Volverbtn) {
+        this.Volverbtn = Volverbtn;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
+
+    public void setjTable1(JTable jTable1) {
+        this.jTable1 = jTable1;
+    }
+
+    public JButton getModificarbtn() {
+        return modificarbtn;
+    }
+
+    public void setModificarbtn(JButton modificarbtn) {
+        this.modificarbtn = modificarbtn;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Volverbtn;
-    private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton modificarbtn;
     // End of variables declaration//GEN-END:variables
 }
