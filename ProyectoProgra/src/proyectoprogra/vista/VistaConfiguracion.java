@@ -32,6 +32,7 @@ public class VistaConfiguracion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        checkbox = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         IngresarNombre = new javax.swing.JLabel();
         nombreUsuario = new javax.swing.JTextField();
@@ -84,6 +85,7 @@ public class VistaConfiguracion extends javax.swing.JFrame {
             }
         });
 
+        checkbox.add(administradorCheck);
         administradorCheck.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         administradorCheck.setText("Administrador");
         administradorCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -92,6 +94,7 @@ public class VistaConfiguracion extends javax.swing.JFrame {
             }
         });
 
+        checkbox.add(PlataformaCheck);
         PlataformaCheck.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         PlataformaCheck.setText("Plataforma");
         PlataformaCheck.addActionListener(new java.awt.event.ActionListener() {
@@ -154,8 +157,7 @@ public class VistaConfiguracion extends javax.swing.JFrame {
                         .addGap(78, 78, 78))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(volverBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(volverBtn)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(2, 2, 2)
@@ -324,6 +326,7 @@ public class VistaConfiguracion extends javax.swing.JFrame {
     private javax.swing.JCheckBox PlataformaCheck;
     private javax.swing.JLabel RolUsuario;
     private javax.swing.JCheckBox administradorCheck;
+    private javax.swing.ButtonGroup checkbox;
     private javax.swing.JPasswordField confirmContrasenna;
     private javax.swing.JPasswordField contrasenna;
     private javax.swing.JPanel jPanel1;
