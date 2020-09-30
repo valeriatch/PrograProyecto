@@ -49,6 +49,11 @@ public class Usuario {
     public void setContrasenna(String contrasenna) {
         this.contrasenna = contrasenna;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "rol=" + rol + ", nombreUsuario=" + nombreUsuario + ", contrasenna=" + contrasenna + '}';
+    }
     
     private String rol;
     private String nombreUsuario;

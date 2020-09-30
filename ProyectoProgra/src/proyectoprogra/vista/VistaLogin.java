@@ -39,7 +39,6 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         iniciaSesion = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        creaCuenta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
@@ -74,15 +73,6 @@ public class VistaLogin extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logoAeropuerto.jpg"))); // NOI18N
 
-        creaCuenta.setBackground(new java.awt.Color(0, 102, 204));
-        creaCuenta.setForeground(new java.awt.Color(255, 255, 255));
-        creaCuenta.setText("Crear Cuenta");
-        creaCuenta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                creaCuentaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout LOGINLayout = new javax.swing.GroupLayout(LOGIN);
         LOGIN.setLayout(LOGINLayout);
         LOGINLayout.setHorizontalGroup(
@@ -109,17 +99,11 @@ public class VistaLogin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(229, 229, 229))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LOGINLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(creaCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
         );
         LOGINLayout.setVerticalGroup(
             LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(LOGINLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(creaCuenta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(7, 7, 7)
+                .addGap(67, 67, 67)
                 .addGroup(LOGINLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,10 +137,6 @@ public class VistaLogin extends javax.swing.JFrame {
     private void usuarioEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioEntradaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioEntradaActionPerformed
-
-    private void creaCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creaCuentaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_creaCuentaActionPerformed
     
     /**
      * @param args the command line arguments
@@ -199,7 +179,6 @@ public class VistaLogin extends javax.swing.JFrame {
     private javax.swing.JLabel Usuario;
     private javax.swing.JLabel contrasenna;
     private javax.swing.JPasswordField contrasennaEntrada;
-    private javax.swing.JButton creaCuenta;
     private javax.swing.JButton iniciaSesion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -228,14 +207,6 @@ public class VistaLogin extends javax.swing.JFrame {
 
     public void setIniciaSesion(JButton iniciaSesion) {
         this.iniciaSesion = iniciaSesion;
-    }
-
-    public JButton getCreaCuenta() {
-        return creaCuenta;
-    }
-
-    public void setCreaCuenta(JButton creaCuenta) {
-        this.creaCuenta = creaCuenta;
     }
     
     public void iniciar()

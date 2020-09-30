@@ -41,7 +41,6 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         
-        this.vistaLogin.getCreaCuenta().addActionListener(this);
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
         this.mainFrame.getAerolíneas().addActionListener(this);
@@ -59,12 +58,6 @@ public class Controlador implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource().equals(vistaLogin.getCreaCuenta()))
-        {
-            vistaLogin.setVisible(false);
-            vistaConfiguracion.iniciar();
-            
-        }
         if(ae.getSource().equals(vistaLogin.getIniciaSesion()))
         {
             vistaLogin.setVisible(false);
@@ -130,20 +123,20 @@ public class Controlador implements ActionListener{
                 {
                     rol = vistaConfiguracion.getPlataformaCheck().getText();
                 }
-                if(nombre.equals("") || contrasenna.equals("") || ((!vistaConfiguracion.getAdministradorCheck().isSelected() && !vistaConfiguracion.getPlataformaCheck().isSelected())) || ((vistaConfiguracion.getAdministradorCheck().isSelected() && vistaConfiguracion.getPlataformaCheck().isSelected())))
+                if(nombre.equals("") || contrasenna.equals("") || rol == "")
                 {
                     JOptionPane.showMessageDialog(null, "Ingrese lo que se solicita y recuerde marcar solo un rol", "ERROR", JOptionPane.ERROR_MESSAGE);                    
                 }
                 else
                 {
-                    usuario = new Usuario(nombre, contrasenna, rol);
+                    usuario = new Usuario(rol, nombre, contrasenna);
                     m.annadirUusario(usuario);
                     JOptionPane.showMessageDialog(null, "Registro exitoso");
+                    //System.out.println(m.toString());
                     vistaConfiguracion.getNombreUsuario().setText("");
                     vistaConfiguracion.getContrasenna().setText("");
                     vistaConfiguracion.getConfirmContrasenna().setText("");
-                    vistaConfiguracion.getAdministradorCheck().setSelected(false);
-                    vistaConfiguracion.getPlataformaCheck().setSelected(false); 
+                    vistaConfiguracion.getCheckbox().clearSelection();
                 }           
             }
             else

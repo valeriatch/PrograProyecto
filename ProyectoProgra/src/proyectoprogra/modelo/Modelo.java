@@ -43,7 +43,19 @@ public class Modelo {
         vuelos.add(vuelo1);
         
     }
-    
+
+    public String toStringUsuarios() {
+        return "Modelo{" + "usuarios=" + usuarios + '}';
+    }
+    public String toStringAerolineas() {
+        return "Modelo{" + "aerolineas=" + aerolineas + '}';
+    }
+    public String toStringClientes() {
+        return "Modelo{" + "clientes=" + clientes + '}';
+    }
+    public String toStringVuelos() {
+        return "Modelo{" + "vuelos=" + vuelos + '}';
+    }
     
     //public Iterator <Vuelos> i = vuelos.iterator();
         

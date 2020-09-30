@@ -5,6 +5,7 @@
  */
 package proyectoprogra.vista;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JPasswordField;
@@ -311,6 +312,14 @@ public class VistaConfiguracion extends javax.swing.JFrame {
 
     public void setVolverBtn(JButton volverBtn) {
         this.volverBtn = volverBtn;
+    }
+
+    public ButtonGroup getCheckbox() {
+        return checkbox;
+    }
+
+    public void setCheckbox(ButtonGroup checkbox) {
+        this.checkbox = checkbox;
     }
     
     public void iniciar()

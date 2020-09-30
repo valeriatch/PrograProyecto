@@ -5,8 +5,10 @@
  */
 package proyectoprogra;
 
+import javax.swing.JOptionPane;
 import proyectoprogra.controlador.Controlador;
 import proyectoprogra.modelo.Modelo;
+import proyectoprogra.modelo.Usuario;
 import proyectoprogra.vista.MainFrame;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
@@ -29,8 +31,12 @@ public class ProyectoProgra {
         MainFrame mainFrame = new MainFrame();
         VistaRegistraAerolinea vistaRegAero = new VistaRegistraAerolinea();
         VistaVuelos vistaVuelos = new VistaVuelos();
-        
+        Usuario usuario;
         Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos);
+        usuario = new Usuario("Administrador", "admin", "admin");
+        modelo.annadirUusario(usuario);
+        JOptionPane.showMessageDialog(null, "Usuario agregado...\nUsuario: admin\nContraseña: admin");
+        System.out.println(modelo.toStringUsuarios());
         vistalogin.iniciar();
     
     }
