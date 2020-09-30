@@ -25,8 +25,15 @@ public class Modelo {
     clientes = new ArrayList<Cliente>();
     vuelos = new ArrayList<Vuelos>();
     }
-    
-    
+
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public ArrayList<Vuelos> getVuelos() {
+        return vuelos;
+    }
+
     public void annadirUusario(Usuario usuario1){
         usuarios.add(usuario1);
     }

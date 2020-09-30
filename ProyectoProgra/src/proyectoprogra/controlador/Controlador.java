@@ -8,6 +8,7 @@ package proyectoprogra.controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import proyectoprogra.modelo.Aerolinea;
 import proyectoprogra.modelo.Modelo;
 import proyectoprogra.modelo.Usuario;
@@ -137,18 +138,26 @@ public class Controlador implements ActionListener{
             String apellidos = "";
             int acompannantes = 0;
             int IDCliente = 0;
-            
+       
             nombre = vistaAgregarClientes.getNombreTxt().getText();
             apellidos = vistaAgregarClientes.getApellidoTxt().getText();
-            System.out.println("pruebba");
             acompannantes = Integer.parseInt(vistaAgregarClientes.getAcompannantesTxt().getText());
             IDCliente = Integer.parseInt(vistaAgregarClientes.getIDClienteTxt().getText());
-            System.out.println("pruebb2");
             
             cliente1 = new Cliente (nombre,apellidos, IDCliente, acompannantes);
             m.annadirCliente(cliente1);
-            System.out.println(m.toStringClientes());
             JOptionPane.showMessageDialog(null, "Registro exitoso");
+            
+            DefaultTableModel table = (DefaultTableModel) vistaAgregarClientes.getTableUsuarios().getModel();
+            Object rowData[] = new Object[4];
+            table.setNumRows(0);
+            for(int i=0; i < m.getClientes().size(); i++){
+                rowData[0] = m.getClientes().get(i).getNombre();
+                rowData[1] = m.getClientes().get(i).getApellido();
+                rowData[2] = m.getClientes().get(i).getID();
+                rowData[3] = m.getClientes().get(i).getNumeroAcompannantes();
+                table.addRow(rowData);
+            }
             
             vistaAgregarClientes.getNombreTxt().setText("");
             vistaAgregarClientes.getApellidoTxt().setText("");
@@ -213,6 +222,7 @@ public class Controlador implements ActionListener{
                 m.annadirAerolinea(aerolinea);
                 System.out.println(m.toStringAerolineas());
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
+                
                 vistaRegAero.getNombreAerolinea().setText("");
                 vistaRegAero.getFechaTxt().setText("");
             }

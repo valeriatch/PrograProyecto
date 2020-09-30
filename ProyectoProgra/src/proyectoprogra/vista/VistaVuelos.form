@@ -59,13 +59,13 @@
                           </Group>
                           <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="aerolineatxf" max="32767" attributes="0"/>
                               <Component id="nVuelotxf" max="32767" attributes="0"/>
                               <Component id="partidatxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="destinotxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="horasalidatxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="horallegadatxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="creaciontxf" pref="346" max="32767" attributes="0"/>
+                              <Component id="aerolineatxf" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -84,7 +84,7 @@
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="aerolineaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="aerolineatxf" alignment="3" max="32767" attributes="0"/>
+                      <Component id="aerolineatxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">

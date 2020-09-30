@@ -6,6 +6,7 @@
 package proyectoprogra.vista;
 
 import javax.swing.JButton;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -14,7 +15,10 @@ import javax.swing.JTextField;
  */
 public class VistaAgregarCliente extends javax.swing.JFrame {
 
-    
+    public JTable getTableUsuarios() {
+        return tableUsuarios;
+    }
+
     public VistaAgregarCliente() {
         initComponents();
     }
@@ -85,30 +89,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
 
         tableUsuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Nombre", "Apellido", "ID Cliente", "Num Acompañantes"
