@@ -6,7 +6,9 @@
 package proyectoprogra.vista;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
+import proyectoprogra.modelo.Aerolinea;
 
 /**
  *
@@ -39,7 +41,6 @@ public class VistaVuelos extends javax.swing.JFrame {
         horaSalidaL = new javax.swing.JLabel();
         horallegadaL = new javax.swing.JLabel();
         creacionL = new javax.swing.JLabel();
-        aerolineatxf = new javax.swing.JTextField();
         nVuelotxf = new javax.swing.JTextField();
         partidatxf = new javax.swing.JTextField();
         destinotxf = new javax.swing.JTextField();
@@ -48,6 +49,9 @@ public class VistaVuelos extends javax.swing.JFrame {
         creaciontxf = new javax.swing.JTextField();
         registrarbtn = new javax.swing.JButton();
         verbtn = new javax.swing.JButton();
+        comboBoxAero = new javax.swing.JComboBox<>();
+        duracionVueloL = new javax.swing.JLabel();
+        duracionVuelotxf = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,12 +81,6 @@ public class VistaVuelos extends javax.swing.JFrame {
         creacionL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         creacionL.setText("Fecha de creacion");
 
-        aerolineatxf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aerolineatxfActionPerformed(evt);
-            }
-        });
-
         partidatxf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 partidatxfActionPerformed(evt);
@@ -94,6 +92,9 @@ public class VistaVuelos extends javax.swing.JFrame {
 
         verbtn.setText("Ver Vuelos");
 
+        duracionVueloL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        duracionVueloL.setText("Duracion vuelo");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -102,16 +103,18 @@ public class VistaVuelos extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(registrarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(nVueloL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(salidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(destinoL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(horaSalidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(horallegadaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(creacionL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Volverbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(128, 128, 128)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(nVueloL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(salidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(destinoL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(horaSalidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(horallegadaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(creacionL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Volverbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(duracionVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(120, 120, 120)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(nVuelotxf)
                             .addComponent(partidatxf)
@@ -119,7 +122,8 @@ public class VistaVuelos extends javax.swing.JFrame {
                             .addComponent(horasalidatxf)
                             .addComponent(horallegadatxf)
                             .addComponent(creaciontxf, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
-                            .addComponent(aerolineatxf))))
+                            .addComponent(comboBoxAero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(duracionVuelotxf))))
                 .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(verbtn))
         );
@@ -130,36 +134,43 @@ public class VistaVuelos extends javax.swing.JFrame {
                     .addComponent(verbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Volverbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aerolineaL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(aerolineatxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comboBoxAero)
+                    .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nVuelotxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(salidaL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(partidatxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(partidatxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salidaL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(destinoL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(destinotxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(horaSalidaL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(horasalidatxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(horallegadaL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(horallegadatxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(creacionL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(creaciontxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(duracionVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(duracionVuelotxf, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(creacionL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(creaciontxf, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(registrarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -170,7 +181,7 @@ public class VistaVuelos extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 584, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -183,15 +194,7 @@ public class VistaVuelos extends javax.swing.JFrame {
     public void setVolverbtn(JButton Volverbtn) {
         this.Volverbtn = Volverbtn;
     }
-
-    public JTextField getAerolineatxf() {
-        return aerolineatxf;
-    }
-
-    public void setAerolineatxf(JTextField aerolineatxf) {
-        this.aerolineatxf = aerolineatxf;
-    }
-
+    
     public JTextField getCreaciontxf() {
         return creaciontxf;
     }
@@ -255,6 +258,14 @@ public class VistaVuelos extends javax.swing.JFrame {
     public void setVerbtn(JButton verbtn) {
         this.verbtn = verbtn;
     }
+
+    public JTextField getDuracionVuelotxf() {
+        return duracionVuelotxf;
+    }
+
+    public void setDuracionVuelotxf(JTextField duracionVuelotxf) {
+        this.duracionVuelotxf = duracionVuelotxf;
+    }
     
     public void iniciar()
     {
@@ -262,10 +273,14 @@ public class VistaVuelos extends javax.swing.JFrame {
         setVisible(true);
     }
     
-    private void aerolineatxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aerolineatxfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_aerolineatxfActionPerformed
+    public JComboBox<String> getComboBoxAero() {
+        return comboBoxAero;
+    }
 
+    public void setComboBoxAero(JComboBox<String> comboBoxAero) {
+        this.comboBoxAero = comboBoxAero;
+    }
+    
     private void partidatxfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_partidatxfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_partidatxfActionPerformed
@@ -308,11 +323,13 @@ public class VistaVuelos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Volverbtn;
     private javax.swing.JLabel aerolineaL;
-    private javax.swing.JTextField aerolineatxf;
+    private javax.swing.JComboBox<String> comboBoxAero;
     private javax.swing.JLabel creacionL;
     private javax.swing.JTextField creaciontxf;
     private javax.swing.JLabel destinoL;
     private javax.swing.JTextField destinotxf;
+    private javax.swing.JLabel duracionVueloL;
+    private javax.swing.JTextField duracionVuelotxf;
     private javax.swing.JLabel horaSalidaL;
     private javax.swing.JLabel horallegadaL;
     private javax.swing.JTextField horallegadatxf;
@@ -325,4 +342,6 @@ public class VistaVuelos extends javax.swing.JFrame {
     private javax.swing.JLabel salidaL;
     private javax.swing.JButton verbtn;
     // End of variables declaration//GEN-END:variables
+
+    
 }

@@ -7,6 +7,7 @@ package proyectoprogra.controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import proyectoprogra.modelo.Aerolinea;
@@ -39,6 +40,7 @@ public class Controlador implements ActionListener{
     private Cliente cliente1;
     private Aerolinea aerolinea;
     private VerPlataforma plataforma;
+    private Vuelos vuelo;
     
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VerPlataforma plataforma){
         this.m = m;
@@ -121,6 +123,11 @@ public class Controlador implements ActionListener{
         if(ae.getSource().equals(mainFrame.getVuelos()))
         {
             mainFrame.setVisible(false);
+            vistaVuelos.getComboBoxAero().removeAllItems();
+            ArrayList<Aerolinea> aero = m.getAerolineas();
+            for(int i = 0; i < aero.size(); i++) {
+                vistaVuelos.getComboBoxAero().addItem(aero.get(i).getNombre());
+            }
             vistaVuelos.iniciar();
             
         }
@@ -241,6 +248,35 @@ public class Controlador implements ActionListener{
                 vistaRegAero.getNombreAerolinea().setText("");
                 vistaRegAero.getFechaTxt().setText("");
             }
+        }
+        if(ae.getSource().equals(vistaVuelos.getRegistrarbtn()))
+        {
+            String aerolinea = "", numeroVuelo = "", salida = "", destino = "", horarioSalida = "", horarioLlegada = "", fechaCreacion = "";
+            int duracionVuelo = 0, numeroAsientos = 0;
+            
+            aerolinea = vistaVuelos.getComboBoxAero().getSelectedItem().toString();
+            numeroVuelo = vistaVuelos.getnVuelotxf().getText();
+            salida = vistaVuelos.getPartidatxf().getText();
+            destino = vistaVuelos.getDestinotxf().getText();
+            horarioSalida = vistaVuelos.getHorasalidatxf().getText();
+            horarioLlegada = vistaVuelos.getHorallegadatxf().getText();
+            fechaCreacion = vistaVuelos.getCreaciontxf().getText();
+            duracionVuelo = Integer.parseInt(vistaVuelos.getDuracionVuelotxf().getText());
+            numeroAsientos = 48;
+            
+            vuelo = new Vuelos(aerolinea, numeroVuelo, salida, destino, horarioSalida, horarioLlegada,fechaCreacion, duracionVuelo, numeroAsientos);
+            m.annadirVuelos(vuelo);
+            System.out.println(m.toStringVuelos());
+            JOptionPane.showMessageDialog(null, "Registro exitoso");
+            
+            vistaVuelos.getnVuelotxf().setText("");
+            vistaVuelos.getPartidatxf().setText("");
+            vistaVuelos.getDestinotxf().setText("");
+            vistaVuelos.getHorasalidatxf().setText("");
+            vistaVuelos.getHorallegadatxf().setText("");
+            vistaVuelos.getCreaciontxf().setText("");
+            vistaVuelos.getDuracionVuelotxf().setText("");
+            
         }
         
         

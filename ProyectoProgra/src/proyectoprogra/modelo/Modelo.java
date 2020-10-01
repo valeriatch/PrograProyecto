@@ -34,6 +34,14 @@ public class Modelo {
         return vuelos;
     }
 
+    public ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public ArrayList<Aerolinea> getAerolineas() {
+        return aerolineas;
+    }
+
     public void annadirUusario(Usuario usuario1){
         usuarios.add(usuario1);
     }

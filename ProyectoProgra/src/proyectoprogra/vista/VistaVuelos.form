@@ -28,7 +28,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" pref="584" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -47,17 +47,20 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="registrarbtn" min="-2" pref="100" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="aerolineaL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="nVueloL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="salidaL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="destinoL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="horaSalidaL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="horallegadaL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="creacionL" alignment="0" max="32767" attributes="0"/>
-                              <Component id="Volverbtn" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="aerolineaL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nVueloL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="salidaL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="destinoL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="horaSalidaL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="horallegadaL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="creacionL" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="Volverbtn" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="duracionVueloL" min="-2" pref="162" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="nVuelotxf" max="32767" attributes="0"/>
                               <Component id="partidatxf" alignment="0" max="32767" attributes="0"/>
@@ -65,7 +68,8 @@
                               <Component id="horasalidatxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="horallegadatxf" alignment="0" max="32767" attributes="0"/>
                               <Component id="creaciontxf" pref="346" max="32767" attributes="0"/>
-                              <Component id="aerolineatxf" max="32767" attributes="0"/>
+                              <Component id="comboBoxAero" max="32767" attributes="0"/>
+                              <Component id="duracionVuelotxf" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -82,43 +86,53 @@
                       <Component id="Volverbtn" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="aerolineaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="aerolineatxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="comboBoxAero" max="32767" attributes="0"/>
+                      <Component id="aerolineaL" pref="36" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="nVueloL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="nVuelotxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="salidaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="partidatxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="salidaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="destinoL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="destinotxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="horaSalidaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="horasalidatxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="horallegadaL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="horallegadatxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="creacionL" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="creaciontxf" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      <Component id="duracionVueloL" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="duracionVuelotxf" alignment="3" min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Component id="creacionL" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="creaciontxf" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="registrarbtn" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -188,11 +202,6 @@
             <Property name="text" type="java.lang.String" value="Fecha de creacion"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="aerolineatxf">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aerolineatxfActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JTextField" name="nVuelotxf">
         </Component>
         <Component class="javax.swing.JTextField" name="partidatxf">
@@ -220,6 +229,26 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Ver Vuelos"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="comboBoxAero">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="duracionVueloL">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Dialog" size="14" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Duracion vuelo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="duracionVuelotxf">
         </Component>
       </SubComponents>
     </Container>

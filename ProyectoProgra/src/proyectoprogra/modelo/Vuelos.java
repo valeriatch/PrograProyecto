@@ -12,7 +12,7 @@ package proyectoprogra.modelo;
 public class Vuelos {
 
     public Vuelos(){
-        aerolinea = new Aerolinea();
+        aerolinea = "";
         numeroVuelo = "";
         salida = "";
         destino = "";
@@ -22,11 +22,24 @@ public class Vuelos {
         duracionVuelo = 0;
         numeroAsientos = 0;
     }
-    public Aerolinea getAerolinea() {
+
+    public Vuelos(String aerolinea, String numeroVuelo, String salida, String destino, String horarioSalida, String horarioLlegada, String fechaCreacion, int duracionVuelo, int numeroAsientos) {
+        this.aerolinea = aerolinea;
+        this.numeroVuelo = numeroVuelo;
+        this.salida = salida;
+        this.destino = destino;
+        this.horarioSalida = horarioSalida;
+        this.horarioLlegada = horarioLlegada;
+        this.fechaCreacion = fechaCreacion;
+        this.duracionVuelo = duracionVuelo;
+        this.numeroAsientos = numeroAsientos;
+    }
+    
+    public String getAerolinea() {
         return aerolinea;
     }
 
-    public void setAerolinea(Aerolinea aerolinea) {
+    public void setAerolinea(String aerolinea) {
         this.aerolinea = aerolinea;
     }
 
@@ -93,8 +106,13 @@ public class Vuelos {
     public void setNumeroAsientos(int numeroAsientos) {
         this.numeroAsientos = numeroAsientos;
     }
+
+    @Override
+    public String toString() {
+        return "Vuelos{" + "aerolinea=" + aerolinea + ", numeroVuelo=" + numeroVuelo + ", salida=" + salida + ", destino=" + destino + ", horarioSalida=" + horarioSalida + ", horarioLlegada=" + horarioLlegada + ", fechaCreacion=" + fechaCreacion + ", duracionVuelo=" + duracionVuelo + ", numeroAsientos=" + numeroAsientos + '}';
+    }
     
-    private Aerolinea aerolinea;
+    private String aerolinea;
     private String numeroVuelo;
     private String salida;
     private String destino;
