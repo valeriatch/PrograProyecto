@@ -39,15 +39,14 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
-<<<<<<< HEAD
+
     private VistaBuscarClientes vistaBuscarCliente;
     
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VistaBuscarClientes vistaBuscarCliente ){
-=======
+    
     private VerPlataforma plataforma;
     
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VerPlataforma plataforma){
->>>>>>> master
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente , VerPlataforma plataforma){
+
         this.m = m;
         this.vistaLogin = vistaLogin;
         this.vistaConfiguracion = vistaConfiguracion;
@@ -55,11 +54,10 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
-<<<<<<< HEAD
+
         this.vistaBuscarCliente = vistaBuscarCliente;
-=======
         this.plataforma = plataforma;
->>>>>>> master
+
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         

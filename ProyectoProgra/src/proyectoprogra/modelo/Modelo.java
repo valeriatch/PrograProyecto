@@ -74,7 +74,7 @@ public class Modelo {
         }
         return false;
     }
-<<<<<<< HEAD
+
     public String buscarCliente(int ID){
         String resultadoCliente = "";
         
@@ -88,8 +88,7 @@ public class Modelo {
         }
         return resultadoCliente;
     }
-        
-=======
+
     public boolean bloquearBotones(String nombre)
     {
         for(int i = 0; i < usuarios.size(); i++)
@@ -105,7 +104,7 @@ public class Modelo {
         }
         return false;
     }
->>>>>>> master
+
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
