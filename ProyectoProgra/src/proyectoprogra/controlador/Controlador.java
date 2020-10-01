@@ -15,6 +15,7 @@ import proyectoprogra.modelo.Usuario;
 import proyectoprogra.modelo.Cliente;
 import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
+import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
@@ -37,8 +38,9 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
+    private VerPlataforma plataforma;
     
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes ){
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VerPlataforma plataforma){
         this.m = m;
         this.vistaLogin = vistaLogin;
         this.vistaConfiguracion = vistaConfiguracion;
@@ -46,6 +48,7 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
+        this.plataforma = plataforma;
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -178,7 +181,6 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getIDClienteTxt().setText("");
             
         }
-            
         
         if(ae.getSource().equals(vistaConfiguracion.getAceptarBttn()))
         {
@@ -240,6 +242,7 @@ public class Controlador implements ActionListener{
                 vistaRegAero.getFechaTxt().setText("");
             }
         }
+        
+        
     }
-    
 }
