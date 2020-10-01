@@ -74,7 +74,21 @@ public class Modelo {
         }
         return false;
     }
-        
+    public boolean bloquearBotones(String nombre)
+    {
+        for(int i = 0; i < usuarios.size(); i++)
+        {
+            Usuario u = usuarios.get(i);
+            if(u.getNombreUsuario().equals(nombre))
+            {
+                if(u.getRol().equals("Administrador"))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
