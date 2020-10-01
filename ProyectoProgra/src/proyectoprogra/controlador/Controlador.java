@@ -17,6 +17,7 @@ import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
 import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
+import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
 import proyectoprogra.vista.VistaRegistraAerolinea;
@@ -38,9 +39,15 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
+<<<<<<< HEAD
+    private VistaBuscarClientes vistaBuscarCliente;
+    
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VistaBuscarClientes vistaBuscarCliente ){
+=======
     private VerPlataforma plataforma;
     
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VerPlataforma plataforma){
+>>>>>>> master
         this.m = m;
         this.vistaLogin = vistaLogin;
         this.vistaConfiguracion = vistaConfiguracion;
@@ -48,7 +55,11 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
+<<<<<<< HEAD
+        this.vistaBuscarCliente = vistaBuscarCliente;
+=======
         this.plataforma = plataforma;
+>>>>>>> master
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -57,11 +68,16 @@ public class Controlador implements ActionListener{
         this.mainFrame.getVuelos().addActionListener(this);
         this.mainFrame.getVolverBtn().addActionListener(this);
         this.mainFrame.getAgregarClienteBttn().addActionListener(this);
+        this.mainFrame.getBuscarCliente().addActionListener(this);
+        
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
+        this.vistaBuscarCliente.getVolverBCBttn().addActionListener(this);
+        this.vistaAgregarClientes.getVolverRCBttn().addActionListener(this);
+        this.vistaBuscarCliente.getBuscarBttn().addActionListener(this);
         
         this.vistaConfiguracion.getVolverBtn().addActionListener(this);
         this.vistaConfiguracion.getAceptarBttn().addActionListener(this);
@@ -142,11 +158,38 @@ public class Controlador implements ActionListener{
             mainFrame.iniciar();
             
         }
+        if(ae.getSource().equals(mainFrame.getBuscarCliente()))
+        {
+            mainFrame.setVisible(false);
+            vistaBuscarCliente.iniciar();
+            
+        }
+        //
+        if(ae.getSource().equals(vistaBuscarCliente.getVolverBCBttn()))
+        {
+            vistaBuscarCliente.setVisible(false);
+            mainFrame.iniciar();
+            
+        }
+        
+        if(ae.getSource().equals(vistaAgregarClientes.getVolverRCBttn()))
+        {
+            vistaAgregarClientes.setVisible(false);
+            mainFrame.iniciar();
+            
+        }
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
             mainFrame.setVisible(false);
             vistaAgregarClientes.iniciar();
             
+        }
+        if(ae.getSource().equals(vistaBuscarCliente.getBuscarBttn()))
+        {
+            int IDCliente = 0;
+            IDCliente = Integer.parseInt(vistaBuscarCliente.getiDCliente().getText());
+            System.out.println(m.buscarCliente(IDCliente));
+                      
         }
         if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
         {
@@ -174,7 +217,7 @@ public class Controlador implements ActionListener{
                 rowData[3] = m.getClientes().get(i).getNumeroAcompannantes();
                 table.addRow(rowData);
             }
-            
+                        
             vistaAgregarClientes.getNombreTxt().setText("");
             vistaAgregarClientes.getApellidoTxt().setText("");
             vistaAgregarClientes.getAcompannantesTxt().setText("");

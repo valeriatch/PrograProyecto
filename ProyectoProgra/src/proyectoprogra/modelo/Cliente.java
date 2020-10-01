@@ -54,6 +54,10 @@ public class Cliente {
     public void setNumeroAcompannantes(int numeroAcompannantes) {
         this.numeroAcompannantes = numeroAcompannantes;
     }
+    @Override
+    public String toString() {
+        return "Clientes{" + "Nombre =" + nombre + ", Apellido =" + apellido + ", ID =" + ID + ", Numero de Acopannantes= " +  numeroAcompannantes +'}';
+    }
     
     private String nombre; 
     private String apellido; 

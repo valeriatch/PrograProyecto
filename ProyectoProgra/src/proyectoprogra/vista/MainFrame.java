@@ -35,6 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
         Vuelos = new javax.swing.JButton();
         VolverBtn = new javax.swing.JButton();
         AgregarClienteBttn = new javax.swing.JButton();
+        BuscarCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Principal");
@@ -70,23 +71,34 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        BuscarCliente.setBackground(new java.awt.Color(51, 253, 153));
+        BuscarCliente.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        BuscarCliente.setText("Buscar Cliente");
+        BuscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Aerolíneas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(VolverBtn)
+                    .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(VolverBtn)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Aerolíneas, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(BuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +110,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(Configuracion)
                     .addComponent(AgregarClienteBttn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 121, Short.MAX_VALUE)
-                .addComponent(Aerolíneas)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Aerolíneas)
+                    .addComponent(BuscarCliente))
                 .addGap(123, 123, 123)
                 .addComponent(Vuelos)
                 .addGap(99, 99, 99))
@@ -158,6 +172,18 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AgregarClienteBttnActionPerformed
 
+    private void BuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BuscarClienteActionPerformed
+
+    public JButton getBuscarCliente() {
+        return BuscarCliente;
+    }
+
+    public void setBuscarCliente(JButton BuscarCliente) {
+        this.BuscarCliente = BuscarCliente;
+    }
+
     public JButton getVolverBtn() {
         return VolverBtn;
     }
@@ -209,6 +235,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aerolíneas;
     private javax.swing.JButton AgregarClienteBttn;
+    private javax.swing.JButton BuscarCliente;
     private javax.swing.JButton Configuracion;
     private javax.swing.JButton VolverBtn;
     private javax.swing.JButton Vuelos;
