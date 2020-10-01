@@ -46,6 +46,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         tableUsuarios = new javax.swing.JTable();
         AgregarClienteBttn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        VolverRCBttn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,12 +104,17 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/perfildeusuario.jpg"))); // NOI18N
 
+        VolverRCBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        VolverRCBttn.setText("Volver");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(491, 491, 491)
+                .addContainerGap()
+                .addComponent(VolverRCBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(369, 369, 369)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -150,7 +156,9 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
                         .addComponent(jLabel4))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel6)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(VolverRCBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6))))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
@@ -224,6 +232,14 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         this.ApellidoTxt = ApellidoTxt;
     }
 
+    public JButton getVolverRCBttn() {
+        return VolverRCBttn;
+    }
+
+    public void setVolverRCBttn(JButton VolverRCBttn) {
+        this.VolverRCBttn = VolverRCBttn;
+    }
+
     public JTextField getIDClienteTxt() {
         return IDClienteTxt;
     }
@@ -283,6 +299,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     private javax.swing.JButton AgregarClienteBttn;
     private javax.swing.JTextField ApellidoTxt;
     private javax.swing.JTextField IDClienteTxt;
+    private javax.swing.JButton VolverRCBttn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
