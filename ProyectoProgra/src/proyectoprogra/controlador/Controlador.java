@@ -59,6 +59,8 @@ public class Controlador implements ActionListener{
         this.mainFrame.getAgregarClienteBttn().addActionListener(this);
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
+        this.vistaVuelos.getRegistrarbtn().addActionListener(this);
+        
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
         
         this.vistaConfiguracion.getVolverBtn().addActionListener(this);
@@ -72,13 +74,24 @@ public class Controlador implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(vistaLogin.getIniciaSesion()))
         {
+            String entradaUsuario = vistaLogin.getUsuarioEntrada().getText();
             if(m.verificaUsuario(vistaLogin.getUsuarioEntrada().getText(), vistaLogin.getContrasennaEntrada().getText()))
             {
                 vistaLogin.setVisible(false);
                 vistaLogin.getUsuarioEntrada().setText("");
                 vistaLogin.getContrasennaEntrada().setText("");
-                mainFrame.iniciar();
+                if(m.bloquearBotones(entradaUsuario))
+                {
+                    mainFrame.iniciar();
             
+                }
+                else
+                {
+                    mainFrame.iniciar();
+                    mainFrame.getConfiguracion().setEnabled(false);
+                    mainFrame.getAerolíneas().setEnabled(false);
+                    mainFrame.getVuelos().setEnabled(false);
+                }
             }
             else
             {
