@@ -194,6 +194,20 @@ public class Controlador implements ActionListener{
             int IDCliente = 0;
             IDCliente = Integer.parseInt(vistaBuscarCliente.getiDCliente().getText());
             System.out.println(m.buscarCliente(IDCliente));
+            
+            DefaultTableModel table = (DefaultTableModel) vistaBuscarCliente.getTablaClientesReg().getModel();
+            Object rowData[] = new Object[3];
+            table.setNumRows(0);
+            for(int i=0; i < m.getClientes().size(); i++){
+                Cliente cl = m.getClientes().get(i);
+                if(cl.getID() == IDCliente){
+                rowData[0] = m.getClientes().get(i).getNombre();
+                rowData[1] = m.getClientes().get(i).getID();
+               // rowData[2] = m.getClientes().get(i).getNumeroAcompannantes();
+                table.addRow(rowData);
+                }
+                
+            }
                       
         }
         if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
