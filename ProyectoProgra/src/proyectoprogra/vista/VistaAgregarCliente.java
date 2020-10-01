@@ -97,6 +97,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
             }
         ));
         tableUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tableUsuarios.setEnabled(false);
         jScrollPane1.setViewportView(tableUsuarios);
 
         AgregarClienteBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N

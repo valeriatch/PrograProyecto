@@ -10,6 +10,7 @@ import proyectoprogra.controlador.Controlador;
 import proyectoprogra.modelo.Modelo;
 import proyectoprogra.modelo.Usuario;
 import proyectoprogra.vista.MainFrame;
+import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
 import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
@@ -34,9 +35,15 @@ public class ProyectoProgra {
         VistaRegistraAerolinea vistaRegAero = new VistaRegistraAerolinea();
         VistaVuelos vistaVuelos = new VistaVuelos();
         VistaAgregarCliente  vistaAgregarClientes = new VistaAgregarCliente();
+<<<<<<< HEAD
         VistaBuscarClientes vistaBuscarCliente = new VistaBuscarClientes();
         Usuario usuario;
         Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente);
+=======
+        VerPlataforma plataforma = new VerPlataforma();
+        Usuario usuario;
+        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, plataforma);
+>>>>>>> master
         usuario = new Usuario("Administrador", "admin", "admin");
         modelo.annadirUusario(usuario);
         JOptionPane.showMessageDialog(null, "Usuario agregado...\nUsuario: admin\nContraseña: admin");

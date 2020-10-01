@@ -15,6 +15,7 @@ import proyectoprogra.modelo.Usuario;
 import proyectoprogra.modelo.Cliente;
 import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
+import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
 import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
@@ -38,9 +39,15 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
+<<<<<<< HEAD
     private VistaBuscarClientes vistaBuscarCliente;
     
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VistaBuscarClientes vistaBuscarCliente ){
+=======
+    private VerPlataforma plataforma;
+    
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes, VerPlataforma plataforma){
+>>>>>>> master
         this.m = m;
         this.vistaLogin = vistaLogin;
         this.vistaConfiguracion = vistaConfiguracion;
@@ -48,7 +55,11 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
+<<<<<<< HEAD
         this.vistaBuscarCliente = vistaBuscarCliente;
+=======
+        this.plataforma = plataforma;
+>>>>>>> master
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -61,6 +72,8 @@ public class Controlador implements ActionListener{
         
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
+        this.vistaVuelos.getRegistrarbtn().addActionListener(this);
+        
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
         this.vistaBuscarCliente.getVolverBCBttn().addActionListener(this);
         this.vistaAgregarClientes.getVolverRCBttn().addActionListener(this);
@@ -77,13 +90,24 @@ public class Controlador implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(vistaLogin.getIniciaSesion()))
         {
+            String entradaUsuario = vistaLogin.getUsuarioEntrada().getText();
             if(m.verificaUsuario(vistaLogin.getUsuarioEntrada().getText(), vistaLogin.getContrasennaEntrada().getText()))
             {
                 vistaLogin.setVisible(false);
                 vistaLogin.getUsuarioEntrada().setText("");
                 vistaLogin.getContrasennaEntrada().setText("");
-                mainFrame.iniciar();
+                if(m.bloquearBotones(entradaUsuario))
+                {
+                    mainFrame.iniciar();
             
+                }
+                else
+                {
+                    mainFrame.iniciar();
+                    mainFrame.getConfiguracion().setEnabled(false);
+                    mainFrame.getAerolíneas().setEnabled(false);
+                    mainFrame.getVuelos().setEnabled(false);
+                }
             }
             else
             {
@@ -200,7 +224,6 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getIDClienteTxt().setText("");
             
         }
-            
         
         if(ae.getSource().equals(vistaConfiguracion.getAceptarBttn()))
         {
@@ -262,6 +285,7 @@ public class Controlador implements ActionListener{
                 vistaRegAero.getFechaTxt().setText("");
             }
         }
+        
+        
     }
-    
 }

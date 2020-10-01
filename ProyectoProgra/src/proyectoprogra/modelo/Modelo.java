@@ -74,6 +74,7 @@ public class Modelo {
         }
         return false;
     }
+<<<<<<< HEAD
     public String buscarCliente(int ID){
         String resultadoCliente = "";
         
@@ -88,6 +89,23 @@ public class Modelo {
         return resultadoCliente;
     }
         
+=======
+    public boolean bloquearBotones(String nombre)
+    {
+        for(int i = 0; i < usuarios.size(); i++)
+        {
+            Usuario u = usuarios.get(i);
+            if(u.getNombreUsuario().equals(nombre))
+            {
+                if(u.getRol().equals("Administrador"))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+>>>>>>> master
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
