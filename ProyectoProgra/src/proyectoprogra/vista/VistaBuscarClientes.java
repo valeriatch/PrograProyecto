@@ -5,6 +5,10 @@
  */
 package proyectoprogra.vista;
 
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
 /**
  *
  * @author vtrejosc
@@ -16,6 +20,10 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
      */
     public VistaBuscarClientes() {
         initComponents();
+    }
+    public void iniciar()    {
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
     /**
@@ -30,10 +38,11 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        iDCliente = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton2 = new javax.swing.JButton();
+        tablaClientesReg = new javax.swing.JTable();
+        buscarBttn = new javax.swing.JButton();
+        VolverBCBttn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,14 +52,14 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("Ingrese el número de cédula o pasaporte con el que se registró previamente: ");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        iDCliente.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        iDCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                iDClienteActionPerformed(evt);
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaClientesReg.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -62,42 +71,52 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
                 "Nombre", "ID Cliente", "Vuelos Relacionados"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tablaClientesReg);
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/busquedabutton_opt.jpg"))); // NOI18N
-        jButton2.setText("Buscar");
+        buscarBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        buscarBttn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/busquedabutton_opt.jpg"))); // NOI18N
+        buscarBttn.setText("Buscar");
+        buscarBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarBttnActionPerformed(evt);
+            }
+        });
+
+        VolverBCBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        VolverBCBttn.setText("Volver");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(iDCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton2)))
-                .addContainerGap(40, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(buscarBttn))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(VolverBCBttn)
+                        .addGap(452, 452, 452)
+                        .addComponent(jLabel1)))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(VolverBCBttn))
+                .addGap(64, 64, 64)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(iDCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buscarBttn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(147, 147, 147))
@@ -120,9 +139,45 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void iDClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iDClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_iDClienteActionPerformed
+
+    public JButton getBuscarBttn() {
+        return buscarBttn;
+    }
+
+    public void setBuscarBttn(JButton buscarBttn) {
+        this.buscarBttn = buscarBttn;
+    }
+
+    public JTextField getiDCliente() {
+        return iDCliente;
+    }
+
+    public JButton getVolverBCBttn() {
+        return VolverBCBttn;
+    }
+
+    public void setVolverBCBttn(JButton VolverBCBttn) {
+        this.VolverBCBttn = VolverBCBttn;
+    }
+
+    public void setiDCliente(JTextField iDCliente) {
+        this.iDCliente = iDCliente;
+    }
+
+    public JTable getTablaClientesReg() {
+        return tablaClientesReg;
+    }
+
+    public void setTablaClientesReg(JTable tablaClientesReg) {
+        this.tablaClientesReg = tablaClientesReg;
+    }
+
+    private void buscarBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarBttnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarBttnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,12 +216,13 @@ public class VistaBuscarClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton VolverBCBttn;
+    private javax.swing.JButton buscarBttn;
+    private javax.swing.JTextField iDCliente;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable tablaClientesReg;
     // End of variables declaration//GEN-END:variables
 }

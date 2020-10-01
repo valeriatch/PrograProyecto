@@ -82,6 +82,21 @@ public class Modelo {
         }
         return false;
     }
+
+    public String buscarCliente(int ID){
+        String resultadoCliente = "";
+        
+        for(int i = 0; i < clientes.size(); i++){
+            Cliente clien1 = clientes.get(i);
+            if((clien1.getID())==(ID)){
+                //System.out.println(clien1.toString());
+                resultadoCliente =  clien1.toString();
+               
+            }
+        }
+        return resultadoCliente;
+    }
+
     public boolean bloquearBotones(String nombre)
     {
         for(int i = 0; i < usuarios.size(); i++)
@@ -97,6 +112,7 @@ public class Modelo {
         }
         return false;
     }
+
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
