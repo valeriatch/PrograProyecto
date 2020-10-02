@@ -174,7 +174,10 @@ public class Controlador implements ActionListener{
         {
             mainFrame.setVisible(false);
             if(JOptionPane.showConfirmDialog(null, "¿Esta seguro que desea salir del sistema? ","Salir del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
-            System.exit(0);                
+             System.exit(0);                
+            }
+            else {
+                 mainFrame.iniciar();
             }
                     
         }
