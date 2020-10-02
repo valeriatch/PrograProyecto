@@ -16,12 +16,15 @@ public class Cliente {
         apellido = "";
         ID = 0;
         numeroAcompannantes = 0;
+        vuelo = "";
+        
     }
-     public Cliente(String nombre, String apellido, int ID, int numeroAcompannantes){
+     public Cliente(String nombre, String apellido, int ID, int numeroAcompannantes, String vuelo){
         this.nombre = nombre;
         this.apellido = apellido;
         this.ID = ID;
         this.numeroAcompannantes = numeroAcompannantes;
+        this.vuelo = vuelo;
     }
     public String getNombre() {
         return nombre;
@@ -54,15 +57,24 @@ public class Cliente {
     public void setNumeroAcompannantes(int numeroAcompannantes) {
         this.numeroAcompannantes = numeroAcompannantes;
     }
+
+    public String getVuelo() {
+        return vuelo;
+    }
+
+    public void setVuelo(String vuelo) {
+        this.vuelo = vuelo;
+    }
     @Override
     public String toString() {
-        return "Clientes{" + "Nombre =" + nombre + ", Apellido =" + apellido + ", ID =" + ID + ", Numero de Acopannantes= " +  numeroAcompannantes +'}';
+        return "Clientes{" + "Nombre =" + nombre + ", Apellido =" + apellido + ", ID =" + ID + ", Numero de Acopannantes= " +  numeroAcompannantes + "Vuelo " + vuelo +'}';
     }
     
     private String nombre; 
     private String apellido; 
     private int ID;
     private int numeroAcompannantes;
+    private String vuelo;
     
     
 }

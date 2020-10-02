@@ -96,7 +96,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Apellido", "ID Cliente", "Num Acompañantes"
+                "Nombre", "Apellido", "ID Cliente", "Num Acompañantes", "Vuelo"
             }
         ));
         tableUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
