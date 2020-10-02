@@ -93,6 +93,8 @@ public class Controlador implements ActionListener{
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
+        this.vistaVerVuelo.getVolverbtn().addActionListener(this);
+        
 
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
@@ -235,6 +237,10 @@ public class Controlador implements ActionListener{
             mainFrame.setVisible(false);
             vistaVerVuelo.iniciar();
         
+        }
+        if(ae.getSource().equals(vistaVerVuelo.getVolverbtn())){
+            vistaVerVuelo.setVisible(false);
+            mainFrame.iniciar();
         }
         
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
