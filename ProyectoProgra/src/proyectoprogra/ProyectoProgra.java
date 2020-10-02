@@ -12,6 +12,7 @@ import proyectoprogra.modelo.Usuario;
 import proyectoprogra.vista.MainFrame;
 //import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
+import proyectoprogra.vista.VistaAvion;
 import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
@@ -40,9 +41,9 @@ public class ProyectoProgra {
         VistaBuscarClientes vistaBuscarCliente = new VistaBuscarClientes();
         Usuario usuario;
       //  VerPlataforma plataforma = new VerPlataforma();
-        
+        VistaAvion vistaAvion = new VistaAvion();
 
-        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente, verVuelos);
+        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente, verVuelos, vistaAvion);
 
 
         usuario = new Usuario("Administrador", "admin", "admin");

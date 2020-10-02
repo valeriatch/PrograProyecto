@@ -5,6 +5,7 @@
  */
 package proyectoprogra.controlador;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
 //import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
+import proyectoprogra.vista.VistaAvion;
 import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
@@ -47,6 +49,7 @@ public class Controlador implements ActionListener{
     private VistaVerVuelos vistaVerVuelo;
 
     private VistaBuscarClientes vistaBuscarCliente;
+    private VistaAvion vistaAvion;
     
     
   //  private VerPlataforma plataforma;
@@ -60,7 +63,7 @@ public class Controlador implements ActionListener{
     String fechaCreacion = dtf.format(date);
     
 
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente ,VistaVerVuelos vistaVerVuelo){
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente ,VistaVerVuelos vistaVerVuelo, VistaAvion vistaAvion){
 
 
 
@@ -73,6 +76,7 @@ public class Controlador implements ActionListener{
         this.vistaAgregarClientes = vistaAgregarClientes;
         this.vistaBuscarCliente = vistaBuscarCliente;
         this.vistaVerVuelo = vistaVerVuelo;
+        this.vistaAvion = vistaAvion;
 
         //this.plataforma = plataforma;
 
@@ -108,6 +112,8 @@ public class Controlador implements ActionListener{
         
         this.vistaRegAero.getVolverBtn().addActionListener(this);
         this.vistaRegAero.getRegistrarBttn().addActionListener(this);
+        
+        reset();
     }
 
     @Override
@@ -321,7 +327,8 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getAcompannantesTxt().setText("");
             vistaAgregarClientes.getIDClienteTxt().setText("");
             //vistaAgregarClientes.getMostrarVuelosComB();
-            
+            vistaAgregarClientes.setVisible(false);
+            vistaAvion.iniciar();
         }
         
         if(ae.getSource().equals(vistaConfiguracion.getAceptarBttn()))
@@ -413,6 +420,153 @@ public class Controlador implements ActionListener{
         }
         
         
+    }
+    
+    public void reset(){
+        
+        vistaAvion.getjButton1().setText("-");
+        vistaAvion.getjButton1().setBackground(Color.green);
+        
+        vistaAvion.getjButton2().setText("-");
+        vistaAvion.getjButton2().setBackground(Color.green);
+        
+        vistaAvion.getjButton3().setText("-");
+        vistaAvion.getjButton3().setBackground(Color.green);
+        
+        vistaAvion.getjButton4().setText("-");
+        vistaAvion.getjButton4().setBackground(Color.green);
+        
+        vistaAvion.getjButton5().setText("-");
+        vistaAvion.getjButton5().setBackground(Color.green);
+        
+        vistaAvion.getjButton6().setText("-");
+        vistaAvion.getjButton6().setBackground(Color.green);
+        
+        vistaAvion.getjButton7().setText("-");
+        vistaAvion.getjButton7().setBackground(Color.green);
+        
+        vistaAvion.getjButton8().setText("-");
+        vistaAvion.getjButton8().setBackground(Color.green);
+        
+        vistaAvion.getjButton9().setText("-");
+        vistaAvion.getjButton9().setBackground(Color.green);
+        
+        vistaAvion.getjButton10().setText("-");
+        vistaAvion.getjButton10().setBackground(Color.green);
+        
+        vistaAvion.getjButton11().setText("-");
+        vistaAvion.getjButton11().setBackground(Color.green);
+        
+        vistaAvion.getjButton12().setText("-");
+        vistaAvion.getjButton12().setBackground(Color.green);
+        
+        vistaAvion.getjButton13().setText("-");
+        vistaAvion.getjButton13().setBackground(Color.green);
+        
+        vistaAvion.getjButton14().setText("-");
+        vistaAvion.getjButton14().setBackground(Color.green);
+        
+        vistaAvion.getjButton15().setText("-");
+        vistaAvion.getjButton15().setBackground(Color.green);
+        
+        vistaAvion.getjButton16().setText("-");
+        vistaAvion.getjButton16().setBackground(Color.green);
+        
+        vistaAvion.getjButton17().setText("-");
+        vistaAvion.getjButton17().setBackground(Color.green);
+        
+        vistaAvion.getjButton18().setText("-");
+        vistaAvion.getjButton18().setBackground(Color.green);
+        
+        vistaAvion.getjButton19().setText("-");
+        vistaAvion.getjButton19().setBackground(Color.green);
+        
+        vistaAvion.getjButton20().setText("-");
+        vistaAvion.getjButton20().setBackground(Color.green);
+        
+        vistaAvion.getjButton21().setText("-");
+        vistaAvion.getjButton21().setBackground(Color.green);
+        
+        vistaAvion.getjButton22().setText("-");
+        vistaAvion.getjButton22().setBackground(Color.green);
+        
+        vistaAvion.getjButton23().setText("-");
+        vistaAvion.getjButton23().setBackground(Color.green);
+        
+        vistaAvion.getjButton24().setText("-");
+        vistaAvion.getjButton24().setBackground(Color.green);
+        
+        vistaAvion.getjButton25().setText("-");
+        vistaAvion.getjButton25().setBackground(Color.green);
+        
+        vistaAvion.getjButton26().setText("-");
+        vistaAvion.getjButton26().setBackground(Color.green);
+        
+        vistaAvion.getjButton27().setText("-");
+        vistaAvion.getjButton27().setBackground(Color.green);
+        
+        vistaAvion.getjButton28().setText("-");
+        vistaAvion.getjButton28().setBackground(Color.green);
+        
+        vistaAvion.getjButton29().setText("-");
+        vistaAvion.getjButton29().setBackground(Color.green);
+        
+        vistaAvion.getjButton30().setText("-");
+        vistaAvion.getjButton30().setBackground(Color.green);
+        
+        vistaAvion.getjButton31().setText("-");
+        vistaAvion.getjButton31().setBackground(Color.green);
+        
+        vistaAvion.getjButton32().setText("-");
+        vistaAvion.getjButton32().setBackground(Color.green);
+        
+        vistaAvion.getjButton33().setText("-");
+        vistaAvion.getjButton33().setBackground(Color.green);
+        
+        vistaAvion.getjButton34().setText("-");
+        vistaAvion.getjButton34().setBackground(Color.green);
+        
+        vistaAvion.getjButton35().setText("-");
+        vistaAvion.getjButton35().setBackground(Color.green);
+        
+        vistaAvion.getjButton36().setText("-");
+        vistaAvion.getjButton36().setBackground(Color.green);
+        
+        vistaAvion.getjButton37().setText("-");
+        vistaAvion.getjButton37().setBackground(Color.green);
+        
+        vistaAvion.getjButton38().setText("-");
+        vistaAvion.getjButton38().setBackground(Color.green);
+        
+        vistaAvion.getjButton39().setText("-");
+        vistaAvion.getjButton39().setBackground(Color.green);
+        
+        vistaAvion.getjButton40().setText("-");
+        vistaAvion.getjButton40().setBackground(Color.green);
+        
+        vistaAvion.getjButton41().setText("-");
+        vistaAvion.getjButton41().setBackground(Color.green);
+        
+        vistaAvion.getjButton42().setText("-");
+        vistaAvion.getjButton42().setBackground(Color.green);
+        
+        vistaAvion.getjButton43().setText("-");
+        vistaAvion.getjButton43().setBackground(Color.green);
+        
+        vistaAvion.getjButton44().setText("-");
+        vistaAvion.getjButton44().setBackground(Color.green);
+        
+        vistaAvion.getjButton45().setText("-");
+        vistaAvion.getjButton45().setBackground(Color.green);
+        
+        vistaAvion.getjButton46().setText("-");
+        vistaAvion.getjButton46().setBackground(Color.green);
+        
+        vistaAvion.getjButton47().setText("-");
+        vistaAvion.getjButton47().setBackground(Color.green);
+        
+        vistaAvion.getjButton48().setText("-");
+        vistaAvion.getjButton48().setBackground(Color.green);
     }
 }
 
