@@ -202,9 +202,17 @@ public class Controlador implements ActionListener{
         }
         if(ae.getSource().equals(mainFrame.getBuscarCliente()))
         {
-            mainFrame.setVisible(false);
-            vistaBuscarCliente.iniciar();
-            
+            if(m.getClientes().size() == 0){
+                JOptionPane.showMessageDialog(null, "No se ha registrado ningun cliente", "ERROR", JOptionPane.ERROR_MESSAGE);
+                vistaBuscarCliente.getiDCliente().setText("");
+                vistaBuscarCliente.setVisible(false);
+                mainFrame.iniciar();
+                
+            }
+            else{
+                mainFrame.setVisible(false);
+                vistaBuscarCliente.iniciar();
+            }
         }
         if(ae.getSource().equals(mainFrame.getSalirBttn()))
         {
@@ -258,11 +266,14 @@ public class Controlador implements ActionListener{
             DefaultTableModel table = (DefaultTableModel) vistaBuscarCliente.getTablaClientesReg().getModel();
             Object rowData[] = new Object[3];
             table.setNumRows(0);
-            for(int i=0; i < m.getClientes().size(); i++){
+      
+                for(int i=0; i < m.getClientes().size(); i++){
                 Cliente cl = m.getClientes().get(i);
                 if(cl.getID() == IDCliente){
                 rowData[0] = m.getClientes().get(i).getNombre();
                 rowData[1] = m.getClientes().get(i).getID();
+                rowData[2] = m.getClientes().get(i).getVuelo();
+                
                // rowData[2] = m.getClientes().get(i).getNumeroAcompannantes();
                 table.addRow(rowData);
                 }
@@ -273,7 +284,7 @@ public class Controlador implements ActionListener{
                 } 
                 
             }
-                      
+                                  
         }
         if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
         {
@@ -281,24 +292,27 @@ public class Controlador implements ActionListener{
             String apellidos = "";
             int acompannantes = 0;
             int IDCliente = 0;
+            String vuelo = "";
        
             nombre = vistaAgregarClientes.getNombreTxt().getText();
             apellidos = vistaAgregarClientes.getApellidoTxt().getText();
             acompannantes = Integer.parseInt(vistaAgregarClientes.getAcompannantesTxt().getText());
             IDCliente = Integer.parseInt(vistaAgregarClientes.getIDClienteTxt().getText());
+            vuelo = vistaAgregarClientes.getMostrarVuelosComB().getSelectedItem().toString();
             
-            cliente1 = new Cliente (nombre,apellidos, IDCliente, acompannantes);
+            cliente1 = new Cliente (nombre,apellidos, IDCliente, acompannantes, vuelo);
             m.annadirCliente(cliente1);
             JOptionPane.showMessageDialog(null, "Registro exitoso");
             
             DefaultTableModel table = (DefaultTableModel) vistaAgregarClientes.getTableUsuarios().getModel();
-            Object rowData[] = new Object[4];
+            Object rowData[] = new Object[5];
             table.setNumRows(0);
             for(int i=0; i < m.getClientes().size(); i++){
                 rowData[0] = m.getClientes().get(i).getNombre();
                 rowData[1] = m.getClientes().get(i).getApellido();
                 rowData[2] = m.getClientes().get(i).getID();
                 rowData[3] = m.getClientes().get(i).getNumeroAcompannantes();
+                rowData[4] = m.getClientes().get(i).getVuelo();
                 table.addRow(rowData);
             }
                         
@@ -306,6 +320,7 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getApellidoTxt().setText("");
             vistaAgregarClientes.getAcompannantesTxt().setText("");
             vistaAgregarClientes.getIDClienteTxt().setText("");
+            //vistaAgregarClientes.getMostrarVuelosComB();
             
         }
         
