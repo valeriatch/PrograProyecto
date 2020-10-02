@@ -96,6 +96,7 @@ public class VistaVuelos extends javax.swing.JFrame {
         horallegadatxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
         creaciontxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        creaciontxf.setEnabled(false);
 
         registrarbtn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         registrarbtn.setText("Registrar");
