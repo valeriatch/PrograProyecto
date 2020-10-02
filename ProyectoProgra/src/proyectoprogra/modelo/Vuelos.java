@@ -5,6 +5,9 @@
  */
 package proyectoprogra.modelo;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author XperriX
@@ -121,5 +124,6 @@ public class Vuelos {
     private String fechaCreacion;
     private int duracionVuelo;
     private int numeroAsientos;
-    
+    LocalDate date = LocalDate.now();
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 }

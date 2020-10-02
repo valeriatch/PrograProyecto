@@ -7,6 +7,8 @@ package proyectoprogra.controlador;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -22,6 +24,7 @@ import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
 import proyectoprogra.vista.VistaRegistraAerolinea;
+import proyectoprogra.vista.VistaVerVuelos;
 import proyectoprogra.vista.VistaVuelos;
 
 /**
@@ -40,14 +43,15 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
-
-    private VistaBuscarClientes vistaBuscarCliente;
-    
-    
+    private VistaBuscarClientes vistaBuscarCliente;  
     private VerPlataforma plataforma;
     private Vuelos vuelo;
+    private VistaVerVuelos verVuelos;
+    LocalDate date = LocalDate.now();
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    String fechaCreacion = dtf.format(date);
     
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente , VerPlataforma plataforma){
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente , VerPlataforma plataforma, VistaVerVuelos verVuelos){
 
         this.m = m;
         this.vistaLogin = vistaLogin;
@@ -56,10 +60,9 @@ public class Controlador implements ActionListener{
         this.vistaRegAero = vistaRegAero;
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
-
         this.vistaBuscarCliente = vistaBuscarCliente;
         this.plataforma = plataforma;
-
+        this.verVuelos = verVuelos;
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -73,6 +76,7 @@ public class Controlador implements ActionListener{
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
+        this.vistaVuelos.getVerbtn().addActionListener(this);
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
         this.vistaBuscarCliente.getVolverBCBttn().addActionListener(this);
@@ -128,6 +132,12 @@ public class Controlador implements ActionListener{
             vistaRegAero.iniciar();
             
         }
+        
+        if(ae.getSource().equals(vistaVuelos.getVerbtn())){
+            vistaVuelos.setVisible(false);
+            verVuelos.iniciar();
+        }
+        
         if(ae.getSource().equals(mainFrame.getConfiguracion()))
         {
             mainFrame.setVisible(false);
@@ -271,17 +281,19 @@ public class Controlador implements ActionListener{
             }
         }
         if(ae.getSource().equals(vistaRegAero.getRegistrarBttn())){
+            System.out.println(dtf.format(date));
             String nombre = "";
-            String fecha = "";
-            fecha = vistaRegAero.getFechaTxt().getText();
+            
+            vistaRegAero.getFechaTxt().setText(fechaCreacion);
+            //fecha = vistaRegAero.getFechaTxt().getText();
             nombre = vistaRegAero.getNombreAerolinea().getText();
-            if(nombre.equals("") || fecha.equals(""))
+            if(nombre.equals(""))
             {
             
                 JOptionPane.showMessageDialog(null, "Ingrese lo que se solicita", "ERROR", JOptionPane.ERROR_MESSAGE);                    
             }
             else{
-                aerolinea = new Aerolinea(fecha, nombre);
+                aerolinea = new Aerolinea(fechaCreacion, nombre);
                 m.annadirAerolinea(aerolinea);
                 System.out.println(m.toStringAerolineas());
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
