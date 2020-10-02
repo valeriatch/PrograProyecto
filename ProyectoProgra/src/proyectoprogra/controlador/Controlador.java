@@ -60,7 +60,7 @@ public class Controlador implements ActionListener{
     String fechaCreacion = dtf.format(date);
     
 
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente /*VistaVerVuelos vistaVerVuelo*/){
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente ,VistaVerVuelos vistaVerVuelo){
 
 
 
@@ -72,10 +72,10 @@ public class Controlador implements ActionListener{
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
         this.vistaBuscarCliente = vistaBuscarCliente;
+        this.vistaVerVuelo = vistaVerVuelo;
 
         //this.plataforma = plataforma;
 
-        this.verVuelos = verVuelos;
 
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
@@ -88,10 +88,13 @@ public class Controlador implements ActionListener{
         this.mainFrame.getBuscarCliente().addActionListener(this);
         this.mainFrame.getSalirBttn().addActionListener(this);
         this.mainFrame.getVerVuelosRegBttn().addActionListener(this);
+   
         
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
+        this.vistaVerVuelo.getVolverbtn().addActionListener(this);
+        
 
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
@@ -229,6 +232,17 @@ public class Controlador implements ActionListener{
             mainFrame.iniciar();
             
         }
+        if(ae.getSource().equals(mainFrame.getVerVuelosRegBttn()))
+        {
+            mainFrame.setVisible(false);
+            vistaVerVuelo.iniciar();
+        
+        }
+        if(ae.getSource().equals(vistaVerVuelo.getVolverbtn())){
+            vistaVerVuelo.setVisible(false);
+            mainFrame.iniciar();
+        }
+        
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
             mainFrame.setVisible(false);
@@ -257,7 +271,6 @@ public class Controlador implements ActionListener{
                     vistaBuscarCliente.getiDCliente().setText("");
                     
                 } 
-                    
                 
             }
                       

@@ -145,11 +145,7 @@ public class VistaVerVuelos extends javax.swing.JFrame {
         this.modificarbtn = modificarbtn;
     }
     
-    /*public void iniciar()
-    {
-        setLocationRelativeTo(null);
-        setVisible(true);
-    }*/
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Volverbtn;
