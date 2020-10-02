@@ -39,10 +39,9 @@ public class ProyectoProgra {
         VistaVerVuelos verVuelos = new VistaVerVuelos();
         VistaBuscarClientes vistaBuscarCliente = new VistaBuscarClientes();
         Usuario usuario;
-      //  VerPlataforma plataforma = new VerPlataforma();
         
 
-        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente/*plataforma*/);
+        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente, verVuelos);
 
 
         usuario = new Usuario("Administrador", "admin", "admin");
