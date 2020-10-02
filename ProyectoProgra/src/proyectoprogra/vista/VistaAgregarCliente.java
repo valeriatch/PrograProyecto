@@ -6,6 +6,7 @@
 package proyectoprogra.vista;
 
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -47,6 +48,8 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         AgregarClienteBttn = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         VolverRCBttn = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        mostrarVuelosComB = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -101,12 +104,22 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tableUsuarios);
 
         AgregarClienteBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        AgregarClienteBttn.setText("Agregar Cliente");
+        AgregarClienteBttn.setText("Elegir los asientos en el vuelo");
+        AgregarClienteBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarClienteBttnActionPerformed(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/perfildeusuario.jpg"))); // NOI18N
 
         VolverRCBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         VolverRCBttn.setText("Volver");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel7.setText("Vuelos disponibles: ");
+
+        mostrarVuelosComB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -144,9 +157,14 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AgregarClienteBttn)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(mostrarVuelosComB, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(41, 41, 41)
+                                .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1437, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 59, Short.MAX_VALUE))))
+                        .addGap(0, 74, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,20 +192,21 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(AcompannantesTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(AgregarClienteBttn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(60, 60, 60)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mostrarVuelosComB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(105, 105, 105))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -208,6 +227,10 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     private void nombreTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreTxtActionPerformed
+
+    private void AgregarClienteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarClienteBttnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AgregarClienteBttnActionPerformed
 
     public JTextField getAcompannantesTxt() {
         return AcompannantesTxt;
@@ -255,6 +278,14 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
 
     public void setNombreTxt(JTextField nombreTxt) {
         this.nombreTxt = nombreTxt;
+    }
+
+    public JComboBox<String> getMostrarVuelosComB() {
+        return mostrarVuelosComB;
+    }
+
+    public void setMostrarVuelosComB(JComboBox<String> mostrarVuelosComB) {
+        this.mostrarVuelosComB = mostrarVuelosComB;
     }
     public void iniciar()    {
         setLocationRelativeTo(null);
@@ -307,8 +338,10 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> mostrarVuelosComB;
     private javax.swing.JTextField nombreTxt;
     private javax.swing.JTable tableUsuarios;
     // End of variables declaration//GEN-END:variables
