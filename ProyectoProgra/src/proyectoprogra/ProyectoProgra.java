@@ -41,11 +41,9 @@ public class ProyectoProgra {
         Usuario usuario;
       //  VerPlataforma plataforma = new VerPlataforma();
         
-<<<<<<< HEAD
+
         Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente/*plataforma*/);
-=======
-        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente,plataforma, verVuelos);
->>>>>>> master
+
 
         usuario = new Usuario("Administrador", "admin", "admin");
         modelo.annadirUusario(usuario);

@@ -43,28 +43,26 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
-<<<<<<< HEAD
+
     private VistaVerVuelos vistaVerVuelo;
 
     private VistaBuscarClientes vistaBuscarCliente;
     
     
   //  private VerPlataforma plataforma;
-=======
-    private VistaBuscarClientes vistaBuscarCliente;  
-    private VerPlataforma plataforma;
->>>>>>> master
+
+
+
     private Vuelos vuelo;
     private VistaVerVuelos verVuelos;
     LocalDate date = LocalDate.now();
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     String fechaCreacion = dtf.format(date);
     
-<<<<<<< HEAD
+
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente /*VistaVerVuelos vistaVerVuelo*/){
-=======
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente , VerPlataforma plataforma, VistaVerVuelos verVuelos){
->>>>>>> master
+
+
 
         this.m = m;
         this.vistaLogin = vistaLogin;
@@ -74,13 +72,11 @@ public class Controlador implements ActionListener{
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
         this.vistaBuscarCliente = vistaBuscarCliente;
-<<<<<<< HEAD
+
         //this.plataforma = plataforma;
 
-=======
-        this.plataforma = plataforma;
         this.verVuelos = verVuelos;
->>>>>>> master
+
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -96,7 +92,7 @@ public class Controlador implements ActionListener{
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
-        this.vistaVuelos.getVerbtn().addActionListener(this);
+
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
         this.vistaBuscarCliente.getVolverBCBttn().addActionListener(this);
@@ -154,11 +150,7 @@ public class Controlador implements ActionListener{
             
         }
         
-        if(ae.getSource().equals(vistaVuelos.getVerbtn())){
-            vistaVuelos.setVisible(false);
-            verVuelos.iniciar();
-        }
-        
+
         if(ae.getSource().equals(mainFrame.getConfiguracion()))
         {
             mainFrame.setVisible(false);
@@ -349,7 +341,7 @@ public class Controlador implements ActionListener{
             String nombre = "";
             
             vistaRegAero.getFechaTxt().setText(fechaCreacion);
-            //fecha = vistaRegAero.getFechaTxt().getText();
+           // fecha = vistaRegAero.getFechaTxt().getText();
             nombre = vistaRegAero.getNombreAerolinea().getText();
             if(nombre.equals(""))
             {
