@@ -18,7 +18,7 @@ import proyectoprogra.modelo.Usuario;
 import proyectoprogra.modelo.Cliente;
 import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
-import proyectoprogra.vista.VerPlataforma;
+//import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
 import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
@@ -43,15 +43,28 @@ public class Controlador implements ActionListener{
     private VistaAgregarCliente vistaAgregarClientes;
     private Cliente cliente1;
     private Aerolinea aerolinea;
+<<<<<<< HEAD
+    private VistaVerVuelos vistaVerVuelo;
+
+    private VistaBuscarClientes vistaBuscarCliente;
+    
+    
+  //  private VerPlataforma plataforma;
+=======
     private VistaBuscarClientes vistaBuscarCliente;  
     private VerPlataforma plataforma;
+>>>>>>> master
     private Vuelos vuelo;
     private VistaVerVuelos verVuelos;
     LocalDate date = LocalDate.now();
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     String fechaCreacion = dtf.format(date);
     
+<<<<<<< HEAD
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente /*VistaVerVuelos vistaVerVuelo*/){
+=======
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente , VerPlataforma plataforma, VistaVerVuelos verVuelos){
+>>>>>>> master
 
         this.m = m;
         this.vistaLogin = vistaLogin;
@@ -61,8 +74,13 @@ public class Controlador implements ActionListener{
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
         this.vistaBuscarCliente = vistaBuscarCliente;
+<<<<<<< HEAD
+        //this.plataforma = plataforma;
+
+=======
         this.plataforma = plataforma;
         this.verVuelos = verVuelos;
+>>>>>>> master
         
         this.vistaLogin.getIniciaSesion().addActionListener(this);
         
@@ -73,6 +91,7 @@ public class Controlador implements ActionListener{
         this.mainFrame.getAgregarClienteBttn().addActionListener(this);
         this.mainFrame.getBuscarCliente().addActionListener(this);
         this.mainFrame.getSalirBttn().addActionListener(this);
+        this.mainFrame.getVerVuelosRegBttn().addActionListener(this);
         
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
@@ -83,6 +102,7 @@ public class Controlador implements ActionListener{
         this.vistaBuscarCliente.getVolverBCBttn().addActionListener(this);
         this.vistaAgregarClientes.getVolverRCBttn().addActionListener(this);
         this.vistaBuscarCliente.getBuscarBttn().addActionListener(this);
+        this.vistaAgregarClientes.getMostrarVuelosComB().addActionListener(this);
         
         this.vistaConfiguracion.getVolverBtn().addActionListener(this);
         this.vistaConfiguracion.getAceptarBttn().addActionListener(this);
@@ -154,6 +174,17 @@ public class Controlador implements ActionListener{
                 vistaVuelos.getComboBoxAero().addItem(aero.get(i).getNombre());
             }
             vistaVuelos.iniciar();
+            
+        }
+        if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
+        {
+            mainFrame.setVisible(false);
+            vistaAgregarClientes.getMostrarVuelosComB().removeAllItems();
+            ArrayList<Vuelos> vuel = m.getVuelos();
+             for(int i = 0; i < vuel.size(); i++) {
+                 vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getDestino());
+             }
+             vistaAgregarClientes.iniciar();
             
         }
         if(ae.getSource().equals(vistaVuelos.getVolverbtn()))

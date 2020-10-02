@@ -48,7 +48,6 @@ public class VistaVuelos extends javax.swing.JFrame {
         horallegadatxf = new javax.swing.JTextField();
         creaciontxf = new javax.swing.JTextField();
         registrarbtn = new javax.swing.JButton();
-        verbtn = new javax.swing.JButton();
         comboBoxAero = new javax.swing.JComboBox<>();
         duracionVueloL = new javax.swing.JLabel();
         duracionVuelotxf = new javax.swing.JTextField();
@@ -57,86 +56,100 @@ public class VistaVuelos extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        Volverbtn.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        Volverbtn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         Volverbtn.setText("Volver");
 
-        aerolineaL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        aerolineaL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         aerolineaL.setText("Ingrese aerolínea");
 
-        nVueloL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        nVueloL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         nVueloL.setText("N. de vuelo");
 
-        salidaL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        salidaL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         salidaL.setText("Partida");
 
-        destinoL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        destinoL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         destinoL.setText("Destino");
 
-        horaSalidaL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        horaSalidaL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         horaSalidaL.setText("Fecha y hora de salida");
 
-        horallegadaL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        horallegadaL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         horallegadaL.setText("Fecha y hora de llegada");
 
-        creacionL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        creacionL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         creacionL.setText("Fecha de creacion");
 
+        nVuelotxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        partidatxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         partidatxf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 partidatxfActionPerformed(evt);
             }
         });
 
-        registrarbtn.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        destinotxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        horasalidatxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        horallegadatxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        creaciontxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+
+        registrarbtn.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         registrarbtn.setText("Registrar");
 
-        verbtn.setText("Ver Vuelos");
+        comboBoxAero.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
-        duracionVueloL.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
+        duracionVueloL.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         duracionVueloL.setText("Duracion vuelo");
+
+        duracionVuelotxf.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(registrarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nVueloL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(salidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(destinoL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(horaSalidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(horallegadaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(creacionL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(duracionVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(120, 120, 120)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(nVueloL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(salidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(destinoL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(horaSalidaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(horallegadaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(creacionL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Volverbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(duracionVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(120, 120, 120)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(nVuelotxf)
-                            .addComponent(partidatxf)
-                            .addComponent(destinotxf)
-                            .addComponent(horasalidatxf)
-                            .addComponent(horallegadatxf)
-                            .addComponent(creaciontxf, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
-                            .addComponent(comboBoxAero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(duracionVuelotxf))))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(verbtn))
+                                .addComponent(nVuelotxf)
+                                .addComponent(partidatxf)
+                                .addComponent(destinotxf)
+                                .addComponent(horasalidatxf)
+                                .addComponent(horallegadatxf)
+                                .addComponent(creaciontxf, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
+                                .addComponent(comboBoxAero, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(duracionVuelotxf)))
+                        .addComponent(registrarbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Volverbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(verbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Volverbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
+                .addContainerGap()
+                .addComponent(Volverbtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(comboBoxAero)
-                    .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                    .addComponent(aerolineaL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nVueloL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,7 +190,7 @@ public class VistaVuelos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 736, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,14 +262,6 @@ public class VistaVuelos extends javax.swing.JFrame {
 
     public void setRegistrarbtn(JButton registrarbtn) {
         this.registrarbtn = registrarbtn;
-    }
-
-    public JButton getVerbtn() {
-        return verbtn;
-    }
-
-    public void setVerbtn(JButton verbtn) {
-        this.verbtn = verbtn;
     }
 
     public JTextField getDuracionVuelotxf() {
@@ -340,7 +345,6 @@ public class VistaVuelos extends javax.swing.JFrame {
     private javax.swing.JTextField partidatxf;
     private javax.swing.JButton registrarbtn;
     private javax.swing.JLabel salidaL;
-    private javax.swing.JButton verbtn;
     // End of variables declaration//GEN-END:variables
 
     
