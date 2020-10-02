@@ -72,6 +72,7 @@ public class Controlador implements ActionListener{
         this.mainFrame.getVolverBtn().addActionListener(this);
         this.mainFrame.getAgregarClienteBttn().addActionListener(this);
         this.mainFrame.getBuscarCliente().addActionListener(this);
+        this.mainFrame.getSalirBttn().addActionListener(this);
         
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
@@ -179,6 +180,18 @@ public class Controlador implements ActionListener{
             vistaBuscarCliente.iniciar();
             
         }
+        if(ae.getSource().equals(mainFrame.getSalirBttn()))
+        {
+            mainFrame.setVisible(false);
+            if(JOptionPane.showConfirmDialog(null, "¿Esta seguro que desea salir del sistema? ","Salir del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
+             System.exit(0);                
+            }
+            else {
+                 mainFrame.iniciar();
+            }
+                    
+        }
+        
         //
         if(ae.getSource().equals(vistaBuscarCliente.getVolverBCBttn()))
         {
@@ -204,6 +217,26 @@ public class Controlador implements ActionListener{
             int IDCliente = 0;
             IDCliente = Integer.parseInt(vistaBuscarCliente.getiDCliente().getText());
             System.out.println(m.buscarCliente(IDCliente));
+            
+            DefaultTableModel table = (DefaultTableModel) vistaBuscarCliente.getTablaClientesReg().getModel();
+            Object rowData[] = new Object[3];
+            table.setNumRows(0);
+            for(int i=0; i < m.getClientes().size(); i++){
+                Cliente cl = m.getClientes().get(i);
+                if(cl.getID() == IDCliente){
+                rowData[0] = m.getClientes().get(i).getNombre();
+                rowData[1] = m.getClientes().get(i).getID();
+               // rowData[2] = m.getClientes().get(i).getNumeroAcompannantes();
+                table.addRow(rowData);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Cliente no registrado", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    vistaBuscarCliente.getiDCliente().setText("");
+                    
+                } 
+                    
+                
+            }
                       
         }
         if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
@@ -335,3 +368,5 @@ public class Controlador implements ActionListener{
         
     }
 }
+
+ 

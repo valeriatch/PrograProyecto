@@ -36,6 +36,7 @@ public class MainFrame extends javax.swing.JFrame {
         VolverBtn = new javax.swing.JButton();
         AgregarClienteBttn = new javax.swing.JButton();
         BuscarCliente = new javax.swing.JButton();
+        SalirBttn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Principal");
@@ -80,17 +81,13 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        SalirBttn.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        SalirBttn.setText("Salir");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(VolverBtn)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Configuracion, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -99,6 +96,19 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(BuscarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(AgregarClienteBttn, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Vuelos, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(VolverBtn)))
+                        .addGap(0, 247, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(SalirBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +125,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(BuscarCliente))
                 .addGap(123, 123, 123)
                 .addComponent(Vuelos)
-                .addGap(99, 99, 99))
+                .addGap(37, 37, 37)
+                .addComponent(SalirBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -191,6 +203,14 @@ public class MainFrame extends javax.swing.JFrame {
     public void setVolverBtn(JButton VolverBtn) {
         this.VolverBtn = VolverBtn;
     }
+
+    public JButton getSalirBttn() {
+        return SalirBttn;
+    }
+
+    public void setSalirBttn(JButton SalirBttn) {
+        this.SalirBttn = SalirBttn;
+    }
     
     public void iniciar()
     {
@@ -237,6 +257,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton AgregarClienteBttn;
     private javax.swing.JButton BuscarCliente;
     private javax.swing.JButton Configuracion;
+    private javax.swing.JButton SalirBttn;
     private javax.swing.JButton VolverBtn;
     private javax.swing.JButton Vuelos;
     private javax.swing.JPanel jPanel1;
