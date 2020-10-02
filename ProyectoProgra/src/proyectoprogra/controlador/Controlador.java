@@ -19,7 +19,6 @@ import proyectoprogra.modelo.Usuario;
 import proyectoprogra.modelo.Cliente;
 import proyectoprogra.modelo.Vuelos;
 import proyectoprogra.vista.MainFrame;
-//import proyectoprogra.vista.VerPlataforma;
 import proyectoprogra.vista.VistaAgregarCliente;
 import proyectoprogra.vista.VistaAvion;
 import proyectoprogra.vista.VistaBuscarClientes;
@@ -46,9 +45,10 @@ public class Controlador implements ActionListener{
     private Cliente cliente1;
     private Aerolinea aerolinea;
 
-    private VistaVerVuelos vistaVerVuelo;
+    
 
     private VistaBuscarClientes vistaBuscarCliente;
+
     private VistaAvion vistaAvion;
     
     
@@ -62,11 +62,7 @@ public class Controlador implements ActionListener{
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     String fechaCreacion = dtf.format(date);
     
-
-    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente ,VistaVerVuelos vistaVerVuelo, VistaAvion vistaAvion){
-
-
-
+    public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente, VistaVerVuelos verVuelos, VistaAvion vistaAvion){
         this.m = m;
         this.vistaLogin = vistaLogin;
         this.vistaConfiguracion = vistaConfiguracion;
@@ -75,10 +71,11 @@ public class Controlador implements ActionListener{
         this.vistaVuelos = vistaVuelos;
         this.vistaAgregarClientes = vistaAgregarClientes;
         this.vistaBuscarCliente = vistaBuscarCliente;
-        this.vistaVerVuelo = vistaVerVuelo;
+
+        this.verVuelos = verVuelos;
         this.vistaAvion = vistaAvion;
 
-        //this.plataforma = plataforma;
+        this.verVuelos = verVuelos;
 
 
         
@@ -97,8 +94,8 @@ public class Controlador implements ActionListener{
         
         this.vistaVuelos.getVolverbtn().addActionListener(this);
         this.vistaVuelos.getRegistrarbtn().addActionListener(this);
-        this.vistaVerVuelo.getVolverbtn().addActionListener(this);
-        
+        this.verVuelos.getVolverbtn().addActionListener(this);
+  
 
         
         this.vistaAgregarClientes.getAgregarClienteBttn().addActionListener(this);
@@ -112,7 +109,10 @@ public class Controlador implements ActionListener{
         
         this.vistaRegAero.getVolverBtn().addActionListener(this);
         this.vistaRegAero.getRegistrarBttn().addActionListener(this);
-        
+
+        this.verVuelos.getVolverbtn().addActionListener(this);
+        this.verVuelos.getModificarbtn().addActionListener(this);
+
         reset();
     }
 
@@ -129,7 +129,6 @@ public class Controlador implements ActionListener{
                 if(m.bloquearBotones(entradaUsuario))
                 {
                     mainFrame.iniciar();
-            
                 }
                 else
                 {
@@ -146,12 +145,13 @@ public class Controlador implements ActionListener{
                 vistaLogin.getContrasennaEntrada().setText("");
             }
         }
+        
         if(ae.getSource().equals(mainFrame.getVolverBtn()))
         {
             mainFrame.setVisible(false);
             vistaLogin.iniciar();
-            
         }
+        
         if(ae.getSource().equals(mainFrame.getAerolíneas()))
         {
             mainFrame.setVisible(false);
@@ -159,13 +159,12 @@ public class Controlador implements ActionListener{
             vistaRegAero.getFechaTxt().setText(fechaCreacion);
         }
         
-
         if(ae.getSource().equals(mainFrame.getConfiguracion()))
         {
             mainFrame.setVisible(false);
             vistaConfiguracion.iniciar();
-            
         }
+        
         if(ae.getSource().equals(mainFrame.getVuelos()))
         {
             mainFrame.setVisible(false);
@@ -177,6 +176,7 @@ public class Controlador implements ActionListener{
             vistaVuelos.iniciar();
             vistaVuelos.getCreaciontxf().setText(fechaCreacion);
         }
+        
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
             mainFrame.setVisible(false);
@@ -186,28 +186,36 @@ public class Controlador implements ActionListener{
                  vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getDestino());
              }
              vistaAgregarClientes.iniciar();
-            
         }
+        
+        if(ae.getSource().equals(verVuelos.getVolverbtn())){
+            verVuelos.setVisible(false);
+            mainFrame.iniciar();
+        }
+        
         if(ae.getSource().equals(vistaVuelos.getVolverbtn()))
         {
             vistaVuelos.setVisible(false);
             mainFrame.iniciar();
-            
         }
+        
         if(ae.getSource().equals(vistaConfiguracion.getVolverBtn()))
         {
             vistaConfiguracion.setVisible(false);
             mainFrame.iniciar();
-            
         }
+        
         if(ae.getSource().equals(vistaRegAero.getVolverBtn()))
         {
             vistaRegAero.setVisible(false);
             mainFrame.iniciar();
-            
         }
+        
         if(ae.getSource().equals(mainFrame.getBuscarCliente()))
         {
+            mainFrame.setVisible(false);
+            vistaBuscarCliente.iniciar();
+
             if(m.getClientes().size() == 0){
                 JOptionPane.showMessageDialog(null, "No se ha registrado ningun cliente", "ERROR", JOptionPane.ERROR_MESSAGE);
                 vistaBuscarCliente.getiDCliente().setText("");
@@ -220,6 +228,7 @@ public class Controlador implements ActionListener{
                 vistaBuscarCliente.iniciar();
             }
         }
+        
         if(ae.getSource().equals(mainFrame.getSalirBttn()))
         {
             mainFrame.setVisible(false);
@@ -228,40 +237,36 @@ public class Controlador implements ActionListener{
             }
             else {
                  mainFrame.iniciar();
-            }
-                    
+            }        
         }
         
-        //
         if(ae.getSource().equals(vistaBuscarCliente.getVolverBCBttn()))
         {
             vistaBuscarCliente.setVisible(false);
-            mainFrame.iniciar();
-            
+            mainFrame.iniciar();  
         }
         
         if(ae.getSource().equals(vistaAgregarClientes.getVolverRCBttn()))
         {
             vistaAgregarClientes.setVisible(false);
-            mainFrame.iniciar();
-            
+            mainFrame.iniciar();   
         }
+
         if(ae.getSource().equals(mainFrame.getVerVuelosRegBttn()))
         {
             mainFrame.setVisible(false);
-            vistaVerVuelo.iniciar();
+            verVuelos.iniciar();
         
         }
-        if(ae.getSource().equals(vistaVerVuelo.getVolverbtn())){
-            vistaVerVuelo.setVisible(false);
+        if(ae.getSource().equals(verVuelos.getVolverbtn())){
+            verVuelos.setVisible(false);
             mainFrame.iniciar();
         }
-        
+
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
             mainFrame.setVisible(false);
-            vistaAgregarClientes.iniciar();
-            
+            vistaAgregarClientes.iniciar();  
         }
         if(ae.getSource().equals(vistaBuscarCliente.getBuscarBttn()))
         {
@@ -287,12 +292,13 @@ public class Controlador implements ActionListener{
                     JOptionPane.showMessageDialog(null, "Cliente no registrado", "ERROR", JOptionPane.ERROR_MESSAGE);
                     vistaBuscarCliente.getiDCliente().setText("");
                     
-                } 
+                }    
                 
-            }
-                                  
-        }
-        if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
+            }          
+
+                    
+                } 
+                        if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
         {
             String nombre = "";
             String apellidos = "";
@@ -320,8 +326,7 @@ public class Controlador implements ActionListener{
                 rowData[3] = m.getClientes().get(i).getNumeroAcompannantes();
                 rowData[4] = m.getClientes().get(i).getVuelo();
                 table.addRow(rowData);
-            }
-                        
+            }          
             vistaAgregarClientes.getNombreTxt().setText("");
             vistaAgregarClientes.getApellidoTxt().setText("");
             vistaAgregarClientes.getAcompannantesTxt().setText("");
@@ -357,7 +362,6 @@ public class Controlador implements ActionListener{
                     usuario = new Usuario(rol, nombre, contrasenna);
                     m.annadirUusario(usuario);
                     JOptionPane.showMessageDialog(null, "Registro exitoso");
-                    //System.out.println(m.toString());
                     vistaConfiguracion.getNombreUsuario().setText("");
                     vistaConfiguracion.getContrasenna().setText("");
                     vistaConfiguracion.getConfirmContrasenna().setText("");
@@ -371,12 +375,12 @@ public class Controlador implements ActionListener{
                 vistaConfiguracion.getConfirmContrasenna().setText("");
             }
         }
+        
         if(ae.getSource().equals(vistaRegAero.getRegistrarBttn())){
             System.out.println(dtf.format(date));
             String nombre = "";
             
             vistaRegAero.getFechaTxt().setText(fechaCreacion);
-           // fecha = vistaRegAero.getFechaTxt().getText();
             nombre = vistaRegAero.getNombreAerolinea().getText();
             if(nombre.equals(""))
             {
@@ -391,6 +395,7 @@ public class Controlador implements ActionListener{
                 vistaRegAero.getNombreAerolinea().setText("");
             }
         }
+        
         if(ae.getSource().equals(vistaVuelos.getRegistrarbtn()))
         {
             String aerolinea = "", numeroVuelo = "", salida = "", destino = "", horarioSalida = "", horarioLlegada = "";
@@ -416,10 +421,55 @@ public class Controlador implements ActionListener{
             vistaVuelos.getHorasalidatxf().setText("");
             vistaVuelos.getHorallegadatxf().setText("");
             vistaVuelos.getDuracionVuelotxf().setText("");
-            
         }
-        
-        
+        if(ae.getSource().equals(mainFrame.getVerVuelosRegBttn())){
+            mainFrame.setVisible(false);
+            verVuelos.setVisible(true);
+            
+            DefaultTableModel table = (DefaultTableModel) verVuelos.getjTable1().getModel();
+            Object rowData[] = new Object[6];
+            table.setNumRows(0);
+            for(int i=0; i < m.getVuelos().size(); i++){
+                rowData[0] = m.getVuelos().get(i).getAerolinea();
+                rowData[1] = m.getVuelos().get(i).getNumeroVuelo();
+                rowData[2] = m.getVuelos().get(i).getSalida();
+                rowData[3] = m.getVuelos().get(i).getHorarioSalida();
+                rowData[4] = m.getVuelos().get(i).getDestino();
+                rowData[5] = m.getVuelos().get(i).getHorarioLlegada();
+                table.addRow(rowData);
+            }
+            if(ae.getSource().equals(verVuelos.getModificarbtn())){
+                String aerolinea = "", numeroVuelo = "", salida = "", destino = "", horarioSalida = "", horarioLlegada = "";
+                int duracionVuelo = 0, numeroAsientos = 0;
+                table.setNumRows(0);
+                
+                for(int i=0; i < m.getClientes().size(); i++){
+                    rowData[0] = m.getVuelos().get(i).getAerolinea();
+                    rowData[1] = m.getVuelos().get(i).getNumeroVuelo();
+                    rowData[2] = m.getVuelos().get(i).getSalida();
+                    rowData[3] = m.getVuelos().get(i).getHorarioSalida();
+                    rowData[4] = m.getVuelos().get(i).getDestino();
+                    rowData[5] = m.getVuelos().get(i).getHorarioLlegada();
+                    table.addRow(rowData);
+                }
+                int row = verVuelos.getjTable1().getSelectedRow();
+                int col = verVuelos.getjTable1().getSelectedColumn();
+                if(row >= 0){
+                    duracionVuelo = m.getVuelos().get(row).getDuracionVuelo();
+                    numeroAsientos = m.getVuelos().get(row).getNumeroAsientos();
+                        
+                    aerolinea = table.getValueAt(row, col).toString();
+                    numeroVuelo = table.getValueAt(row, col).toString();
+                    salida = table.getValueAt(row, col).toString();
+                    horarioSalida = table.getValueAt(row, col).toString();
+                    destino = table.getValueAt(row, col).toString();
+                    horarioLlegada = table.getValueAt(row, col).toString();
+                        
+                    vuelo = new Vuelos(aerolinea, numeroVuelo, salida, destino, horarioSalida, horarioLlegada,fechaCreacion, duracionVuelo, numeroAsientos);
+                    m.getVuelos().set(row, vuelo);
+                    }
+                }
+            }
     }
     
     public void reset(){
@@ -570,4 +620,3 @@ public class Controlador implements ActionListener{
     }
 }
 
- 
