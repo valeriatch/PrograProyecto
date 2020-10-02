@@ -147,7 +147,7 @@ public class Controlador implements ActionListener{
         {
             mainFrame.setVisible(false);
             vistaRegAero.iniciar();
-            
+            vistaRegAero.getFechaTxt().setText(fechaCreacion);
         }
         
 
@@ -166,7 +166,7 @@ public class Controlador implements ActionListener{
                 vistaVuelos.getComboBoxAero().addItem(aero.get(i).getNombre());
             }
             vistaVuelos.iniciar();
-            
+            vistaVuelos.getCreaciontxf().setText(fechaCreacion);
         }
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
@@ -345,7 +345,6 @@ public class Controlador implements ActionListener{
             nombre = vistaRegAero.getNombreAerolinea().getText();
             if(nombre.equals(""))
             {
-            
                 JOptionPane.showMessageDialog(null, "Ingrese lo que se solicita", "ERROR", JOptionPane.ERROR_MESSAGE);                    
             }
             else{
@@ -355,12 +354,11 @@ public class Controlador implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Registro exitoso");
                 
                 vistaRegAero.getNombreAerolinea().setText("");
-                vistaRegAero.getFechaTxt().setText("");
             }
         }
         if(ae.getSource().equals(vistaVuelos.getRegistrarbtn()))
         {
-            String aerolinea = "", numeroVuelo = "", salida = "", destino = "", horarioSalida = "", horarioLlegada = "", fechaCreacion = "";
+            String aerolinea = "", numeroVuelo = "", salida = "", destino = "", horarioSalida = "", horarioLlegada = "";
             int duracionVuelo = 0, numeroAsientos = 0;
             
             aerolinea = vistaVuelos.getComboBoxAero().getSelectedItem().toString();
@@ -369,7 +367,6 @@ public class Controlador implements ActionListener{
             destino = vistaVuelos.getDestinotxf().getText();
             horarioSalida = vistaVuelos.getHorasalidatxf().getText();
             horarioLlegada = vistaVuelos.getHorallegadatxf().getText();
-            fechaCreacion = vistaVuelos.getCreaciontxf().getText();
             duracionVuelo = Integer.parseInt(vistaVuelos.getDuracionVuelotxf().getText());
             numeroAsientos = 48;
             
@@ -383,7 +380,6 @@ public class Controlador implements ActionListener{
             vistaVuelos.getDestinotxf().setText("");
             vistaVuelos.getHorasalidatxf().setText("");
             vistaVuelos.getHorallegadatxf().setText("");
-            vistaVuelos.getCreaciontxf().setText("");
             vistaVuelos.getDuracionVuelotxf().setText("");
             
         }
