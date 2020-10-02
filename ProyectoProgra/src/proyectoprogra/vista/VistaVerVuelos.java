@@ -118,6 +118,12 @@ public class VistaVerVuelos extends javax.swing.JFrame {
     public JButton getVolverbtn() {
         return Volverbtn;
     }
+    
+    public void iniciar()
+    {
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
 
     public void setVolverbtn(JButton Volverbtn) {
         this.Volverbtn = Volverbtn;

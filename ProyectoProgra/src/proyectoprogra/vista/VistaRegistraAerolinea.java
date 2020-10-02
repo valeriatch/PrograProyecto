@@ -61,6 +61,7 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
 
         fechaTxt.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         fechaTxt.setToolTipText("");
+        fechaTxt.setEnabled(false);
         fechaTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fechaTxtActionPerformed(evt);
@@ -120,7 +121,7 @@ public class VistaRegistraAerolinea extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(IngresarAerolinea, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                    .addComponent(nombreAerolinea))
+                    .addComponent(nombreAerolinea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(71, 71, 71)
                 .addComponent(registrarBttn)
                 .addGap(97, 97, 97))

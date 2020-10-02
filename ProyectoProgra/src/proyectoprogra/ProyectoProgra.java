@@ -16,6 +16,7 @@ import proyectoprogra.vista.VistaBuscarClientes;
 import proyectoprogra.vista.VistaConfiguracion;
 import proyectoprogra.vista.VistaLogin;
 import proyectoprogra.vista.VistaRegistraAerolinea;
+import proyectoprogra.vista.VistaVerVuelos;
 import proyectoprogra.vista.VistaVuelos;
 
 /**
@@ -35,12 +36,16 @@ public class ProyectoProgra {
         VistaRegistraAerolinea vistaRegAero = new VistaRegistraAerolinea();
         VistaVuelos vistaVuelos = new VistaVuelos();
         VistaAgregarCliente  vistaAgregarClientes = new VistaAgregarCliente();
-
+        VistaVerVuelos verVuelos = new VistaVerVuelos();
         VistaBuscarClientes vistaBuscarCliente = new VistaBuscarClientes();
         Usuario usuario;
       //  VerPlataforma plataforma = new VerPlataforma();
         
+<<<<<<< HEAD
         Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente/*plataforma*/);
+=======
+        Controlador c = new Controlador(modelo, vistalogin, vistaConfig, mainFrame, vistaRegAero, vistaVuelos, vistaAgregarClientes, vistaBuscarCliente,plataforma, verVuelos);
+>>>>>>> master
 
         usuario = new Usuario("Administrador", "admin", "admin");
         modelo.annadirUusario(usuario);
