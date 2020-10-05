@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import proyectoprogra.modelo.Aerolinea;
@@ -62,6 +63,11 @@ public class Controlador implements ActionListener{
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     String fechaCreacion = dtf.format(date);
     
+    String idVuelo = "";
+    int cantAcompanantes = 0;
+    int cant = 0;
+    private ArrayList <JButton> listaBotones = new ArrayList<>();
+    
     public Controlador(Modelo m, VistaLogin vistaLogin, VistaConfiguracion vistaConfiguracion, MainFrame mainFrame, VistaRegistraAerolinea vistaRegAero, VistaVuelos vistaVuelos, VistaAgregarCliente vistaAgregarClientes,VistaBuscarClientes vistaBuscarCliente, VistaVerVuelos verVuelos, VistaAvion vistaAvion){
         this.m = m;
         this.vistaLogin = vistaLogin;
@@ -112,7 +118,58 @@ public class Controlador implements ActionListener{
 
         this.verVuelos.getVolverbtn().addActionListener(this);
         this.verVuelos.getModificarbtn().addActionListener(this);
-
+        
+        this.vistaAvion.getjButton1().addActionListener(this);
+        this.vistaAvion.getjButton2().addActionListener(this);
+        this.vistaAvion.getjButton3().addActionListener(this);
+        this.vistaAvion.getjButton4().addActionListener(this);
+        this.vistaAvion.getjButton5().addActionListener(this);
+        this.vistaAvion.getjButton6().addActionListener(this);
+        this.vistaAvion.getjButton7().addActionListener(this);
+        this.vistaAvion.getjButton8().addActionListener(this);
+        this.vistaAvion.getjButton9().addActionListener(this);
+        this.vistaAvion.getjButton10().addActionListener(this);
+        this.vistaAvion.getjButton11().addActionListener(this);
+        this.vistaAvion.getjButton12().addActionListener(this);
+        this.vistaAvion.getjButton13().addActionListener(this);
+        this.vistaAvion.getjButton14().addActionListener(this);
+        this.vistaAvion.getjButton15().addActionListener(this);
+        this.vistaAvion.getjButton16().addActionListener(this);
+        this.vistaAvion.getjButton17().addActionListener(this);
+        this.vistaAvion.getjButton18().addActionListener(this);
+        this.vistaAvion.getjButton19().addActionListener(this);
+        this.vistaAvion.getjButton20().addActionListener(this);
+        this.vistaAvion.getjButton21().addActionListener(this);
+        this.vistaAvion.getjButton22().addActionListener(this);
+        this.vistaAvion.getjButton23().addActionListener(this);
+        this.vistaAvion.getjButton24().addActionListener(this);
+        this.vistaAvion.getjButton25().addActionListener(this);
+        this.vistaAvion.getjButton26().addActionListener(this);
+        this.vistaAvion.getjButton27().addActionListener(this);
+        this.vistaAvion.getjButton28().addActionListener(this);
+        this.vistaAvion.getjButton29().addActionListener(this);
+        this.vistaAvion.getjButton30().addActionListener(this);
+        this.vistaAvion.getjButton31().addActionListener(this);
+        this.vistaAvion.getjButton32().addActionListener(this);
+        this.vistaAvion.getjButton33().addActionListener(this);
+        this.vistaAvion.getjButton34().addActionListener(this);
+        this.vistaAvion.getjButton35().addActionListener(this);
+        this.vistaAvion.getjButton36().addActionListener(this);
+        this.vistaAvion.getjButton37().addActionListener(this);
+        this.vistaAvion.getjButton38().addActionListener(this);
+        this.vistaAvion.getjButton39().addActionListener(this);
+        this.vistaAvion.getjButton40().addActionListener(this);
+        this.vistaAvion.getjButton41().addActionListener(this);
+        this.vistaAvion.getjButton42().addActionListener(this);
+        this.vistaAvion.getjButton43().addActionListener(this);
+        this.vistaAvion.getjButton44().addActionListener(this);
+        this.vistaAvion.getjButton45().addActionListener(this);
+        this.vistaAvion.getjButton46().addActionListener(this);
+        this.vistaAvion.getjButton47().addActionListener(this);
+        this.vistaAvion.getjButton48().addActionListener(this);
+        this.vistaAvion.getComprarAsientosBtn().addActionListener(this);
+        this.vistaAvion.getVolverBtn().addActionListener(this);
+        
         reset();
     }
 
@@ -183,7 +240,7 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getMostrarVuelosComB().removeAllItems();
             ArrayList<Vuelos> vuel = m.getVuelos();
              for(int i = 0; i < vuel.size(); i++) {
-                 vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getDestino());
+                 vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getNumeroVuelo());
              }
              vistaAgregarClientes.iniciar();
         }
@@ -278,7 +335,7 @@ public class Controlador implements ActionListener{
             Object rowData[] = new Object[3];
             table.setNumRows(0);
       
-                for(int i=0; i < m.getClientes().size(); i++){
+            for(int i=0; i < m.getClientes().size(); i++){
                 Cliente cl = m.getClientes().get(i);
                 if(cl.getID() == IDCliente){
                 rowData[0] = m.getClientes().get(i).getNombre();
@@ -297,8 +354,8 @@ public class Controlador implements ActionListener{
             }          
 
                     
-                } 
-                        if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
+        } 
+        if (ae.getSource().equals(vistaAgregarClientes.getAgregarClienteBttn()))
         {
             String nombre = "";
             String apellidos = "";
@@ -311,10 +368,11 @@ public class Controlador implements ActionListener{
             acompannantes = Integer.parseInt(vistaAgregarClientes.getAcompannantesTxt().getText());
             IDCliente = Integer.parseInt(vistaAgregarClientes.getIDClienteTxt().getText());
             vuelo = vistaAgregarClientes.getMostrarVuelosComB().getSelectedItem().toString();
-            
+            idVuelo = vistaAgregarClientes.getMostrarVuelosComB().getSelectedItem().toString(); //el parametro id del vuelo para apartar campos
+            cantAcompanantes = acompannantes; // variable para comparar con la cantidad de botones de asientos elegidos
             cliente1 = new Cliente (nombre,apellidos, IDCliente, acompannantes, vuelo);
             m.annadirCliente(cliente1);
-            JOptionPane.showMessageDialog(null, "Registro exitoso");
+            //JOptionPane.showMessageDialog(null, "Registro exitoso");
             
             DefaultTableModel table = (DefaultTableModel) vistaAgregarClientes.getTableUsuarios().getModel();
             Object rowData[] = new Object[5];
@@ -333,6 +391,8 @@ public class Controlador implements ActionListener{
             vistaAgregarClientes.getIDClienteTxt().setText("");
             //vistaAgregarClientes.getMostrarVuelosComB();
             vistaAgregarClientes.setVisible(false);
+            reset();
+            //vistaAvion.getComprarAsientosBtn().setEnabled(false);
             vistaAvion.iniciar();
         }
         
@@ -470,153 +530,1057 @@ public class Controlador implements ActionListener{
                     }
                 }
             }
+        if(ae.getSource().equals(vistaAvion.getjButton1()) && vistaAvion.getjButton1().getText() == "-")
+        {
+            vistaAvion.getjButton1().setBackground(Color.gray);
+            vistaAvion.getjButton1().setText("x");
+            m.apartarCampos(idVuelo, 0, 0);
+            listaBotones.add(vistaAvion.getjButton1());
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton1()) && vistaAvion.getjButton1().getText() == "x"){
+            vistaAvion.getjButton1().setBackground(Color.green);
+            vistaAvion.getjButton1().setText("-");
+            m.quitarCampos(idVuelo, 0, 0);
+            listaBotones.remove(vistaAvion.getjButton1());
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton2()) && vistaAvion.getjButton2().getText() == "-")
+        {
+            vistaAvion.getjButton2().setBackground(Color.gray);
+            vistaAvion.getjButton2().setText("x");
+            m.apartarCampos(idVuelo, 1, 0);
+            listaBotones.add(vistaAvion.getjButton2());
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton2()) && vistaAvion.getjButton2().getText() == "x"){
+            vistaAvion.getjButton2().setBackground(Color.green);
+            vistaAvion.getjButton2().setText("-");
+            m.quitarCampos(idVuelo, 1, 0);
+            listaBotones.remove(vistaAvion.getjButton2());
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton3()) && vistaAvion.getjButton3().getText() == "-")
+        {
+            vistaAvion.getjButton3().setBackground(Color.gray); 
+            vistaAvion.getjButton3().setText("x");
+            m.apartarCampos(idVuelo, 2, 0);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton3()) && vistaAvion.getjButton3().getText() == "x"){
+            vistaAvion.getjButton3().setBackground(Color.green);
+            vistaAvion.getjButton3().setText("-");
+            m.quitarCampos(idVuelo, 2, 0);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton4()) && vistaAvion.getjButton4().getText() == "-")
+        {
+            vistaAvion.getjButton4().setBackground(Color.gray);
+            vistaAvion.getjButton4().setText("x");
+            m.apartarCampos(idVuelo, 3, 0);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton4()) && vistaAvion.getjButton4().getText() == "x"){
+            vistaAvion.getjButton4().setBackground(Color.green);
+            vistaAvion.getjButton4().setText("-");
+            m.quitarCampos(idVuelo, 3, 0);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton5()) && vistaAvion.getjButton5().getText() == "-")
+        {
+            vistaAvion.getjButton5().setBackground(Color.gray); 
+            vistaAvion.getjButton5().setText("x");
+            m.apartarCampos(idVuelo, 4, 0);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton5()) && vistaAvion.getjButton5().getText() == "x"){
+            vistaAvion.getjButton5().setBackground(Color.green);
+            vistaAvion.getjButton5().setText("-");
+            m.quitarCampos(idVuelo, 4, 0);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton6()) && vistaAvion.getjButton6().getText() == "-")
+        {
+            vistaAvion.getjButton6().setBackground(Color.gray); 
+            vistaAvion.getjButton6().setText("x");
+            m.apartarCampos(idVuelo, 5, 0);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton6()) && vistaAvion.getjButton6().getText() == "x"){
+            vistaAvion.getjButton6().setBackground(Color.green);
+            vistaAvion.getjButton6().setText("-");
+            m.quitarCampos(idVuelo, 5, 0);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton7()) && vistaAvion.getjButton7().getText() == "-")
+        {
+            vistaAvion.getjButton7().setBackground(Color.gray);   
+            vistaAvion.getjButton7().setText("x");
+            m.apartarCampos(idVuelo, 0, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton7()) && vistaAvion.getjButton7().getText() == "x"){
+            vistaAvion.getjButton7().setBackground(Color.green);
+            vistaAvion.getjButton7().setText("-");
+            m.quitarCampos(idVuelo, 0, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton8()) && vistaAvion.getjButton8().getText() == "-")
+        {
+            vistaAvion.getjButton8().setBackground(Color.gray); 
+            vistaAvion.getjButton8().setText("x");
+            m.apartarCampos(idVuelo, 1, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton8()) && vistaAvion.getjButton8().getText() == "x"){
+            vistaAvion.getjButton8().setBackground(Color.green);
+            vistaAvion.getjButton8().setText("-");
+            m.quitarCampos(idVuelo, 1, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton9()) && vistaAvion.getjButton9().getText() == "-")
+        {
+            vistaAvion.getjButton9().setBackground(Color.gray); 
+            vistaAvion.getjButton9().setText("x");
+            m.apartarCampos(idVuelo, 2, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton9()) && vistaAvion.getjButton9().getText() == "x"){
+            vistaAvion.getjButton9().setBackground(Color.green);
+            vistaAvion.getjButton9().setText("-");
+            m.quitarCampos(idVuelo, 2, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton10()) && vistaAvion.getjButton10().getText() == "-")
+        {
+            vistaAvion.getjButton10().setBackground(Color.gray); 
+            vistaAvion.getjButton10().setText("x");
+            m.apartarCampos(idVuelo, 3, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton10()) && vistaAvion.getjButton10().getText() == "x"){
+            vistaAvion.getjButton10().setBackground(Color.green);
+            vistaAvion.getjButton10().setText("-");
+            m.quitarCampos(idVuelo, 3, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton11()) && vistaAvion.getjButton11().getText() == "-")
+        {
+            vistaAvion.getjButton11().setBackground(Color.gray);  
+            vistaAvion.getjButton11().setText("x");
+            m.apartarCampos(idVuelo, 4, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton11()) && vistaAvion.getjButton11().getText() == "x"){
+            vistaAvion.getjButton11().setBackground(Color.green);
+            vistaAvion.getjButton11().setText("-");
+            m.quitarCampos(idVuelo, 4, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton12()) && vistaAvion.getjButton12().getText() == "-")
+        {
+            vistaAvion.getjButton12().setBackground(Color.gray);  
+            vistaAvion.getjButton12().setText("x");
+            m.apartarCampos(idVuelo, 5, 1);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton12()) && vistaAvion.getjButton12().getText() == "x"){
+            vistaAvion.getjButton12().setBackground(Color.green);
+            vistaAvion.getjButton12().setText("-");
+            m.quitarCampos(idVuelo, 5, 1);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton13()) && vistaAvion.getjButton13().getText() == "-")
+        {
+            vistaAvion.getjButton13().setBackground(Color.gray);   
+            vistaAvion.getjButton13().setText("x");
+            m.apartarCampos(idVuelo, 0, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton13()) && vistaAvion.getjButton13().getText() == "x"){
+            vistaAvion.getjButton13().setBackground(Color.green);
+            vistaAvion.getjButton13().setText("-");
+            m.quitarCampos(idVuelo, 0, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton14()) && vistaAvion.getjButton14().getText() == "-")
+        {
+            vistaAvion.getjButton14().setBackground(Color.gray);   
+            vistaAvion.getjButton14().setText("x");
+            m.apartarCampos(idVuelo, 1, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton14()) && vistaAvion.getjButton14().getText() == "x"){
+            vistaAvion.getjButton14().setBackground(Color.green);
+            vistaAvion.getjButton14().setText("-");
+            m.quitarCampos(idVuelo, 1, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton15()) && vistaAvion.getjButton15().getText() == "-")
+        {
+            vistaAvion.getjButton15().setBackground(Color.gray);  
+            vistaAvion.getjButton15().setText("x");
+            m.apartarCampos(idVuelo, 2, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton15()) && vistaAvion.getjButton15().getText() == "x"){
+            vistaAvion.getjButton15().setBackground(Color.green);
+            vistaAvion.getjButton15().setText("-");
+            m.quitarCampos(idVuelo, 2, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton16()) && vistaAvion.getjButton16().getText() == "-")
+        {
+            vistaAvion.getjButton16().setBackground(Color.gray);   
+            vistaAvion.getjButton16().setText("x");
+            m.apartarCampos(idVuelo, 3, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton16()) && vistaAvion.getjButton16().getText() == "x"){
+            vistaAvion.getjButton16().setBackground(Color.green);
+            vistaAvion.getjButton16().setText("-");
+            m.quitarCampos(idVuelo, 3, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton17()) && vistaAvion.getjButton17().getText() == "-")
+        {
+            vistaAvion.getjButton17().setBackground(Color.gray);   
+            vistaAvion.getjButton17().setText("x");
+            m.apartarCampos(idVuelo, 4, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton17()) && vistaAvion.getjButton17().getText() == "x"){
+            vistaAvion.getjButton17().setBackground(Color.green);
+            vistaAvion.getjButton17().setText("-");
+            m.quitarCampos(idVuelo, 4, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton18()) && vistaAvion.getjButton18().getText() == "-")
+        {
+            vistaAvion.getjButton18().setBackground(Color.gray);   
+            vistaAvion.getjButton18().setText("x");
+            m.apartarCampos(idVuelo, 5, 2);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton18()) && vistaAvion.getjButton18().getText() == "x"){
+            vistaAvion.getjButton18().setBackground(Color.green);
+            vistaAvion.getjButton18().setText("-");
+            m.quitarCampos(idVuelo, 5, 2);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton19()) && vistaAvion.getjButton19().getText() == "-")
+        {
+            vistaAvion.getjButton19().setBackground(Color.gray);   
+            vistaAvion.getjButton19().setText("x");
+            m.apartarCampos(idVuelo, 0, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton19()) && vistaAvion.getjButton19().getText() == "x"){
+            vistaAvion.getjButton19().setBackground(Color.green);
+            vistaAvion.getjButton19().setText("-");
+            m.quitarCampos(idVuelo, 0, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton20()) && vistaAvion.getjButton20().getText() == "-")
+        {
+            vistaAvion.getjButton20().setBackground(Color.gray);   
+            vistaAvion.getjButton20().setText("x");
+            m.apartarCampos(idVuelo, 1, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton20()) && vistaAvion.getjButton20().getText() == "x"){
+            vistaAvion.getjButton20().setBackground(Color.green);
+            vistaAvion.getjButton20().setText("-");
+            m.quitarCampos(idVuelo, 1, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton21()) && vistaAvion.getjButton21().getText() == "-")
+        {
+            vistaAvion.getjButton21().setBackground(Color.gray);   
+            vistaAvion.getjButton21().setText("x");
+            m.apartarCampos(idVuelo, 2, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton21()) && vistaAvion.getjButton21().getText() == "x"){
+            vistaAvion.getjButton21().setBackground(Color.green);
+            vistaAvion.getjButton21().setText("-");
+            m.quitarCampos(idVuelo, 2, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton22()) && vistaAvion.getjButton22().getText() == "-")
+        {
+            vistaAvion.getjButton22().setBackground(Color.gray);   
+            vistaAvion.getjButton22().setText("x");
+            m.apartarCampos(idVuelo, 3, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton22()) && vistaAvion.getjButton22().getText() == "x"){
+            vistaAvion.getjButton22().setBackground(Color.green);
+            vistaAvion.getjButton22().setText("-");
+            m.quitarCampos(idVuelo, 3, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton23()) && vistaAvion.getjButton23().getText() == "-")
+        {
+            vistaAvion.getjButton23().setBackground(Color.gray);   
+            vistaAvion.getjButton23().setText("x");
+            m.apartarCampos(idVuelo, 4, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton23()) && vistaAvion.getjButton23().getText() == "x"){
+            vistaAvion.getjButton23().setBackground(Color.green);
+            vistaAvion.getjButton23().setText("-");
+            m.quitarCampos(idVuelo, 4, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton24()) && vistaAvion.getjButton24().getText() == "-")
+        {
+            vistaAvion.getjButton24().setBackground(Color.gray);   
+            vistaAvion.getjButton24().setText("x");
+            m.apartarCampos(idVuelo, 5, 3);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton24()) && vistaAvion.getjButton24().getText() == "x"){
+            vistaAvion.getjButton24().setBackground(Color.green);
+            vistaAvion.getjButton24().setText("-");
+            m.quitarCampos(idVuelo, 5, 3);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton25()) && vistaAvion.getjButton25().getText() == "-")
+        {
+            vistaAvion.getjButton25().setBackground(Color.gray);   
+            vistaAvion.getjButton25().setText("x");
+            m.apartarCampos(idVuelo, 0, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton25()) && vistaAvion.getjButton25().getText() == "x"){
+            vistaAvion.getjButton25().setBackground(Color.green);
+            vistaAvion.getjButton25().setText("-");
+            m.quitarCampos(idVuelo, 0, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton26()) && vistaAvion.getjButton26().getText() == "-")
+        {
+            vistaAvion.getjButton26().setBackground(Color.gray);   
+            vistaAvion.getjButton26().setText("x");
+            m.apartarCampos(idVuelo, 1, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton26()) && vistaAvion.getjButton26().getText() == "x"){
+            vistaAvion.getjButton26().setBackground(Color.green);
+            vistaAvion.getjButton26().setText("-");
+            m.quitarCampos(idVuelo, 1, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton27()) && vistaAvion.getjButton27().getText() == "-")
+        {
+            vistaAvion.getjButton27().setBackground(Color.gray);   
+            vistaAvion.getjButton27().setText("x");
+            m.apartarCampos(idVuelo, 2, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton27()) && vistaAvion.getjButton27().getText() == "x"){
+            vistaAvion.getjButton27().setBackground(Color.green);
+            vistaAvion.getjButton27().setText("-");
+            m.quitarCampos(idVuelo, 2, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton28()) && vistaAvion.getjButton28().getText() == "-")
+        {
+            vistaAvion.getjButton28().setBackground(Color.gray);   
+            vistaAvion.getjButton28().setText("x");
+            m.apartarCampos(idVuelo, 3, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton28()) && vistaAvion.getjButton28().getText() == "x"){
+            vistaAvion.getjButton28().setBackground(Color.green);
+            vistaAvion.getjButton28().setText("-");
+            m.quitarCampos(idVuelo, 3, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton29()) && vistaAvion.getjButton29().getText() == "-")
+        {
+            vistaAvion.getjButton29().setBackground(Color.gray);   
+            vistaAvion.getjButton29().setText("x");
+            m.apartarCampos(idVuelo, 4, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton29()) && vistaAvion.getjButton29().getText() == "x"){
+            vistaAvion.getjButton29().setBackground(Color.green);
+            vistaAvion.getjButton29().setText("-");
+            m.quitarCampos(idVuelo, 4, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton30()) && vistaAvion.getjButton30().getText() == "-")
+        {
+            vistaAvion.getjButton30().setBackground(Color.gray);   
+            vistaAvion.getjButton30().setText("x");
+            m.apartarCampos(idVuelo, 5, 4);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton30()) && vistaAvion.getjButton30().getText() == "x"){
+            vistaAvion.getjButton30().setBackground(Color.green);
+            vistaAvion.getjButton30().setText("-");
+            m.quitarCampos(idVuelo, 5, 4);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton31()) && vistaAvion.getjButton31().getText() == "-")
+        {
+            vistaAvion.getjButton31().setBackground(Color.gray);   
+            vistaAvion.getjButton31().setText("x");
+            m.apartarCampos(idVuelo, 0, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton31()) && vistaAvion.getjButton31().getText() == "x"){
+            vistaAvion.getjButton31().setBackground(Color.green);
+            vistaAvion.getjButton31().setText("-");
+            m.quitarCampos(idVuelo, 0, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton32()) && vistaAvion.getjButton32().getText() == "-")
+        {
+            vistaAvion.getjButton32().setBackground(Color.gray);   
+            vistaAvion.getjButton32().setText("x");
+            m.apartarCampos(idVuelo, 1, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton32()) && vistaAvion.getjButton32().getText() == "x"){
+            vistaAvion.getjButton32().setBackground(Color.green);
+            vistaAvion.getjButton32().setText("-");
+            m.quitarCampos(idVuelo, 1, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton33()) && vistaAvion.getjButton33().getText() == "-")
+        {
+            vistaAvion.getjButton33().setBackground(Color.gray);   
+            vistaAvion.getjButton33().setText("x");
+            m.apartarCampos(idVuelo, 2, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton33()) && vistaAvion.getjButton33().getText() == "x"){
+            vistaAvion.getjButton33().setBackground(Color.green);
+            vistaAvion.getjButton33().setText("-");
+            m.quitarCampos(idVuelo, 2, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton34()) && vistaAvion.getjButton34().getText() == "-")
+        {
+            vistaAvion.getjButton34().setBackground(Color.gray);   
+            vistaAvion.getjButton34().setText("x");
+            m.apartarCampos(idVuelo, 3, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton34()) && vistaAvion.getjButton34().getText() == "x"){
+            vistaAvion.getjButton34().setBackground(Color.green);
+            vistaAvion.getjButton34().setText("-");
+            m.quitarCampos(idVuelo, 3, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton35()) && vistaAvion.getjButton35().getText() == "-")
+        {
+            vistaAvion.getjButton35().setBackground(Color.gray);   
+            vistaAvion.getjButton35().setText("x");
+            m.apartarCampos(idVuelo, 4, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton35()) && vistaAvion.getjButton35().getText() == "x"){
+            vistaAvion.getjButton35().setBackground(Color.green);
+            vistaAvion.getjButton35().setText("-");
+            m.quitarCampos(idVuelo, 4, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton36()) && vistaAvion.getjButton36().getText() == "-")
+        {
+            vistaAvion.getjButton36().setBackground(Color.gray);   
+            vistaAvion.getjButton36().setText("x");
+            m.apartarCampos(idVuelo, 5, 5);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton36()) && vistaAvion.getjButton36().getText() == "x"){
+            vistaAvion.getjButton36().setBackground(Color.green);
+            vistaAvion.getjButton36().setText("-");
+            m.quitarCampos(idVuelo, 5, 5);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton37()) && vistaAvion.getjButton37().getText() == "-")
+        {
+            vistaAvion.getjButton37().setBackground(Color.gray);   
+            vistaAvion.getjButton37().setText("x");
+            m.apartarCampos(idVuelo, 0, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton37()) && vistaAvion.getjButton37().getText() == "x"){
+            vistaAvion.getjButton37().setBackground(Color.green);
+            vistaAvion.getjButton37().setText("-");
+            m.quitarCampos(idVuelo, 0, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton38()) && vistaAvion.getjButton38().getText() == "-")
+        {
+            vistaAvion.getjButton38().setBackground(Color.gray);   
+            vistaAvion.getjButton38().setText("x");
+            m.apartarCampos(idVuelo, 1, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton38()) && vistaAvion.getjButton38().getText() == "x"){
+            vistaAvion.getjButton38().setBackground(Color.green);
+            vistaAvion.getjButton38().setText("-");
+            m.quitarCampos(idVuelo, 1, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton39()) && vistaAvion.getjButton39().getText() == "-")
+        {
+            vistaAvion.getjButton39().setBackground(Color.gray);   
+            vistaAvion.getjButton39().setText("x");
+            m.apartarCampos(idVuelo, 2, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton39()) && vistaAvion.getjButton39().getText() == "x"){
+            vistaAvion.getjButton39().setBackground(Color.green);
+            vistaAvion.getjButton39().setText("-");
+            m.quitarCampos(idVuelo, 2, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton40()) && vistaAvion.getjButton40().getText() == "-")
+        {
+            vistaAvion.getjButton40().setBackground(Color.gray);   
+            vistaAvion.getjButton40().setText("x");
+            m.apartarCampos(idVuelo, 3, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton40()) && vistaAvion.getjButton40().getText() == "x"){
+            vistaAvion.getjButton40().setBackground(Color.green);
+            vistaAvion.getjButton40().setText("-");
+            m.quitarCampos(idVuelo, 3, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton41()) && vistaAvion.getjButton41().getText() == "-")
+        {
+            vistaAvion.getjButton41().setBackground(Color.gray);   
+            vistaAvion.getjButton41().setText("x");
+            m.apartarCampos(idVuelo, 4, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton41()) && vistaAvion.getjButton41().getText() == "x"){
+            vistaAvion.getjButton41().setBackground(Color.green);
+            vistaAvion.getjButton41().setText("-");
+            m.quitarCampos(idVuelo, 4, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton42()) && vistaAvion.getjButton42().getText() == "-")
+        {
+            vistaAvion.getjButton42().setBackground(Color.gray);   
+            vistaAvion.getjButton42().setText("x");
+            m.apartarCampos(idVuelo, 5, 6);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton42()) && vistaAvion.getjButton42().getText() == "x"){
+            vistaAvion.getjButton42().setBackground(Color.green);
+            vistaAvion.getjButton42().setText("-");
+            m.quitarCampos(idVuelo, 5, 6);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton43()) && vistaAvion.getjButton43().getText() == "-")
+        {
+            vistaAvion.getjButton43().setBackground(Color.gray);   
+            vistaAvion.getjButton43().setText("x");
+            m.apartarCampos(idVuelo, 0, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton43()) && vistaAvion.getjButton43().getText() == "x"){
+            vistaAvion.getjButton43().setBackground(Color.green);
+            vistaAvion.getjButton43().setText("-");
+            m.quitarCampos(idVuelo, 0, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton44()) && vistaAvion.getjButton44().getText() == "-")
+        {
+            vistaAvion.getjButton44().setBackground(Color.gray);   
+            vistaAvion.getjButton44().setText("x");
+            m.apartarCampos(idVuelo, 1, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton44()) && vistaAvion.getjButton44().getText() == "x"){
+            vistaAvion.getjButton44().setBackground(Color.green);
+            vistaAvion.getjButton44().setText("-");
+            m.quitarCampos(idVuelo, 1, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton45()) && vistaAvion.getjButton45().getText() == "-")
+        {
+            vistaAvion.getjButton45().setBackground(Color.gray);   
+            vistaAvion.getjButton45().setText("x");
+            m.apartarCampos(idVuelo, 2, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton45()) && vistaAvion.getjButton45().getText() == "x"){
+            vistaAvion.getjButton45().setBackground(Color.green);
+            vistaAvion.getjButton45().setText("-");
+            m.quitarCampos(idVuelo, 2, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton46()) && vistaAvion.getjButton46().getText() == "-")
+        {
+            vistaAvion.getjButton46().setBackground(Color.gray);   
+            vistaAvion.getjButton46().setText("x");
+            m.apartarCampos(idVuelo, 3, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton46()) && vistaAvion.getjButton46().getText() == "x"){
+            vistaAvion.getjButton46().setBackground(Color.green);
+            vistaAvion.getjButton46().setText("-");
+            m.quitarCampos(idVuelo, 3, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton47()) && vistaAvion.getjButton47().getText() == "-")
+        {
+            vistaAvion.getjButton47().setBackground(Color.gray);   
+            vistaAvion.getjButton47().setText("x");
+            m.apartarCampos(idVuelo, 4, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton47()) && vistaAvion.getjButton47().getText() == "x"){
+            vistaAvion.getjButton47().setBackground(Color.green);
+            vistaAvion.getjButton47().setText("-");
+            m.quitarCampos(idVuelo, 4, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getjButton48()) && vistaAvion.getjButton48().getText() == "-")
+        {
+            vistaAvion.getjButton48().setBackground(Color.gray);  
+            vistaAvion.getjButton48().setText("x");
+            m.apartarCampos(idVuelo, 5, 7);
+            cant++;
+        }else if(ae.getSource().equals(vistaAvion.getjButton48()) && vistaAvion.getjButton48().getText() == "x"){
+            vistaAvion.getjButton48().setBackground(Color.green);
+            vistaAvion.getjButton48().setText("-");
+            m.quitarCampos(idVuelo, 5, 7);
+            cant--;
+        }
+        if(ae.getSource().equals(vistaAvion.getComprarAsientosBtn()) && cant == cantAcompanantes)
+        {
+            JOptionPane.showMessageDialog(null, "Compra exitosa");
+            cant = 0;
+            vistaAvion.setVisible(false);
+            vistaAgregarClientes.iniciar();
+        }else if(ae.getSource().equals(vistaAvion.getComprarAsientosBtn()) && cant != cantAcompanantes){
+            JOptionPane.showMessageDialog(null, "Los asientos seleccionados no coinciden con la cantidad de acompañantes.\nSeleccione la cantidad correcta");
+        }
+        if(ae.getSource().equals(vistaAvion.getVolverBtn()))
+        {
+            vistaAvion.setVisible(false);
+            accionVolverBtn();
+            cant = 0;
+            listaBotones.removeAll(listaBotones);
+            vistaAgregarClientes.iniciar();
+        }
+        System.out.println(m.toStringVuelos());
+        System.out.println(idVuelo);
+        System.out.println(cant);
+        System.out.println(cantAcompanantes);
+    }
+    
+    public void accionVolverBtn(){
+        for(int i = 0; i < listaBotones.size(); i++)
+        {
+            if(listaBotones.get(i) == vistaAvion.getjButton1())
+            {
+                m.quitarCampos(idVuelo, 0, 0);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton2())
+            {
+                m.quitarCampos(idVuelo, 1, 0);
+            }
+            //falta el resto de botones
+        }
     }
     
     public void reset(){
-        
-        vistaAvion.getjButton1().setText("-");
-        vistaAvion.getjButton1().setBackground(Color.green);
-        
-        vistaAvion.getjButton2().setText("-");
-        vistaAvion.getjButton2().setBackground(Color.green);
-        
-        vistaAvion.getjButton3().setText("-");
-        vistaAvion.getjButton3().setBackground(Color.green);
-        
-        vistaAvion.getjButton4().setText("-");
-        vistaAvion.getjButton4().setBackground(Color.green);
-        
-        vistaAvion.getjButton5().setText("-");
-        vistaAvion.getjButton5().setBackground(Color.green);
-        
-        vistaAvion.getjButton6().setText("-");
-        vistaAvion.getjButton6().setBackground(Color.green);
-        
-        vistaAvion.getjButton7().setText("-");
-        vistaAvion.getjButton7().setBackground(Color.green);
-        
-        vistaAvion.getjButton8().setText("-");
-        vistaAvion.getjButton8().setBackground(Color.green);
-        
-        vistaAvion.getjButton9().setText("-");
-        vistaAvion.getjButton9().setBackground(Color.green);
-        
-        vistaAvion.getjButton10().setText("-");
-        vistaAvion.getjButton10().setBackground(Color.green);
-        
-        vistaAvion.getjButton11().setText("-");
-        vistaAvion.getjButton11().setBackground(Color.green);
-        
-        vistaAvion.getjButton12().setText("-");
-        vistaAvion.getjButton12().setBackground(Color.green);
-        
-        vistaAvion.getjButton13().setText("-");
-        vistaAvion.getjButton13().setBackground(Color.green);
-        
-        vistaAvion.getjButton14().setText("-");
-        vistaAvion.getjButton14().setBackground(Color.green);
-        
-        vistaAvion.getjButton15().setText("-");
-        vistaAvion.getjButton15().setBackground(Color.green);
-        
-        vistaAvion.getjButton16().setText("-");
-        vistaAvion.getjButton16().setBackground(Color.green);
-        
-        vistaAvion.getjButton17().setText("-");
-        vistaAvion.getjButton17().setBackground(Color.green);
-        
-        vistaAvion.getjButton18().setText("-");
-        vistaAvion.getjButton18().setBackground(Color.green);
-        
-        vistaAvion.getjButton19().setText("-");
-        vistaAvion.getjButton19().setBackground(Color.green);
-        
-        vistaAvion.getjButton20().setText("-");
-        vistaAvion.getjButton20().setBackground(Color.green);
-        
-        vistaAvion.getjButton21().setText("-");
-        vistaAvion.getjButton21().setBackground(Color.green);
-        
-        vistaAvion.getjButton22().setText("-");
-        vistaAvion.getjButton22().setBackground(Color.green);
-        
-        vistaAvion.getjButton23().setText("-");
-        vistaAvion.getjButton23().setBackground(Color.green);
-        
-        vistaAvion.getjButton24().setText("-");
-        vistaAvion.getjButton24().setBackground(Color.green);
-        
-        vistaAvion.getjButton25().setText("-");
-        vistaAvion.getjButton25().setBackground(Color.green);
-        
-        vistaAvion.getjButton26().setText("-");
-        vistaAvion.getjButton26().setBackground(Color.green);
-        
-        vistaAvion.getjButton27().setText("-");
-        vistaAvion.getjButton27().setBackground(Color.green);
-        
-        vistaAvion.getjButton28().setText("-");
-        vistaAvion.getjButton28().setBackground(Color.green);
-        
-        vistaAvion.getjButton29().setText("-");
-        vistaAvion.getjButton29().setBackground(Color.green);
-        
-        vistaAvion.getjButton30().setText("-");
-        vistaAvion.getjButton30().setBackground(Color.green);
-        
-        vistaAvion.getjButton31().setText("-");
-        vistaAvion.getjButton31().setBackground(Color.green);
-        
-        vistaAvion.getjButton32().setText("-");
-        vistaAvion.getjButton32().setBackground(Color.green);
-        
-        vistaAvion.getjButton33().setText("-");
-        vistaAvion.getjButton33().setBackground(Color.green);
-        
-        vistaAvion.getjButton34().setText("-");
-        vistaAvion.getjButton34().setBackground(Color.green);
-        
-        vistaAvion.getjButton35().setText("-");
-        vistaAvion.getjButton35().setBackground(Color.green);
-        
-        vistaAvion.getjButton36().setText("-");
-        vistaAvion.getjButton36().setBackground(Color.green);
-        
-        vistaAvion.getjButton37().setText("-");
-        vistaAvion.getjButton37().setBackground(Color.green);
-        
-        vistaAvion.getjButton38().setText("-");
-        vistaAvion.getjButton38().setBackground(Color.green);
-        
-        vistaAvion.getjButton39().setText("-");
-        vistaAvion.getjButton39().setBackground(Color.green);
-        
-        vistaAvion.getjButton40().setText("-");
-        vistaAvion.getjButton40().setBackground(Color.green);
-        
-        vistaAvion.getjButton41().setText("-");
-        vistaAvion.getjButton41().setBackground(Color.green);
-        
-        vistaAvion.getjButton42().setText("-");
-        vistaAvion.getjButton42().setBackground(Color.green);
-        
-        vistaAvion.getjButton43().setText("-");
-        vistaAvion.getjButton43().setBackground(Color.green);
-        
-        vistaAvion.getjButton44().setText("-");
-        vistaAvion.getjButton44().setBackground(Color.green);
-        
-        vistaAvion.getjButton45().setText("-");
-        vistaAvion.getjButton45().setBackground(Color.green);
-        
-        vistaAvion.getjButton46().setText("-");
-        vistaAvion.getjButton46().setBackground(Color.green);
-        
-        vistaAvion.getjButton47().setText("-");
-        vistaAvion.getjButton47().setBackground(Color.green);
-        
-        vistaAvion.getjButton48().setText("-");
-        vistaAvion.getjButton48().setBackground(Color.green);
+        if(m.cargaAsientos(idVuelo, 0, 0)){
+            vistaAvion.getjButton1().setText("x");
+            vistaAvion.getjButton1().setBackground(Color.red);
+            vistaAvion.getjButton1().setEnabled(false);
+        }else{
+            vistaAvion.getjButton1().setText("-");
+            vistaAvion.getjButton1().setBackground(Color.green);
+            vistaAvion.getjButton1().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 0)){
+            vistaAvion.getjButton2().setText("x");
+            vistaAvion.getjButton2().setBackground(Color.red);
+            vistaAvion.getjButton2().setEnabled(false);
+        }else{
+            vistaAvion.getjButton2().setText("-");
+            vistaAvion.getjButton2().setBackground(Color.green);
+            vistaAvion.getjButton2().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 0)){
+            vistaAvion.getjButton3().setText("x");
+            vistaAvion.getjButton3().setBackground(Color.red);
+            vistaAvion.getjButton3().setEnabled(false);
+        }else{
+            vistaAvion.getjButton3().setText("-");
+            vistaAvion.getjButton3().setBackground(Color.green);
+            vistaAvion.getjButton3().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 0)){
+            vistaAvion.getjButton4().setText("x");
+            vistaAvion.getjButton4().setBackground(Color.red);
+            vistaAvion.getjButton4().setEnabled(false);
+        }else{
+            vistaAvion.getjButton4().setText("-");
+            vistaAvion.getjButton4().setBackground(Color.green);
+            vistaAvion.getjButton4().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 0)){
+            vistaAvion.getjButton5().setText("x");
+            vistaAvion.getjButton5().setBackground(Color.red);
+            vistaAvion.getjButton5().setEnabled(false);
+        }else{
+            vistaAvion.getjButton5().setText("-");
+            vistaAvion.getjButton5().setBackground(Color.green);
+            vistaAvion.getjButton5().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 0)){
+            vistaAvion.getjButton6().setText("x");
+            vistaAvion.getjButton6().setBackground(Color.red);
+            vistaAvion.getjButton6().setEnabled(false);
+        }else{
+            vistaAvion.getjButton6().setText("-");
+            vistaAvion.getjButton6().setBackground(Color.green);
+            vistaAvion.getjButton6().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 1)){
+            vistaAvion.getjButton7().setText("x");
+            vistaAvion.getjButton7().setBackground(Color.red);
+            vistaAvion.getjButton7().setEnabled(false);
+        }else{
+            vistaAvion.getjButton7().setText("-");
+            vistaAvion.getjButton7().setBackground(Color.green);
+            vistaAvion.getjButton7().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 1)){
+            vistaAvion.getjButton8().setText("x");
+            vistaAvion.getjButton8().setBackground(Color.red);
+            vistaAvion.getjButton8().setEnabled(false);
+        }else{
+            vistaAvion.getjButton8().setText("-");
+            vistaAvion.getjButton8().setBackground(Color.green);
+            vistaAvion.getjButton8().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 1)){
+            vistaAvion.getjButton9().setText("x");
+            vistaAvion.getjButton9().setBackground(Color.red);
+            vistaAvion.getjButton9().setEnabled(false);
+        }else{
+            vistaAvion.getjButton9().setText("-");
+            vistaAvion.getjButton9().setBackground(Color.green);
+            vistaAvion.getjButton9().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 1)){
+            vistaAvion.getjButton10().setText("x");
+            vistaAvion.getjButton10().setBackground(Color.red);
+            vistaAvion.getjButton10().setEnabled(false);
+        }else{
+            vistaAvion.getjButton10().setText("-");
+            vistaAvion.getjButton10().setBackground(Color.green);
+            vistaAvion.getjButton10().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 1)){
+            vistaAvion.getjButton11().setText("x");
+            vistaAvion.getjButton11().setBackground(Color.red);
+            vistaAvion.getjButton11().setEnabled(false);
+        }else{
+            vistaAvion.getjButton11().setText("-");
+            vistaAvion.getjButton11().setBackground(Color.green);
+            vistaAvion.getjButton11().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 1)){
+            vistaAvion.getjButton12().setText("x");
+            vistaAvion.getjButton12().setBackground(Color.red);
+            vistaAvion.getjButton12().setEnabled(false);
+        }else{
+            vistaAvion.getjButton12().setText("-");
+            vistaAvion.getjButton12().setBackground(Color.green);
+            vistaAvion.getjButton12().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 2)){
+            vistaAvion.getjButton13().setText("x");
+            vistaAvion.getjButton13().setBackground(Color.red);
+            vistaAvion.getjButton13().setEnabled(false);
+        }else{
+            vistaAvion.getjButton13().setText("-");
+            vistaAvion.getjButton13().setBackground(Color.green);
+            vistaAvion.getjButton13().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 2)){
+            vistaAvion.getjButton14().setText("x");
+            vistaAvion.getjButton14().setBackground(Color.red);
+            vistaAvion.getjButton14().setEnabled(false);
+        }else{
+            vistaAvion.getjButton14().setText("-");
+            vistaAvion.getjButton14().setBackground(Color.green);
+            vistaAvion.getjButton14().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 2)){
+            vistaAvion.getjButton15().setText("x");
+            vistaAvion.getjButton15().setBackground(Color.red);
+            vistaAvion.getjButton15().setEnabled(false);
+        }else{
+            vistaAvion.getjButton15().setText("-");
+            vistaAvion.getjButton15().setBackground(Color.green);
+            vistaAvion.getjButton15().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 2)){
+            vistaAvion.getjButton16().setText("x");
+            vistaAvion.getjButton16().setBackground(Color.red);
+            vistaAvion.getjButton16().setEnabled(false);
+        }else{
+            vistaAvion.getjButton16().setText("-");
+            vistaAvion.getjButton16().setBackground(Color.green);
+            vistaAvion.getjButton16().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 2)){
+            vistaAvion.getjButton17().setText("x");
+            vistaAvion.getjButton17().setBackground(Color.red);
+            vistaAvion.getjButton17().setEnabled(false);
+        }else{
+            vistaAvion.getjButton17().setText("-");
+            vistaAvion.getjButton17().setBackground(Color.green);
+            vistaAvion.getjButton17().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 2)){
+            vistaAvion.getjButton18().setText("x");
+            vistaAvion.getjButton18().setBackground(Color.red);
+            vistaAvion.getjButton18().setEnabled(false);
+        }else{
+            vistaAvion.getjButton18().setText("-");
+            vistaAvion.getjButton18().setBackground(Color.green);
+            vistaAvion.getjButton18().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 3)){
+            vistaAvion.getjButton19().setText("x");
+            vistaAvion.getjButton19().setBackground(Color.red);
+            vistaAvion.getjButton19().setEnabled(false);
+        }else{
+            vistaAvion.getjButton19().setText("-");
+            vistaAvion.getjButton19().setBackground(Color.green);
+            vistaAvion.getjButton19().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 3)){
+            vistaAvion.getjButton20().setText("x");
+            vistaAvion.getjButton20().setBackground(Color.red);
+            vistaAvion.getjButton20().setEnabled(false);
+        }else{
+            vistaAvion.getjButton20().setText("-");
+            vistaAvion.getjButton20().setBackground(Color.green);
+            vistaAvion.getjButton20().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 3)){
+            vistaAvion.getjButton21().setText("x");
+            vistaAvion.getjButton21().setBackground(Color.red);
+            vistaAvion.getjButton21().setEnabled(false);
+        }else{
+            vistaAvion.getjButton21().setText("-");
+            vistaAvion.getjButton21().setBackground(Color.green);
+            vistaAvion.getjButton21().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 3)){
+            vistaAvion.getjButton22().setText("x");
+            vistaAvion.getjButton22().setBackground(Color.red);
+            vistaAvion.getjButton22().setEnabled(false);
+        }else{
+            vistaAvion.getjButton22().setText("-");
+            vistaAvion.getjButton22().setBackground(Color.green);
+            vistaAvion.getjButton22().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 3)){
+            vistaAvion.getjButton23().setText("x");
+            vistaAvion.getjButton23().setBackground(Color.red);
+            vistaAvion.getjButton23().setEnabled(false);
+        }else{
+            vistaAvion.getjButton23().setText("-");
+            vistaAvion.getjButton23().setBackground(Color.green);
+            vistaAvion.getjButton23().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 3)){
+            vistaAvion.getjButton24().setText("x");
+            vistaAvion.getjButton24().setBackground(Color.red);
+            vistaAvion.getjButton24().setEnabled(false);
+        }else{
+            vistaAvion.getjButton24().setText("-");
+            vistaAvion.getjButton24().setBackground(Color.green);
+            vistaAvion.getjButton24().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 4)){
+            vistaAvion.getjButton25().setText("x");
+            vistaAvion.getjButton25().setBackground(Color.red);
+            vistaAvion.getjButton25().setEnabled(false);
+        }else{
+            vistaAvion.getjButton25().setText("-");
+            vistaAvion.getjButton25().setBackground(Color.green);
+            vistaAvion.getjButton25().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 4)){
+            vistaAvion.getjButton26().setText("x");
+            vistaAvion.getjButton26().setBackground(Color.red);
+            vistaAvion.getjButton26().setEnabled(false);
+        }else{
+            vistaAvion.getjButton26().setText("-");
+            vistaAvion.getjButton26().setBackground(Color.green);
+            vistaAvion.getjButton26().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 4)){
+            vistaAvion.getjButton27().setText("x");
+            vistaAvion.getjButton27().setBackground(Color.red);
+            vistaAvion.getjButton27().setEnabled(false);
+        }else{
+            vistaAvion.getjButton27().setText("-");
+            vistaAvion.getjButton27().setBackground(Color.green);
+            vistaAvion.getjButton27().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 4)){
+            vistaAvion.getjButton28().setText("x");
+            vistaAvion.getjButton28().setBackground(Color.red);
+            vistaAvion.getjButton28().setEnabled(false);
+        }else{
+            vistaAvion.getjButton28().setText("-");
+            vistaAvion.getjButton28().setBackground(Color.green);
+            vistaAvion.getjButton28().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 4)){
+            vistaAvion.getjButton29().setText("x");
+            vistaAvion.getjButton29().setBackground(Color.red);
+            vistaAvion.getjButton29().setEnabled(false);
+        }else{
+            vistaAvion.getjButton29().setText("-");
+            vistaAvion.getjButton29().setBackground(Color.green);
+            vistaAvion.getjButton29().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 4)){
+            vistaAvion.getjButton30().setText("x");
+            vistaAvion.getjButton30().setBackground(Color.red);
+            vistaAvion.getjButton30().setEnabled(false);
+        }else{
+            vistaAvion.getjButton30().setText("-");
+            vistaAvion.getjButton30().setBackground(Color.green);
+            vistaAvion.getjButton30().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 5)){
+            vistaAvion.getjButton31().setText("x");
+            vistaAvion.getjButton31().setBackground(Color.red);
+            vistaAvion.getjButton31().setEnabled(false);
+        }else{
+            vistaAvion.getjButton31().setText("-");
+            vistaAvion.getjButton31().setBackground(Color.green);
+            vistaAvion.getjButton31().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 5)){
+            vistaAvion.getjButton32().setText("x");
+            vistaAvion.getjButton32().setBackground(Color.red);
+            vistaAvion.getjButton32().setEnabled(false);
+        }else{
+            vistaAvion.getjButton32().setText("-");
+            vistaAvion.getjButton32().setBackground(Color.green);
+            vistaAvion.getjButton32().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 5)){
+            vistaAvion.getjButton33().setText("x");
+            vistaAvion.getjButton33().setBackground(Color.red);
+            vistaAvion.getjButton33().setEnabled(false);
+        }else{
+            vistaAvion.getjButton33().setText("-");
+            vistaAvion.getjButton33().setBackground(Color.green);
+            vistaAvion.getjButton33().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 5)){
+            vistaAvion.getjButton34().setText("x");
+            vistaAvion.getjButton34().setBackground(Color.red);
+            vistaAvion.getjButton34().setEnabled(false);
+        }else{
+            vistaAvion.getjButton34().setText("-");
+            vistaAvion.getjButton34().setBackground(Color.green);
+            vistaAvion.getjButton34().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 5)){
+            vistaAvion.getjButton35().setText("x");
+            vistaAvion.getjButton35().setBackground(Color.red);
+            vistaAvion.getjButton35().setEnabled(false);
+        }else{
+            vistaAvion.getjButton35().setText("-");
+            vistaAvion.getjButton35().setBackground(Color.green);
+            vistaAvion.getjButton35().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 5)){
+            vistaAvion.getjButton36().setText("x");
+            vistaAvion.getjButton36().setBackground(Color.red);
+            vistaAvion.getjButton36().setEnabled(false);
+        }else{
+            vistaAvion.getjButton36().setText("-");
+            vistaAvion.getjButton36().setBackground(Color.green);
+            vistaAvion.getjButton36().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 6)){
+            vistaAvion.getjButton37().setText("x");
+            vistaAvion.getjButton37().setBackground(Color.red);
+            vistaAvion.getjButton37().setEnabled(false);
+        }else{
+            vistaAvion.getjButton37().setText("-");
+            vistaAvion.getjButton37().setBackground(Color.green);
+            vistaAvion.getjButton37().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 6)){
+            vistaAvion.getjButton38().setText("x");
+            vistaAvion.getjButton38().setBackground(Color.red);
+            vistaAvion.getjButton38().setEnabled(false);
+        }else{
+            vistaAvion.getjButton38().setText("-");
+            vistaAvion.getjButton38().setBackground(Color.green);
+            vistaAvion.getjButton38().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 6)){
+            vistaAvion.getjButton39().setText("x");
+            vistaAvion.getjButton39().setBackground(Color.red);
+            vistaAvion.getjButton39().setEnabled(false);
+        }else{
+            vistaAvion.getjButton39().setText("-");
+            vistaAvion.getjButton39().setBackground(Color.green);
+            vistaAvion.getjButton39().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 6)){
+            vistaAvion.getjButton40().setText("x");
+            vistaAvion.getjButton40().setBackground(Color.red);
+            vistaAvion.getjButton40().setEnabled(false);
+        }else{
+            vistaAvion.getjButton40().setText("-");
+            vistaAvion.getjButton40().setBackground(Color.green);
+            vistaAvion.getjButton40().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 6)){
+            vistaAvion.getjButton41().setText("x");
+            vistaAvion.getjButton41().setBackground(Color.red);
+            vistaAvion.getjButton41().setEnabled(false);
+        }else{
+            vistaAvion.getjButton41().setText("-");
+            vistaAvion.getjButton41().setBackground(Color.green);
+            vistaAvion.getjButton41().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 6)){
+            vistaAvion.getjButton42().setText("x");
+            vistaAvion.getjButton42().setBackground(Color.red);
+            vistaAvion.getjButton42().setEnabled(false);
+        }else{
+            vistaAvion.getjButton42().setText("-");
+            vistaAvion.getjButton42().setBackground(Color.green);
+            vistaAvion.getjButton42().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 0, 7)){
+            vistaAvion.getjButton43().setText("x");
+            vistaAvion.getjButton43().setBackground(Color.red);
+            vistaAvion.getjButton43().setEnabled(false);
+        }else{
+            vistaAvion.getjButton43().setText("-");
+            vistaAvion.getjButton43().setBackground(Color.green);
+            vistaAvion.getjButton43().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 1, 7)){
+            vistaAvion.getjButton44().setText("x");
+            vistaAvion.getjButton44().setBackground(Color.red);
+            vistaAvion.getjButton44().setEnabled(false);
+        }else{
+            vistaAvion.getjButton44().setText("-");
+            vistaAvion.getjButton44().setBackground(Color.green);
+            vistaAvion.getjButton44().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 2, 7)){
+            vistaAvion.getjButton45().setText("x");
+            vistaAvion.getjButton45().setBackground(Color.red);
+            vistaAvion.getjButton45().setEnabled(false);
+        }else{
+            vistaAvion.getjButton45().setText("-");
+            vistaAvion.getjButton45().setBackground(Color.green);
+            vistaAvion.getjButton45().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 3, 7)){
+            vistaAvion.getjButton46().setText("x");
+            vistaAvion.getjButton46().setBackground(Color.red);
+            vistaAvion.getjButton46().setEnabled(false);
+        }else{
+            vistaAvion.getjButton46().setText("-");
+            vistaAvion.getjButton46().setBackground(Color.green);
+            vistaAvion.getjButton46().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 4, 7)){
+            vistaAvion.getjButton47().setText("x");
+            vistaAvion.getjButton47().setBackground(Color.red);
+            vistaAvion.getjButton47().setEnabled(false);
+        }else{
+            vistaAvion.getjButton47().setText("-");
+            vistaAvion.getjButton47().setBackground(Color.green);
+            vistaAvion.getjButton47().setEnabled(true);
+        }
+        if(m.cargaAsientos(idVuelo, 5, 7)){
+            vistaAvion.getjButton48().setText("x");
+            vistaAvion.getjButton48().setBackground(Color.red);
+            vistaAvion.getjButton48().setEnabled(false);
+        }else{
+            vistaAvion.getjButton48().setText("-");
+            vistaAvion.getjButton48().setBackground(Color.green);
+            vistaAvion.getjButton48().setEnabled(true);
+        }
     }
 }
 

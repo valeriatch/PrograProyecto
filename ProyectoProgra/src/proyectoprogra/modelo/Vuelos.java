@@ -24,6 +24,13 @@ public class Vuelos {
         fechaCreacion = "";
         duracionVuelo = 0;
         numeroAsientos = 0;
+        x = "x";
+        
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 8; j++) {
+                 this.matrizAvion[i][j] = "";
+            }
+        }
     }
 
     public Vuelos(String aerolinea, String numeroVuelo, String salida, String destino, String horarioSalida, String horarioLlegada, String fechaCreacion, int duracionVuelo, int numeroAsientos) {
@@ -36,6 +43,12 @@ public class Vuelos {
         this.fechaCreacion = fechaCreacion;
         this.duracionVuelo = duracionVuelo;
         this.numeroAsientos = numeroAsientos;
+        
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 8; j++) {
+                 this.matrizAvion[i][j] = "-";
+            }
+        }
     }
     
     public String getAerolinea() {
@@ -110,9 +123,44 @@ public class Vuelos {
         this.numeroAsientos = numeroAsientos;
     }
 
+    public String getX() {
+        return x;
+    }
+
+    public void setX(String x) {
+        this.x = x;
+    }
+
+    public String[][] getMatrizAvion() {
+        return matrizAvion;
+    }
+
+    public void setMatrizAvion(String[][] matrizAvion) {
+        this.matrizAvion = matrizAvion;
+    }
+
+//    public void llenar() {
+//        for (int i = 0; i < 6; i++) {
+//            for (int j = 0; j < 8; j++) {
+//                 this.matrizAvion[i][j] = "-";
+//            }
+//        }
+//    }
+    
+    public String imprime(){
+        String matriz = "";
+        for (int i = 0; i < FILAS; i++){
+            for (int j = 0; j < COLUMNAS; j++){
+                matriz += this.matrizAvion[i][j] + " ";
+            }
+            matriz += "\n";
+        }
+        return matriz;
+    }
+    
     @Override
     public String toString() {
-        return "Vuelos{" + "aerolinea=" + aerolinea + ", numeroVuelo=" + numeroVuelo + ", salida=" + salida + ", destino=" + destino + ", horarioSalida=" + horarioSalida + ", horarioLlegada=" + horarioLlegada + ", fechaCreacion=" + fechaCreacion + ", duracionVuelo=" + duracionVuelo + ", numeroAsientos=" + numeroAsientos + '}';
+        return "Vuelos{" + "aerolinea=" + aerolinea + ", numeroVuelo=" + numeroVuelo + ", salida=" + salida + ", destino=" + destino + ", horarioSalida=" + horarioSalida + ", horarioLlegada=" + horarioLlegada + ", fechaCreacion=" + fechaCreacion + ", duracionVuelo=" + duracionVuelo + ", numeroAsientos=" + numeroAsientos + "\nmatriz=\n" + imprime() + '}';
     }
     
     private String aerolinea;
@@ -126,4 +174,8 @@ public class Vuelos {
     private int numeroAsientos;
     LocalDate date = LocalDate.now();
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private final int FILAS  = 6;
+    private final int COLUMNAS = 8;
+    public String[][] matrizAvion  = new String[FILAS][COLUMNAS];
+    private String x;
 }

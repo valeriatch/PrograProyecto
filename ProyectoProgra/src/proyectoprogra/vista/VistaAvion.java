@@ -78,13 +78,15 @@ public class VistaAvion extends javax.swing.JFrame {
         jButton46 = new javax.swing.JButton();
         jButton47 = new javax.swing.JButton();
         jButton48 = new javax.swing.JButton();
+        comprarAsientosBtn = new javax.swing.JButton();
+        volverBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(655, 480));
         setResizable(false);
 
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, new javax.swing.JLabel(), org.jdesktop.beansbinding.ELProperty.create("${background}"), this, org.jdesktop.beansbinding.BeanProperty.create("background"));
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jLabel1, org.jdesktop.beansbinding.ELProperty.create("${background}"), this, org.jdesktop.beansbinding.BeanProperty.create("background"));
         bindingGroup.addBinding(binding);
 
         getContentPane().setLayout(null);
@@ -103,7 +105,7 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton4.setLabel("-");
         getContentPane().add(jButton4);
-        jButton4.setBounds(320, 250, 30, 20);
+        jButton4.setBounds(320, 210, 30, 20);
 
         jButton5.setLabel("-");
         getContentPane().add(jButton5);
@@ -111,31 +113,31 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton6.setLabel("-");
         getContentPane().add(jButton6);
-        jButton6.setBounds(320, 210, 30, 20);
+        jButton6.setBounds(320, 250, 30, 20);
 
         jButton7.setLabel("-");
         getContentPane().add(jButton7);
-        jButton7.setBounds(360, 250, 30, 20);
+        jButton7.setBounds(360, 110, 30, 20);
 
         jButton8.setLabel("-");
         getContentPane().add(jButton8);
-        jButton8.setBounds(360, 230, 30, 20);
+        jButton8.setBounds(360, 130, 30, 20);
 
         jButton9.setLabel("-");
         getContentPane().add(jButton9);
-        jButton9.setBounds(360, 210, 30, 20);
+        jButton9.setBounds(360, 150, 30, 20);
 
         jButton10.setLabel("-");
         getContentPane().add(jButton10);
-        jButton10.setBounds(360, 150, 30, 20);
+        jButton10.setBounds(360, 210, 30, 20);
 
         jButton11.setLabel("-");
         getContentPane().add(jButton11);
-        jButton11.setBounds(360, 130, 30, 20);
+        jButton11.setBounds(360, 230, 30, 20);
 
         jButton12.setLabel("-");
         getContentPane().add(jButton12);
-        jButton12.setBounds(360, 110, 30, 20);
+        jButton12.setBounds(360, 250, 30, 20);
 
         jButton13.setLabel("-");
         getContentPane().add(jButton13);
@@ -151,7 +153,7 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton16.setLabel("-");
         getContentPane().add(jButton16);
-        jButton16.setBounds(400, 250, 30, 20);
+        jButton16.setBounds(400, 210, 30, 20);
 
         jButton17.setLabel("-");
         getContentPane().add(jButton17);
@@ -159,31 +161,31 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton18.setLabel("-");
         getContentPane().add(jButton18);
-        jButton18.setBounds(400, 210, 30, 20);
+        jButton18.setBounds(400, 250, 30, 20);
 
         jButton19.setLabel("-");
         getContentPane().add(jButton19);
-        jButton19.setBounds(440, 250, 30, 20);
+        jButton19.setBounds(440, 110, 30, 20);
 
         jButton20.setLabel("-");
         getContentPane().add(jButton20);
-        jButton20.setBounds(440, 230, 30, 20);
+        jButton20.setBounds(440, 130, 30, 20);
 
         jButton21.setLabel("-");
         getContentPane().add(jButton21);
-        jButton21.setBounds(440, 210, 30, 20);
+        jButton21.setBounds(440, 150, 30, 20);
 
         jButton22.setLabel("-");
         getContentPane().add(jButton22);
-        jButton22.setBounds(440, 150, 30, 20);
+        jButton22.setBounds(440, 210, 30, 20);
 
         jButton23.setLabel("-");
         getContentPane().add(jButton23);
-        jButton23.setBounds(440, 130, 30, 20);
+        jButton23.setBounds(440, 230, 30, 20);
 
         jButton24.setLabel("-");
         getContentPane().add(jButton24);
-        jButton24.setBounds(440, 110, 30, 20);
+        jButton24.setBounds(440, 250, 30, 20);
 
         jButton25.setLabel("-");
         getContentPane().add(jButton25);
@@ -199,7 +201,7 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton28.setLabel("-");
         getContentPane().add(jButton28);
-        jButton28.setBounds(480, 250, 30, 20);
+        jButton28.setBounds(480, 210, 30, 20);
 
         jButton29.setLabel("-");
         getContentPane().add(jButton29);
@@ -207,31 +209,31 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton30.setLabel("-");
         getContentPane().add(jButton30);
-        jButton30.setBounds(480, 210, 30, 20);
+        jButton30.setBounds(480, 250, 30, 20);
 
         jButton31.setLabel("-");
         getContentPane().add(jButton31);
-        jButton31.setBounds(540, 250, 30, 20);
+        jButton31.setBounds(540, 110, 30, 20);
 
         jButton32.setLabel("-");
         getContentPane().add(jButton32);
-        jButton32.setBounds(540, 230, 30, 20);
+        jButton32.setBounds(540, 130, 30, 20);
 
         jButton33.setLabel("-");
         getContentPane().add(jButton33);
-        jButton33.setBounds(540, 210, 30, 20);
+        jButton33.setBounds(540, 150, 30, 20);
 
         jButton34.setLabel("-");
         getContentPane().add(jButton34);
-        jButton34.setBounds(540, 150, 30, 20);
+        jButton34.setBounds(540, 210, 30, 20);
 
         jButton35.setLabel("-");
         getContentPane().add(jButton35);
-        jButton35.setBounds(540, 130, 30, 20);
+        jButton35.setBounds(540, 230, 30, 20);
 
         jButton36.setLabel("-");
         getContentPane().add(jButton36);
-        jButton36.setBounds(540, 110, 30, 20);
+        jButton36.setBounds(540, 250, 30, 20);
 
         jButton37.setLabel("-");
         getContentPane().add(jButton37);
@@ -247,7 +249,7 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton40.setLabel("-");
         getContentPane().add(jButton40);
-        jButton40.setBounds(580, 250, 30, 20);
+        jButton40.setBounds(580, 210, 30, 20);
 
         jButton41.setLabel("-");
         getContentPane().add(jButton41);
@@ -255,31 +257,41 @@ public class VistaAvion extends javax.swing.JFrame {
 
         jButton42.setLabel("-");
         getContentPane().add(jButton42);
-        jButton42.setBounds(580, 210, 30, 20);
+        jButton42.setBounds(580, 250, 30, 20);
 
         jButton43.setLabel("-");
         getContentPane().add(jButton43);
-        jButton43.setBounds(620, 250, 30, 20);
+        jButton43.setBounds(620, 110, 30, 20);
 
         jButton44.setLabel("-");
         getContentPane().add(jButton44);
-        jButton44.setBounds(620, 230, 30, 20);
+        jButton44.setBounds(620, 130, 30, 20);
 
         jButton45.setLabel("-");
         getContentPane().add(jButton45);
-        jButton45.setBounds(620, 210, 30, 20);
+        jButton45.setBounds(620, 150, 30, 20);
 
         jButton46.setLabel("-");
         getContentPane().add(jButton46);
-        jButton46.setBounds(620, 150, 30, 20);
+        jButton46.setBounds(620, 210, 30, 20);
 
         jButton47.setLabel("-");
         getContentPane().add(jButton47);
-        jButton47.setBounds(620, 130, 30, 20);
+        jButton47.setBounds(620, 230, 30, 20);
 
         jButton48.setLabel("-");
         getContentPane().add(jButton48);
-        jButton48.setBounds(620, 110, 30, 20);
+        jButton48.setBounds(620, 250, 30, 20);
+
+        comprarAsientosBtn.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        comprarAsientosBtn.setText("Comprar");
+        getContentPane().add(comprarAsientosBtn);
+        comprarAsientosBtn.setBounds(260, 390, 150, 50);
+
+        volverBtn.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        volverBtn.setText("Volver");
+        getContentPane().add(volverBtn);
+        volverBtn.setBounds(10, 10, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Plantilla Avion .jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -679,13 +691,22 @@ public class VistaAvion extends javax.swing.JFrame {
         this.jButton9 = jButton9;
     }
 
-    public JButton getOne_btn() {
-        return one_btn;
+    public JButton getComprarAsientosBtn() {
+        return comprarAsientosBtn;
     }
 
-    public void setOne_btn(JButton one_btn) {
-        this.one_btn = one_btn;
+    public void setComprarAsientosBtn(JButton comprarAsientosBtn) {
+        this.comprarAsientosBtn = comprarAsientosBtn;
     }
+
+    public JButton getVolverBtn() {
+        return volverBtn;
+    }
+
+    public void setVolverBtn(JButton volverBtn) {
+        this.volverBtn = volverBtn;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -722,6 +743,7 @@ public class VistaAvion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton comprarAsientosBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -771,7 +793,7 @@ public class VistaAvion extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton one_btn;
+    private javax.swing.JButton volverBtn;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

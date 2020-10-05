@@ -112,7 +112,44 @@ public class Modelo {
         }
         return false;
     }
-
+    public void apartarCampos(String idVuelo, int fila, int columna)
+    {
+        for(int i = 0; i < vuelos.size(); i++)
+        {
+            //Vuelos u = vuelos.get(i);
+            if(vuelos.get(i).getNumeroVuelo().equals(idVuelo))
+            {
+                vuelos.get(i).matrizAvion[fila][columna] = "x";
+                //System.out.println("posicion " + fila + " " + columna + "=" + vuelos.get(i).matrizAvion[fila][columna]);
+            }
+        }
+    }
+    public void quitarCampos(String idVuelo, int fila, int columna)
+    {
+        for(int i = 0; i < vuelos.size(); i++)
+        {
+            //Vuelos u = vuelos.get(i);
+            if(vuelos.get(i).getNumeroVuelo().equals(idVuelo))
+            {
+                vuelos.get(i).matrizAvion[fila][columna] = "-";
+                //System.out.println("posicion " + fila + " " + columna + "=" + vuelos.get(i).matrizAvion[fila][columna]);
+            }
+        }
+    }
+    public boolean cargaAsientos(String idVuelo, int fila, int columna)
+    {
+        for(int i = 0; i < vuelos.size(); i++)
+        {
+            if(vuelos.get(i).getNumeroVuelo().equals(idVuelo))
+            {
+                if(vuelos.get(i).matrizAvion[fila][columna] == "x")
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     public String toStringUsuarios() {
         return "Modelo{" + "usuarios=" + usuarios + '}';
     }
