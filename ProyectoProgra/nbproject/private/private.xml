@@ -3,25 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaVerVuelos.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Vuelos.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaRegistraAerolinea.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/imagenes/busquedabutton_opt.jpg</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaBuscarClientes.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Aerolinea.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/controlador/Controlador.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Modelo.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/ProyectoProgra.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaAvion.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Cliente.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaVuelos.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaConfiguracion.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/imagenes/perfildeusuario.jpg</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaLogin.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Usuario.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaAgregarCliente.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/MainFrame.java</file>
-            <file>file:/C:/Users/Usuario1/Desktop/PrograProyecto/ProyectoProgra/src/imagenes/logoAeropuerto.jpg</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Aerolinea.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Modelo.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/MainFrame.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Vuelos.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaLogin.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/controlador/Controlador.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaVerVuelos.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Cliente.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/ProyectoProgra.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaRegistraAerolinea.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaAgregarCliente.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/modelo/Usuario.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaBuscarClientes.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaVuelos.java</file>
+            <file>file:/C:/Users/vtrejosc/OneDrive%20-%20Intel%20Corporation/Documents/GitHub/PrograProyecto/ProyectoProgra/src/proyectoprogra/vista/VistaAvion.java</file>
         </group>
     </open-files>
 </project-private>

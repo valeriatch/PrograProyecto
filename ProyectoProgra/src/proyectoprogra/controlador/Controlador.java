@@ -563,11 +563,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton3().setBackground(Color.gray); 
             vistaAvion.getjButton3().setText("x");
             m.apartarCampos(idVuelo, 2, 0);
+            listaBotones.add(vistaAvion.getjButton3());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton3()) && vistaAvion.getjButton3().getText() == "x"){
             vistaAvion.getjButton3().setBackground(Color.green);
             vistaAvion.getjButton3().setText("-");
             m.quitarCampos(idVuelo, 2, 0);
+            listaBotones.remove(vistaAvion.getjButton3());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton4()) && vistaAvion.getjButton4().getText() == "-")
@@ -575,11 +577,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton4().setBackground(Color.gray);
             vistaAvion.getjButton4().setText("x");
             m.apartarCampos(idVuelo, 3, 0);
+            listaBotones.add(vistaAvion.getjButton4());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton4()) && vistaAvion.getjButton4().getText() == "x"){
             vistaAvion.getjButton4().setBackground(Color.green);
             vistaAvion.getjButton4().setText("-");
             m.quitarCampos(idVuelo, 3, 0);
+            listaBotones.remove(vistaAvion.getjButton4());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton5()) && vistaAvion.getjButton5().getText() == "-")
@@ -587,23 +591,28 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton5().setBackground(Color.gray); 
             vistaAvion.getjButton5().setText("x");
             m.apartarCampos(idVuelo, 4, 0);
+            listaBotones.add(vistaAvion.getjButton5());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton5()) && vistaAvion.getjButton5().getText() == "x"){
             vistaAvion.getjButton5().setBackground(Color.green);
             vistaAvion.getjButton5().setText("-");
             m.quitarCampos(idVuelo, 4, 0);
+            listaBotones.remove(vistaAvion.getjButton5());
             cant--;
         }
+      ///******Actualizar aca para abajo***********************************************************************************************
         if(ae.getSource().equals(vistaAvion.getjButton6()) && vistaAvion.getjButton6().getText() == "-")
         {
             vistaAvion.getjButton6().setBackground(Color.gray); 
             vistaAvion.getjButton6().setText("x");
             m.apartarCampos(idVuelo, 5, 0);
+            listaBotones.add(vistaAvion.getjButton6());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton6()) && vistaAvion.getjButton6().getText() == "x"){
             vistaAvion.getjButton6().setBackground(Color.green);
             vistaAvion.getjButton6().setText("-");
             m.quitarCampos(idVuelo, 5, 0);
+            listaBotones.remove(vistaAvion.getjButton6());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton7()) && vistaAvion.getjButton7().getText() == "-")
@@ -611,11 +620,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton7().setBackground(Color.gray);   
             vistaAvion.getjButton7().setText("x");
             m.apartarCampos(idVuelo, 0, 1);
+            listaBotones.add(vistaAvion.getjButton7());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton7()) && vistaAvion.getjButton7().getText() == "x"){
             vistaAvion.getjButton7().setBackground(Color.green);
             vistaAvion.getjButton7().setText("-");
             m.quitarCampos(idVuelo, 0, 1);
+            listaBotones.remove(vistaAvion.getjButton7());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton8()) && vistaAvion.getjButton8().getText() == "-")
@@ -623,11 +634,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton8().setBackground(Color.gray); 
             vistaAvion.getjButton8().setText("x");
             m.apartarCampos(idVuelo, 1, 1);
+            listaBotones.add(vistaAvion.getjButton8());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton8()) && vistaAvion.getjButton8().getText() == "x"){
             vistaAvion.getjButton8().setBackground(Color.green);
             vistaAvion.getjButton8().setText("-");
             m.quitarCampos(idVuelo, 1, 1);
+            listaBotones.remove(vistaAvion.getjButton8());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton9()) && vistaAvion.getjButton9().getText() == "-")
@@ -635,11 +648,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton9().setBackground(Color.gray); 
             vistaAvion.getjButton9().setText("x");
             m.apartarCampos(idVuelo, 2, 1);
+            listaBotones.add(vistaAvion.getjButton9());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton9()) && vistaAvion.getjButton9().getText() == "x"){
             vistaAvion.getjButton9().setBackground(Color.green);
             vistaAvion.getjButton9().setText("-");
             m.quitarCampos(idVuelo, 2, 1);
+            listaBotones.remove(vistaAvion.getjButton9());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton10()) && vistaAvion.getjButton10().getText() == "-")
@@ -647,11 +662,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton10().setBackground(Color.gray); 
             vistaAvion.getjButton10().setText("x");
             m.apartarCampos(idVuelo, 3, 1);
+            listaBotones.add(vistaAvion.getjButton10());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton10()) && vistaAvion.getjButton10().getText() == "x"){
             vistaAvion.getjButton10().setBackground(Color.green);
             vistaAvion.getjButton10().setText("-");
             m.quitarCampos(idVuelo, 3, 1);
+            listaBotones.remove(vistaAvion.getjButton10());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton11()) && vistaAvion.getjButton11().getText() == "-")
@@ -659,11 +676,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton11().setBackground(Color.gray);  
             vistaAvion.getjButton11().setText("x");
             m.apartarCampos(idVuelo, 4, 1);
+            listaBotones.add(vistaAvion.getjButton11());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton11()) && vistaAvion.getjButton11().getText() == "x"){
             vistaAvion.getjButton11().setBackground(Color.green);
             vistaAvion.getjButton11().setText("-");
             m.quitarCampos(idVuelo, 4, 1);
+            listaBotones.remove(vistaAvion.getjButton11());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton12()) && vistaAvion.getjButton12().getText() == "-")
@@ -671,11 +690,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton12().setBackground(Color.gray);  
             vistaAvion.getjButton12().setText("x");
             m.apartarCampos(idVuelo, 5, 1);
+            listaBotones.add(vistaAvion.getjButton12());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton12()) && vistaAvion.getjButton12().getText() == "x"){
             vistaAvion.getjButton12().setBackground(Color.green);
             vistaAvion.getjButton12().setText("-");
             m.quitarCampos(idVuelo, 5, 1);
+            listaBotones.remove(vistaAvion.getjButton12());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton13()) && vistaAvion.getjButton13().getText() == "-")
@@ -683,11 +704,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton13().setBackground(Color.gray);   
             vistaAvion.getjButton13().setText("x");
             m.apartarCampos(idVuelo, 0, 2);
+            listaBotones.add(vistaAvion.getjButton13());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton13()) && vistaAvion.getjButton13().getText() == "x"){
             vistaAvion.getjButton13().setBackground(Color.green);
             vistaAvion.getjButton13().setText("-");
             m.quitarCampos(idVuelo, 0, 2);
+            listaBotones.remove(vistaAvion.getjButton13());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton14()) && vistaAvion.getjButton14().getText() == "-")
@@ -695,11 +718,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton14().setBackground(Color.gray);   
             vistaAvion.getjButton14().setText("x");
             m.apartarCampos(idVuelo, 1, 2);
+            listaBotones.add(vistaAvion.getjButton14());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton14()) && vistaAvion.getjButton14().getText() == "x"){
             vistaAvion.getjButton14().setBackground(Color.green);
             vistaAvion.getjButton14().setText("-");
             m.quitarCampos(idVuelo, 1, 2);
+            listaBotones.remove(vistaAvion.getjButton14());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton15()) && vistaAvion.getjButton15().getText() == "-")
@@ -707,11 +732,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton15().setBackground(Color.gray);  
             vistaAvion.getjButton15().setText("x");
             m.apartarCampos(idVuelo, 2, 2);
+            listaBotones.add(vistaAvion.getjButton15());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton15()) && vistaAvion.getjButton15().getText() == "x"){
             vistaAvion.getjButton15().setBackground(Color.green);
             vistaAvion.getjButton15().setText("-");
             m.quitarCampos(idVuelo, 2, 2);
+            listaBotones.remove(vistaAvion.getjButton15());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton16()) && vistaAvion.getjButton16().getText() == "-")
@@ -719,11 +746,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton16().setBackground(Color.gray);   
             vistaAvion.getjButton16().setText("x");
             m.apartarCampos(idVuelo, 3, 2);
+            listaBotones.add(vistaAvion.getjButton16());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton16()) && vistaAvion.getjButton16().getText() == "x"){
             vistaAvion.getjButton16().setBackground(Color.green);
             vistaAvion.getjButton16().setText("-");
             m.quitarCampos(idVuelo, 3, 2);
+            listaBotones.remove(vistaAvion.getjButton16());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton17()) && vistaAvion.getjButton17().getText() == "-")
@@ -731,11 +760,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton17().setBackground(Color.gray);   
             vistaAvion.getjButton17().setText("x");
             m.apartarCampos(idVuelo, 4, 2);
+            listaBotones.add(vistaAvion.getjButton17());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton17()) && vistaAvion.getjButton17().getText() == "x"){
             vistaAvion.getjButton17().setBackground(Color.green);
             vistaAvion.getjButton17().setText("-");
             m.quitarCampos(idVuelo, 4, 2);
+            listaBotones.remove(vistaAvion.getjButton17());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton18()) && vistaAvion.getjButton18().getText() == "-")
@@ -743,11 +774,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton18().setBackground(Color.gray);   
             vistaAvion.getjButton18().setText("x");
             m.apartarCampos(idVuelo, 5, 2);
+            listaBotones.add(vistaAvion.getjButton18());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton18()) && vistaAvion.getjButton18().getText() == "x"){
             vistaAvion.getjButton18().setBackground(Color.green);
             vistaAvion.getjButton18().setText("-");
             m.quitarCampos(idVuelo, 5, 2);
+            listaBotones.remove(vistaAvion.getjButton18());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton19()) && vistaAvion.getjButton19().getText() == "-")
@@ -755,11 +788,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton19().setBackground(Color.gray);   
             vistaAvion.getjButton19().setText("x");
             m.apartarCampos(idVuelo, 0, 3);
+            listaBotones.add(vistaAvion.getjButton19());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton19()) && vistaAvion.getjButton19().getText() == "x"){
             vistaAvion.getjButton19().setBackground(Color.green);
             vistaAvion.getjButton19().setText("-");
             m.quitarCampos(idVuelo, 0, 3);
+            listaBotones.remove(vistaAvion.getjButton19());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton20()) && vistaAvion.getjButton20().getText() == "-")
@@ -767,11 +802,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton20().setBackground(Color.gray);   
             vistaAvion.getjButton20().setText("x");
             m.apartarCampos(idVuelo, 1, 3);
+            listaBotones.add(vistaAvion.getjButton20());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton20()) && vistaAvion.getjButton20().getText() == "x"){
             vistaAvion.getjButton20().setBackground(Color.green);
             vistaAvion.getjButton20().setText("-");
             m.quitarCampos(idVuelo, 1, 3);
+            listaBotones.remove(vistaAvion.getjButton20());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton21()) && vistaAvion.getjButton21().getText() == "-")
@@ -779,23 +816,28 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton21().setBackground(Color.gray);   
             vistaAvion.getjButton21().setText("x");
             m.apartarCampos(idVuelo, 2, 3);
+            listaBotones.add(vistaAvion.getjButton21());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton21()) && vistaAvion.getjButton21().getText() == "x"){
             vistaAvion.getjButton21().setBackground(Color.green);
             vistaAvion.getjButton21().setText("-");
             m.quitarCampos(idVuelo, 2, 3);
+            listaBotones.remove(vistaAvion.getjButton21());
             cant--;
         }
+       
         if(ae.getSource().equals(vistaAvion.getjButton22()) && vistaAvion.getjButton22().getText() == "-")
         {
             vistaAvion.getjButton22().setBackground(Color.gray);   
             vistaAvion.getjButton22().setText("x");
             m.apartarCampos(idVuelo, 3, 3);
+            listaBotones.add(vistaAvion.getjButton22());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton22()) && vistaAvion.getjButton22().getText() == "x"){
             vistaAvion.getjButton22().setBackground(Color.green);
             vistaAvion.getjButton22().setText("-");
             m.quitarCampos(idVuelo, 3, 3);
+            listaBotones.remove(vistaAvion.getjButton22());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton23()) && vistaAvion.getjButton23().getText() == "-")
@@ -803,11 +845,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton23().setBackground(Color.gray);   
             vistaAvion.getjButton23().setText("x");
             m.apartarCampos(idVuelo, 4, 3);
+            listaBotones.add(vistaAvion.getjButton23());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton23()) && vistaAvion.getjButton23().getText() == "x"){
             vistaAvion.getjButton23().setBackground(Color.green);
             vistaAvion.getjButton23().setText("-");
             m.quitarCampos(idVuelo, 4, 3);
+            listaBotones.remove(vistaAvion.getjButton23());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton24()) && vistaAvion.getjButton24().getText() == "-")
@@ -815,11 +859,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton24().setBackground(Color.gray);   
             vistaAvion.getjButton24().setText("x");
             m.apartarCampos(idVuelo, 5, 3);
+            listaBotones.add(vistaAvion.getjButton24());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton24()) && vistaAvion.getjButton24().getText() == "x"){
             vistaAvion.getjButton24().setBackground(Color.green);
             vistaAvion.getjButton24().setText("-");
             m.quitarCampos(idVuelo, 5, 3);
+            listaBotones.remove(vistaAvion.getjButton24());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton25()) && vistaAvion.getjButton25().getText() == "-")
@@ -827,11 +873,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton25().setBackground(Color.gray);   
             vistaAvion.getjButton25().setText("x");
             m.apartarCampos(idVuelo, 0, 4);
+            listaBotones.add(vistaAvion.getjButton25());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton25()) && vistaAvion.getjButton25().getText() == "x"){
             vistaAvion.getjButton25().setBackground(Color.green);
             vistaAvion.getjButton25().setText("-");
             m.quitarCampos(idVuelo, 0, 4);
+            listaBotones.remove(vistaAvion.getjButton25());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton26()) && vistaAvion.getjButton26().getText() == "-")
@@ -839,11 +887,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton26().setBackground(Color.gray);   
             vistaAvion.getjButton26().setText("x");
             m.apartarCampos(idVuelo, 1, 4);
+            listaBotones.add(vistaAvion.getjButton26());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton26()) && vistaAvion.getjButton26().getText() == "x"){
             vistaAvion.getjButton26().setBackground(Color.green);
             vistaAvion.getjButton26().setText("-");
             m.quitarCampos(idVuelo, 1, 4);
+            listaBotones.remove(vistaAvion.getjButton26());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton27()) && vistaAvion.getjButton27().getText() == "-")
@@ -851,11 +901,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton27().setBackground(Color.gray);   
             vistaAvion.getjButton27().setText("x");
             m.apartarCampos(idVuelo, 2, 4);
+            listaBotones.add(vistaAvion.getjButton27());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton27()) && vistaAvion.getjButton27().getText() == "x"){
             vistaAvion.getjButton27().setBackground(Color.green);
             vistaAvion.getjButton27().setText("-");
             m.quitarCampos(idVuelo, 2, 4);
+            listaBotones.remove(vistaAvion.getjButton27());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton28()) && vistaAvion.getjButton28().getText() == "-")
@@ -863,11 +915,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton28().setBackground(Color.gray);   
             vistaAvion.getjButton28().setText("x");
             m.apartarCampos(idVuelo, 3, 4);
+            listaBotones.add(vistaAvion.getjButton28());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton28()) && vistaAvion.getjButton28().getText() == "x"){
             vistaAvion.getjButton28().setBackground(Color.green);
             vistaAvion.getjButton28().setText("-");
             m.quitarCampos(idVuelo, 3, 4);
+            listaBotones.remove(vistaAvion.getjButton28());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton29()) && vistaAvion.getjButton29().getText() == "-")
@@ -875,11 +929,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton29().setBackground(Color.gray);   
             vistaAvion.getjButton29().setText("x");
             m.apartarCampos(idVuelo, 4, 4);
+            listaBotones.add(vistaAvion.getjButton29());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton29()) && vistaAvion.getjButton29().getText() == "x"){
             vistaAvion.getjButton29().setBackground(Color.green);
             vistaAvion.getjButton29().setText("-");
             m.quitarCampos(idVuelo, 4, 4);
+            listaBotones.remove(vistaAvion.getjButton29());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton30()) && vistaAvion.getjButton30().getText() == "-")
@@ -887,11 +943,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton30().setBackground(Color.gray);   
             vistaAvion.getjButton30().setText("x");
             m.apartarCampos(idVuelo, 5, 4);
+            listaBotones.add(vistaAvion.getjButton30());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton30()) && vistaAvion.getjButton30().getText() == "x"){
             vistaAvion.getjButton30().setBackground(Color.green);
             vistaAvion.getjButton30().setText("-");
             m.quitarCampos(idVuelo, 5, 4);
+            listaBotones.remove(vistaAvion.getjButton30());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton31()) && vistaAvion.getjButton31().getText() == "-")
@@ -899,11 +957,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton31().setBackground(Color.gray);   
             vistaAvion.getjButton31().setText("x");
             m.apartarCampos(idVuelo, 0, 5);
+            listaBotones.add(vistaAvion.getjButton31());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton31()) && vistaAvion.getjButton31().getText() == "x"){
             vistaAvion.getjButton31().setBackground(Color.green);
             vistaAvion.getjButton31().setText("-");
             m.quitarCampos(idVuelo, 0, 5);
+            listaBotones.remove(vistaAvion.getjButton31());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton32()) && vistaAvion.getjButton32().getText() == "-")
@@ -911,11 +971,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton32().setBackground(Color.gray);   
             vistaAvion.getjButton32().setText("x");
             m.apartarCampos(idVuelo, 1, 5);
+            listaBotones.add(vistaAvion.getjButton32());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton32()) && vistaAvion.getjButton32().getText() == "x"){
             vistaAvion.getjButton32().setBackground(Color.green);
             vistaAvion.getjButton32().setText("-");
             m.quitarCampos(idVuelo, 1, 5);
+            listaBotones.remove(vistaAvion.getjButton32());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton33()) && vistaAvion.getjButton33().getText() == "-")
@@ -923,11 +985,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton33().setBackground(Color.gray);   
             vistaAvion.getjButton33().setText("x");
             m.apartarCampos(idVuelo, 2, 5);
+            listaBotones.add(vistaAvion.getjButton33());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton33()) && vistaAvion.getjButton33().getText() == "x"){
             vistaAvion.getjButton33().setBackground(Color.green);
             vistaAvion.getjButton33().setText("-");
             m.quitarCampos(idVuelo, 2, 5);
+            listaBotones.remove(vistaAvion.getjButton33());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton34()) && vistaAvion.getjButton34().getText() == "-")
@@ -935,11 +999,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton34().setBackground(Color.gray);   
             vistaAvion.getjButton34().setText("x");
             m.apartarCampos(idVuelo, 3, 5);
+            listaBotones.add(vistaAvion.getjButton34());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton34()) && vistaAvion.getjButton34().getText() == "x"){
             vistaAvion.getjButton34().setBackground(Color.green);
             vistaAvion.getjButton34().setText("-");
             m.quitarCampos(idVuelo, 3, 5);
+            listaBotones.remove(vistaAvion.getjButton34());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton35()) && vistaAvion.getjButton35().getText() == "-")
@@ -947,11 +1013,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton35().setBackground(Color.gray);   
             vistaAvion.getjButton35().setText("x");
             m.apartarCampos(idVuelo, 4, 5);
+            listaBotones.add(vistaAvion.getjButton35());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton35()) && vistaAvion.getjButton35().getText() == "x"){
             vistaAvion.getjButton35().setBackground(Color.green);
             vistaAvion.getjButton35().setText("-");
             m.quitarCampos(idVuelo, 4, 5);
+            listaBotones.remove(vistaAvion.getjButton35());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton36()) && vistaAvion.getjButton36().getText() == "-")
@@ -959,11 +1027,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton36().setBackground(Color.gray);   
             vistaAvion.getjButton36().setText("x");
             m.apartarCampos(idVuelo, 5, 5);
+            listaBotones.add(vistaAvion.getjButton36());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton36()) && vistaAvion.getjButton36().getText() == "x"){
             vistaAvion.getjButton36().setBackground(Color.green);
             vistaAvion.getjButton36().setText("-");
             m.quitarCampos(idVuelo, 5, 5);
+            listaBotones.remove(vistaAvion.getjButton36());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton37()) && vistaAvion.getjButton37().getText() == "-")
@@ -971,11 +1041,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton37().setBackground(Color.gray);   
             vistaAvion.getjButton37().setText("x");
             m.apartarCampos(idVuelo, 0, 6);
+            listaBotones.add(vistaAvion.getjButton37());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton37()) && vistaAvion.getjButton37().getText() == "x"){
             vistaAvion.getjButton37().setBackground(Color.green);
             vistaAvion.getjButton37().setText("-");
             m.quitarCampos(idVuelo, 0, 6);
+            listaBotones.remove(vistaAvion.getjButton37());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton38()) && vistaAvion.getjButton38().getText() == "-")
@@ -983,11 +1055,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton38().setBackground(Color.gray);   
             vistaAvion.getjButton38().setText("x");
             m.apartarCampos(idVuelo, 1, 6);
+            listaBotones.add(vistaAvion.getjButton38());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton38()) && vistaAvion.getjButton38().getText() == "x"){
             vistaAvion.getjButton38().setBackground(Color.green);
             vistaAvion.getjButton38().setText("-");
             m.quitarCampos(idVuelo, 1, 6);
+            listaBotones.remove(vistaAvion.getjButton38());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton39()) && vistaAvion.getjButton39().getText() == "-")
@@ -995,11 +1069,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton39().setBackground(Color.gray);   
             vistaAvion.getjButton39().setText("x");
             m.apartarCampos(idVuelo, 2, 6);
+            listaBotones.add(vistaAvion.getjButton39());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton39()) && vistaAvion.getjButton39().getText() == "x"){
             vistaAvion.getjButton39().setBackground(Color.green);
             vistaAvion.getjButton39().setText("-");
             m.quitarCampos(idVuelo, 2, 6);
+            listaBotones.remove(vistaAvion.getjButton39());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton40()) && vistaAvion.getjButton40().getText() == "-")
@@ -1007,11 +1083,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton40().setBackground(Color.gray);   
             vistaAvion.getjButton40().setText("x");
             m.apartarCampos(idVuelo, 3, 6);
+            listaBotones.add(vistaAvion.getjButton40());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton40()) && vistaAvion.getjButton40().getText() == "x"){
             vistaAvion.getjButton40().setBackground(Color.green);
             vistaAvion.getjButton40().setText("-");
             m.quitarCampos(idVuelo, 3, 6);
+            listaBotones.remove(vistaAvion.getjButton40());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton41()) && vistaAvion.getjButton41().getText() == "-")
@@ -1019,11 +1097,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton41().setBackground(Color.gray);   
             vistaAvion.getjButton41().setText("x");
             m.apartarCampos(idVuelo, 4, 6);
+            listaBotones.add(vistaAvion.getjButton41());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton41()) && vistaAvion.getjButton41().getText() == "x"){
             vistaAvion.getjButton41().setBackground(Color.green);
             vistaAvion.getjButton41().setText("-");
             m.quitarCampos(idVuelo, 4, 6);
+            listaBotones.remove(vistaAvion.getjButton41());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton42()) && vistaAvion.getjButton42().getText() == "-")
@@ -1031,11 +1111,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton42().setBackground(Color.gray);   
             vistaAvion.getjButton42().setText("x");
             m.apartarCampos(idVuelo, 5, 6);
+            listaBotones.add(vistaAvion.getjButton42());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton42()) && vistaAvion.getjButton42().getText() == "x"){
             vistaAvion.getjButton42().setBackground(Color.green);
             vistaAvion.getjButton42().setText("-");
             m.quitarCampos(idVuelo, 5, 6);
+            listaBotones.remove(vistaAvion.getjButton42());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton43()) && vistaAvion.getjButton43().getText() == "-")
@@ -1043,11 +1125,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton43().setBackground(Color.gray);   
             vistaAvion.getjButton43().setText("x");
             m.apartarCampos(idVuelo, 0, 7);
+            listaBotones.add(vistaAvion.getjButton43());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton43()) && vistaAvion.getjButton43().getText() == "x"){
             vistaAvion.getjButton43().setBackground(Color.green);
             vistaAvion.getjButton43().setText("-");
             m.quitarCampos(idVuelo, 0, 7);
+            listaBotones.remove(vistaAvion.getjButton43());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton44()) && vistaAvion.getjButton44().getText() == "-")
@@ -1055,11 +1139,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton44().setBackground(Color.gray);   
             vistaAvion.getjButton44().setText("x");
             m.apartarCampos(idVuelo, 1, 7);
+            listaBotones.add(vistaAvion.getjButton44());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton44()) && vistaAvion.getjButton44().getText() == "x"){
             vistaAvion.getjButton44().setBackground(Color.green);
             vistaAvion.getjButton44().setText("-");
             m.quitarCampos(idVuelo, 1, 7);
+            listaBotones.remove(vistaAvion.getjButton44());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton45()) && vistaAvion.getjButton45().getText() == "-")
@@ -1067,11 +1153,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton45().setBackground(Color.gray);   
             vistaAvion.getjButton45().setText("x");
             m.apartarCampos(idVuelo, 2, 7);
+            listaBotones.add(vistaAvion.getjButton45());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton45()) && vistaAvion.getjButton45().getText() == "x"){
             vistaAvion.getjButton45().setBackground(Color.green);
             vistaAvion.getjButton45().setText("-");
             m.quitarCampos(idVuelo, 2, 7);
+            listaBotones.remove(vistaAvion.getjButton45());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton46()) && vistaAvion.getjButton46().getText() == "-")
@@ -1079,11 +1167,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton46().setBackground(Color.gray);   
             vistaAvion.getjButton46().setText("x");
             m.apartarCampos(idVuelo, 3, 7);
+            listaBotones.add(vistaAvion.getjButton46());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton46()) && vistaAvion.getjButton46().getText() == "x"){
             vistaAvion.getjButton46().setBackground(Color.green);
             vistaAvion.getjButton46().setText("-");
             m.quitarCampos(idVuelo, 3, 7);
+            listaBotones.remove(vistaAvion.getjButton46());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton47()) && vistaAvion.getjButton47().getText() == "-")
@@ -1091,11 +1181,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton47().setBackground(Color.gray);   
             vistaAvion.getjButton47().setText("x");
             m.apartarCampos(idVuelo, 4, 7);
+            listaBotones.add(vistaAvion.getjButton47());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton47()) && vistaAvion.getjButton47().getText() == "x"){
             vistaAvion.getjButton47().setBackground(Color.green);
             vistaAvion.getjButton47().setText("-");
             m.quitarCampos(idVuelo, 4, 7);
+            listaBotones.remove(vistaAvion.getjButton47());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getjButton48()) && vistaAvion.getjButton48().getText() == "-")
@@ -1103,11 +1195,13 @@ public class Controlador implements ActionListener{
             vistaAvion.getjButton48().setBackground(Color.gray);  
             vistaAvion.getjButton48().setText("x");
             m.apartarCampos(idVuelo, 5, 7);
+            listaBotones.add(vistaAvion.getjButton48());
             cant++;
         }else if(ae.getSource().equals(vistaAvion.getjButton48()) && vistaAvion.getjButton48().getText() == "x"){
             vistaAvion.getjButton48().setBackground(Color.green);
             vistaAvion.getjButton48().setText("-");
             m.quitarCampos(idVuelo, 5, 7);
+            listaBotones.remove(vistaAvion.getjButton48());
             cant--;
         }
         if(ae.getSource().equals(vistaAvion.getComprarAsientosBtn()) && cant == cantAcompanantes)
@@ -1144,7 +1238,195 @@ public class Controlador implements ActionListener{
             {
                 m.quitarCampos(idVuelo, 1, 0);
             }
-            //falta el resto de botones
+            else if(listaBotones.get(i) == vistaAvion.getjButton3())
+            {
+                m.quitarCampos(idVuelo, 2, 0);
+            }
+           // -------*****
+            else if(listaBotones.get(i) == vistaAvion.getjButton4())
+            {
+                m.quitarCampos(idVuelo, 3, 0);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton5())
+            {
+                m.quitarCampos(idVuelo, 4, 0);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton6())
+            {
+                m.quitarCampos(idVuelo, 5, 0);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton7())
+            {
+                m.quitarCampos(idVuelo, 0, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton8())
+            {
+                m.quitarCampos(idVuelo, 1, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton9())
+            {
+                m.quitarCampos(idVuelo, 2, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton10())
+            {
+                m.quitarCampos(idVuelo, 3, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton11())
+            {
+                m.quitarCampos(idVuelo, 4, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton12())
+            {
+                m.quitarCampos(idVuelo, 5, 1);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton13())
+            {
+                m.quitarCampos(idVuelo, 0, 2);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton14())
+            {
+                m.quitarCampos(idVuelo, 1, 2);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton15())
+            {
+                m.quitarCampos(idVuelo, 2, 2);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton16())
+            {
+                m.quitarCampos(idVuelo, 3, 2);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton17())
+            {
+                m.quitarCampos(idVuelo, 4, 2);
+            }
+            /****/
+            else if(listaBotones.get(i) == vistaAvion.getjButton18())
+            {
+                m.quitarCampos(idVuelo, 5, 2);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton19())
+            {
+                m.quitarCampos(idVuelo, 0, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton20())
+            {
+                m.quitarCampos(idVuelo, 1, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton21())
+            {
+                m.quitarCampos(idVuelo, 2, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton22())
+            {
+                m.quitarCampos(idVuelo, 3, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton23())
+            {
+                m.quitarCampos(idVuelo, 4, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton24())
+            {
+                m.quitarCampos(idVuelo, 5, 3);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton25())
+            {
+                m.quitarCampos(idVuelo, 0, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton26())
+            {
+                m.quitarCampos(idVuelo, 1, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton27())
+            {
+                m.quitarCampos(idVuelo, 2, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton28())
+            {
+                m.quitarCampos(idVuelo, 3, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton29())
+            {
+                m.quitarCampos(idVuelo, 4, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton30())
+            {
+                m.quitarCampos(idVuelo, 5, 4);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton31())
+            {
+                m.quitarCampos(idVuelo, 0, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton32())
+            {
+                m.quitarCampos(idVuelo, 1, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton33())
+            {
+                m.quitarCampos(idVuelo, 2, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton34())
+            {
+                m.quitarCampos(idVuelo, 3, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton35())
+            {
+                m.quitarCampos(idVuelo, 4, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton36())
+            {
+                m.quitarCampos(idVuelo, 5, 5);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton37())
+            {
+                m.quitarCampos(idVuelo, 0, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton38())
+            {
+                m.quitarCampos(idVuelo, 1, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton39())
+            {
+                m.quitarCampos(idVuelo, 2, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton40())
+            {
+                m.quitarCampos(idVuelo, 3, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton41())
+            {
+                m.quitarCampos(idVuelo, 4, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton42())
+            {
+                m.quitarCampos(idVuelo, 5, 6);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton43())
+            {
+                m.quitarCampos(idVuelo, 0, 7);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton44())
+            {
+                m.quitarCampos(idVuelo, 1, 7);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton45())
+            {
+                m.quitarCampos(idVuelo, 2, 7);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton46())
+            {
+                m.quitarCampos(idVuelo, 3, 7);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton47())
+            {
+                m.quitarCampos(idVuelo, 4, 7);
+            }
+            else if(listaBotones.get(i) == vistaAvion.getjButton48())
+            {
+                m.quitarCampos(idVuelo, 5, 7);
+            }
+                     
+            
+            
         }
     }
     
