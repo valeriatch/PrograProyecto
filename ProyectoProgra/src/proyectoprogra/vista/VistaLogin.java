@@ -44,6 +44,7 @@ public class VistaLogin extends javax.swing.JFrame {
         setTitle("LOGIN");
         setName("Login"); // NOI18N
         setResizable(false);
+        getContentPane().setLayout(null);
 
         LOGIN.setBackground(new java.awt.Color(255, 255, 255));
         LOGIN.setName("Login"); // NOI18N
@@ -120,16 +121,8 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(LOGIN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(LOGIN);
+        LOGIN.setBounds(0, 0, 862, 523);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -333,11 +333,11 @@ public class Controlador implements ActionListener{
             mainFrame.iniciar();
         }
 
-        if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
-        {
-            mainFrame.setVisible(false);
-            vistaAgregarClientes.iniciar();  
-        }
+//        if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
+//        {
+//            mainFrame.setVisible(false);
+//            vistaAgregarClientes.iniciar();  
+//        }
         if(ae.getSource().equals(vistaBuscarCliente.getBuscarBttn()))
         {
             int IDCliente = 0;
@@ -438,7 +438,7 @@ public class Controlador implements ActionListener{
                 {
                     usuario = new Usuario(rol, nombre, contrasenna);
                     m.annadirUusario(usuario);
-                    JOptionPane.showMessageDialog(null, "Registro exitoso");
+                    JOptionPane.showMessageDialog(null, "Registro exitoso.\nDevuelvase a la pantalla de Login para cambiar de usuario");
                     vistaConfiguracion.getNombreUsuario().setText("");
                     vistaConfiguracion.getContrasenna().setText("");
                     vistaConfiguracion.getConfirmContrasenna().setText("");
