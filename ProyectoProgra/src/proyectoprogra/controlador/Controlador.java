@@ -225,6 +225,11 @@ public class Controlador implements ActionListener{
         if(ae.getSource().equals(mainFrame.getVuelos()))
         {
             mainFrame.setVisible(false);
+            if(m.getAerolineas().size() == 0){
+                JOptionPane.showMessageDialog(null, "No se ha registrado ninguna aerolinea, por favor ingrese una primero", "ERROR", JOptionPane.ERROR_MESSAGE);
+                mainFrame.iniciar();
+            }
+            else{
             vistaVuelos.getComboBoxAero().removeAllItems();
             ArrayList<Aerolinea> aero = m.getAerolineas();
             for(int i = 0; i < aero.size(); i++) {
@@ -232,18 +237,26 @@ public class Controlador implements ActionListener{
             }
             vistaVuelos.iniciar();
             vistaVuelos.getCreaciontxf().setText(fechaCreacion);
+            }
         }
         
         if(ae.getSource().equals(mainFrame.getAgregarClienteBttn()))
         {
             mainFrame.setVisible(false);
-            vistaAgregarClientes.getMostrarVuelosComB().removeAllItems();
-            ArrayList<Vuelos> vuel = m.getVuelos();
-             for(int i = 0; i < vuel.size(); i++) {
-                 vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getNumeroVuelo());
-             }
-             vistaAgregarClientes.iniciar();
+            if(m.getVuelos().size() == 0){
+                JOptionPane.showMessageDialog(null, "No se ha registrado ningun vuelo, por favor ingrese un vuelo primero", "ERROR", JOptionPane.ERROR_MESSAGE);
+                mainFrame.iniciar();
+            }
+            else{ 
+                vistaAgregarClientes.getMostrarVuelosComB().removeAllItems();
+                ArrayList<Vuelos> vuel = m.getVuelos();
+                 for(int i = 0; i < vuel.size(); i++) {
+                    vistaAgregarClientes.getMostrarVuelosComB().addItem(vuel.get(i).getNumeroVuelo());
+                }
+                vistaAgregarClientes.iniciar();
+            }
         }
+            
         
         if(ae.getSource().equals(verVuelos.getVolverbtn())){
             verVuelos.setVisible(false);
