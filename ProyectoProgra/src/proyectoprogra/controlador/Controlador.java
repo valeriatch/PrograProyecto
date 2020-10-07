@@ -168,7 +168,7 @@ public class Controlador implements ActionListener{
         this.vistaAvion.getjButton47().addActionListener(this);
         this.vistaAvion.getjButton48().addActionListener(this);
         this.vistaAvion.getComprarAsientosBtn().addActionListener(this);
-        this.vistaAvion.getVolverBtn().addActionListener(this);
+      //  this.vistaAvion.getVolverBtn().addActionListener(this);
         
         reset();
     }
@@ -345,10 +345,14 @@ public class Controlador implements ActionListener{
                // rowData[2] = m.getClientes().get(i).getNumeroAcompannantes();
                 table.addRow(rowData);
                 }
-                else{
+                else if(m.getClientes().size() == 0 ){
+                    JOptionPane.showMessageDialog(null, "No se ha registrado ningun cliente", "ERROR", JOptionPane.ERROR_MESSAGE);
+                    vistaBuscarCliente.getiDCliente().setText("");
+                }
+                
+                else if(cl.getID() != IDCliente){
                     JOptionPane.showMessageDialog(null, "Cliente no registrado", "ERROR", JOptionPane.ERROR_MESSAGE);
                     vistaBuscarCliente.getiDCliente().setText("");
-                    
                 }    
                 
             }          
@@ -1213,14 +1217,14 @@ public class Controlador implements ActionListener{
         }else if(ae.getSource().equals(vistaAvion.getComprarAsientosBtn()) && cant != cantAcompanantes){
             JOptionPane.showMessageDialog(null, "Los asientos seleccionados no coinciden con la cantidad de acompañantes.\nSeleccione la cantidad correcta");
         }
-        if(ae.getSource().equals(vistaAvion.getVolverBtn()))
+        /*if(ae.getSource().equals(vistaAvion.getVolverBtn()))
         {
             vistaAvion.setVisible(false);
             accionVolverBtn();
             cant = 0;
             listaBotones.removeAll(listaBotones);
             vistaAgregarClientes.iniciar();
-        }
+        }*/
         System.out.println(m.toStringVuelos());
         System.out.println(idVuelo);
         System.out.println(cant);
@@ -1242,7 +1246,7 @@ public class Controlador implements ActionListener{
             {
                 m.quitarCampos(idVuelo, 2, 0);
             }
-           // -------*****
+           
             else if(listaBotones.get(i) == vistaAvion.getjButton4())
             {
                 m.quitarCampos(idVuelo, 3, 0);

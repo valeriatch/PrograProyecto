@@ -79,7 +79,6 @@ public class VistaAvion extends javax.swing.JFrame {
         jButton47 = new javax.swing.JButton();
         jButton48 = new javax.swing.JButton();
         comprarAsientosBtn = new javax.swing.JButton();
-        volverBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -287,11 +286,6 @@ public class VistaAvion extends javax.swing.JFrame {
         comprarAsientosBtn.setText("Comprar");
         getContentPane().add(comprarAsientosBtn);
         comprarAsientosBtn.setBounds(260, 390, 150, 50);
-
-        volverBtn.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        volverBtn.setText("Volver");
-        getContentPane().add(volverBtn);
-        volverBtn.setBounds(10, 10, 110, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Plantilla Avion .jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -699,13 +693,7 @@ public class VistaAvion extends javax.swing.JFrame {
         this.comprarAsientosBtn = comprarAsientosBtn;
     }
 
-    public JButton getVolverBtn() {
-        return volverBtn;
-    }
 
-    public void setVolverBtn(JButton volverBtn) {
-        this.volverBtn = volverBtn;
-    }
     
     /**
      * @param args the command line arguments
@@ -793,7 +781,6 @@ public class VistaAvion extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton volverBtn;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
