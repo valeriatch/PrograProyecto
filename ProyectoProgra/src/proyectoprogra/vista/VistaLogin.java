@@ -44,7 +44,6 @@ public class VistaLogin extends javax.swing.JFrame {
         setTitle("LOGIN");
         setName("Login"); // NOI18N
         setResizable(false);
-        getContentPane().setLayout(null);
 
         LOGIN.setBackground(new java.awt.Color(255, 255, 255));
         LOGIN.setName("Login"); // NOI18N
@@ -97,7 +96,7 @@ public class VistaLogin extends javax.swing.JFrame {
                                 .addComponent(usuarioEntrada)
                                 .addComponent(contrasennaEntrada, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))))
                     .addGroup(LOGINLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(229, 229, 229))
         );
@@ -121,8 +120,16 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(LOGIN);
-        LOGIN.setBounds(0, 0, 862, 523);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
