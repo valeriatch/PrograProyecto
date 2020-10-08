@@ -186,6 +186,9 @@ public class Controlador implements ActionListener{
                 if(m.bloquearBotones(entradaUsuario))
                 {
                     mainFrame.iniciar();
+                    mainFrame.getConfiguracion().setEnabled(true);
+                    mainFrame.getAerolíneas().setEnabled(true);
+                    mainFrame.getVuelos().setEnabled(true);
                 }
                 else
                 {
